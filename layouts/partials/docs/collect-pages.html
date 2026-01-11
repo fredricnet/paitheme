@@ -1,0 +1,26 @@
+{{- /*
+  Recursively collect all pages from a section and its subsections, sorted by weight
+  This includes section index pages (_index.md) and regular pages
+*/ -}}
+{{- $section := . -}}
+{{- $pages := slice -}}
+
+{{- /* Add the section's index page if it exists and is not the root docs section */ -}}
+{{- if and $section (ne $section.RelPermalink "/docs/") -}}
+    {{- $pages = $pages | append $section -}}
+{{- end -}}
+
+{{- /* Add all child pages, recursively handling subsections */ -}}
+{{- range $section.Pages.ByWeight -}}
+    {{- if .Pages -}}
+        {{- /* It's a section, recursively collect its pages */ -}}
+        {{- $subPages := partial "docs/collect-pages" . -}}
+        {{- $pages = $pages | append $subPages -}}
+    {{- else -}}
+        {{- /* It's a regular page */ -}}
+        {{- $pages = $pages | append . -}}
+    {{- end -}}
+{{- end -}}
+
+{{- return $pages -}}
+

@@ -1,0 +1,30 @@
+{{- /*
+    robots.txt - Search engine and AI crawler directives
+    
+    This template generates robots.txt with references to:
+    - sitemap.xml for search engine crawlers
+    - llms.txt for AI/LLM crawlers
+*/ -}}
+# robots.txt for {{ site.Title }}
+# {{ site.BaseURL }}
+
+User-agent: *
+Allow: /
+
+# Sitemap for search engines
+Sitemap: {{ "sitemap.xml" | absURL }}
+
+# LLMs.txt for AI systems (ChatGPT, Claude, Perplexity, etc.)
+# See: https://llmstxt.org/
+# LLMs.txt: {{ "llms.txt" | absURL }}
+
+# Disallow development/internal pages
+{{- if hugo.IsProduction }}
+Disallow: /dev/
+{{- else }}
+# Development mode - allowing all paths
+{{- end }}
+
+# Crawl-delay recommendation for polite crawlers
+Crawl-delay: 1
+

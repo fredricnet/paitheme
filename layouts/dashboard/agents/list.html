@@ -1,0 +1,245 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        <header class="dashboard-header">
+            <div class="dashboard-header-content">
+                <button class="dashboard-sidebar-toggle" id="dashboard-sidebar-toggle" aria-label="Toggle sidebar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="dashboard-header-left">
+                    <h1 class="dashboard-page-title">{{ .Title }}</h1>
+                    <p class="dashboard-page-subtitle">{{ .Description }}</p>
+                </div>
+                <div class="dashboard-header-right">
+                    <button class="dashboard-btn dashboard-btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5v14"></path>
+                        </svg>
+                        Create New Agent
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <!-- Agents Grid -->
+            <div class="dashboard-agents-grid">
+                <div class="dashboard-agent-card">
+                    <div class="dashboard-agent-card-header">
+                        <div class="dashboard-agent-status-indicator active"></div>
+                        <div class="dashboard-agent-card-actions">
+                            <button class="dashboard-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dashboard-agent-card-body">
+                        <h3 class="dashboard-agent-card-title">Data Processing Agent</h3>
+                        <p class="dashboard-agent-card-description">Processes and transforms large datasets, handles data validation, and performs batch operations on structured and unstructured data sources.</p>
+                        <div class="dashboard-agent-card-meta">
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                Last run: 2m ago
+                            </span>
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                1,247 executions
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-agent-card">
+                    <div class="dashboard-agent-card-header">
+                        <div class="dashboard-agent-status-indicator active"></div>
+                        <div class="dashboard-agent-card-actions">
+                            <button class="dashboard-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dashboard-agent-card-body">
+                        <h3 class="dashboard-agent-card-title">Customer Support Agent</h3>
+                        <p class="dashboard-agent-card-description">Handles customer inquiries, provides automated responses, routes tickets to appropriate teams, and maintains conversation context across channels.</p>
+                        <div class="dashboard-agent-card-meta">
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                Last run: 5m ago
+                            </span>
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                892 executions
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-agent-card">
+                    <div class="dashboard-agent-card-header">
+                        <div class="dashboard-agent-status-indicator error"></div>
+                        <div class="dashboard-agent-card-actions">
+                            <button class="dashboard-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dashboard-agent-card-body">
+                        <h3 class="dashboard-agent-card-title">Email Parser Agent</h3>
+                        <p class="dashboard-agent-card-description">Extracts structured data from emails, categorizes messages, identifies important content, and triggers workflows based on email content patterns.</p>
+                        <div class="dashboard-agent-card-meta">
+                            <span class="dashboard-agent-card-meta-item error">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                                Error: Connection timeout
+                            </span>
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                456 executions
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-agent-card">
+                    <div class="dashboard-agent-card-header">
+                        <div class="dashboard-agent-status-indicator active"></div>
+                        <div class="dashboard-agent-card-actions">
+                            <button class="dashboard-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dashboard-agent-card-body">
+                        <h3 class="dashboard-agent-card-title">Report Generator Agent</h3>
+                        <p class="dashboard-agent-card-description">Generates comprehensive reports from multiple data sources, formats output for different audiences, and schedules automated report delivery.</p>
+                        <div class="dashboard-agent-card-meta">
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                Last run: 1m ago
+                            </span>
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                234 executions
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-agent-card">
+                    <div class="dashboard-agent-card-header">
+                        <div class="dashboard-agent-status-indicator warning"></div>
+                        <div class="dashboard-agent-card-actions">
+                            <button class="dashboard-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dashboard-agent-card-body">
+                        <h3 class="dashboard-agent-card-title">API Gateway Agent</h3>
+                        <p class="dashboard-agent-card-description">Manages API routing, rate limiting, authentication, and request/response transformation across multiple backend services and microservices.</p>
+                        <div class="dashboard-agent-card-meta">
+                            <span class="dashboard-agent-card-meta-item warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                                    <path d="M12 9v4"></path>
+                                    <path d="M12 17h.01"></path>
+                                </svg>
+                                Warning: High latency
+                            </span>
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                3,456 executions
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-agent-card">
+                    <div class="dashboard-agent-card-header">
+                        <div class="dashboard-agent-status-indicator active"></div>
+                        <div class="dashboard-agent-card-actions">
+                            <button class="dashboard-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="dashboard-agent-card-body">
+                        <h3 class="dashboard-agent-card-title">Content Moderation Agent</h3>
+                        <p class="dashboard-agent-card-description">Analyzes user-generated content for policy violations, flags inappropriate material, and escalates cases requiring human review.</p>
+                        <div class="dashboard-agent-card-meta">
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                Last run: 30s ago
+                            </span>
+                            <span class="dashboard-agent-card-meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                                5,678 executions
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

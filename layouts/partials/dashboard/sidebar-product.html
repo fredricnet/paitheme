@@ -1,0 +1,57 @@
+<aside class="dashboard-sidebar">
+    <div class="dashboard-sidebar-header">
+        <a href="/" class="dashboard-logo">
+            <div class="logo-icon-wrapper">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 20 L4 6 L20 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" class="logo-triangle"/>
+                </svg>
+            </div>
+            <span class="logo-text">{{ site.Title }}</span>
+        </a>
+    </div>
+    <nav class="dashboard-nav">
+        <a href="/dashboard/product" class="dashboard-nav-item{{ if eq .RelPermalink "/dashboard/product/" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Overview</span>
+        </a>
+        <a href="/dashboard/product/roadmap" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/product/roadmap" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="M7 16l4-4 4 4"></path>
+                <path d="M7 12h10"></path>
+            </svg>
+            <span>Roadmap</span>
+        </a>
+        <a href="/dashboard/product/features" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/product/features" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                <path d="M2 10h20"></path>
+            </svg>
+            <span>Features</span>
+        </a>
+        <a href="/dashboard/product/releases" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/product/releases" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Releases</span>
+        </a>
+        <a href="/dashboard/product/feedback" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/product/feedback" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Feedback</span>
+        </a>
+        <a href="/dashboard/product/metrics" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/product/metrics" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+            </svg>
+            <span>Metrics</span>
+        </a>
+    </nav>
+</aside>
+

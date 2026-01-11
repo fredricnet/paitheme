@@ -1,0 +1,34 @@
+{{- /*
+  Details Shortcode
+  Creates a collapsible details/summary element
+  
+  @param {string} title The summary text (default: "Details")
+  @param {string} open Whether the details are open by default (true/false)
+  @param {string} icon Optional icon name
+  
+  @example {{< details title="Click to expand" >}}
+    Hidden content here
+  {{< /details >}}
+*/ -}}
+{{- $title := .Get "title" | default "Details" -}}
+{{- $open := .Get "open" | default "false" -}}
+{{- $icon := .Get "icon" -}}
+{{- $content := .Inner -}}
+
+<details class="pai-details"{{ if eq $open "true" }} open{{ end }}>
+    <summary class="pai-details-summary">
+        {{- if $icon -}}
+        <span class="pai-details-icon">
+            {{- partial "utils/icon.html" (dict "name" $icon "attributes" "height=18 width=18") -}}
+        </span>
+        {{- end -}}
+        <span class="pai-details-title">{{ $title }}</span>
+        <span class="pai-details-arrow">
+            {{- partial "utils/icon.html" (dict "name" "chevron-down" "attributes" "height=16 width=16") -}}
+        </span>
+    </summary>
+    <div class="pai-details-content">
+        {{ $content | markdownify }}
+    </div>
+</details>
+

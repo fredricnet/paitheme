@@ -1,0 +1,80 @@
+{{/* Hero Shortcode - Reusable hero section template
+Parameters:
+- title: Hero title (required)
+- description: Hero description text (required)
+- image: Hero image path (optional, default: /images/hero/hero-image.webp)
+- image-alt: Alt text for image (optional, default: "Hero image")
+- js-app: JavaScript app/animation to use instead of image (optional, e.g. "triangle-gol")
+- primary-button-text: Primary CTA button text (optional)
+- primary-button-link: Primary CTA button URL (optional)
+- secondary-button-text: Secondary CTA button text (optional)
+- secondary-button-link: Secondary CTA button URL (optional)
+- show-background: Show background image (optional, default: "true")
+- tag-text: Text for the tag badge (optional)
+- tag-icon: Icon type for tag badge (optional, default: "star")
+- tag-icon-count: Number of icons in tag badge (optional, default: 5)
+- tag-icon-color: Color of tag icons (optional, default: "#3b82f6")
+- published: Whether to render this section (optional, default: "true")
+*/}}
+{{- $published := .Get "published" | default "true" -}}
+{{- if ne $published "false" -}}
+{{- $title := .Get "title" | default "Hero Title" -}}
+{{- $description := .Get "description" | default "Hero description text" -}}
+{{- $image := .Get "image" -}}
+{{- $imageAlt := .Get "image-alt" | default "Hero image" -}}
+{{- $jsApp := .Get "js-app" -}}
+{{- /* Debug: jsApp={{ $jsApp }}, image={{ $image }} */ -}}
+{{- $primaryButtonText := .Get "primary-button-text" -}}
+{{- $primaryButtonLink := .Get "primary-button-link" -}}
+{{- $secondaryButtonText := .Get "secondary-button-text" -}}
+{{- $secondaryButtonLink := .Get "secondary-button-link" -}}
+{{- $showBackground := .Get "show-background" | default "true" -}}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    {{- /* Hero background now handled by unified body backgrounds */ -}}
+    <div class="container">
+        <div class="hero-wrapper{{ if $jsApp }} hero-wrapper-with-app{{ end }}">
+            <div class="hero-content">
+                {{- partial "tag-badge.html" (dict "text" (.Get "tag-text") "icon" (.Get "tag-icon") "count" (.Get
+                "tag-icon-count") "color" (.Get "tag-icon-color")) -}}
+
+                <h1 class="hero-title">{{ $title }}</h1>
+                <p class="hero-description">{{ $description }}</p>
+
+                {{- if or $primaryButtonText $secondaryButtonText -}}
+                <div class="hero-cta">
+                    {{- if $primaryButtonText -}}
+                    <a href="{{ $primaryButtonLink }}" class="btn btn-primary btn-large">{{ $primaryButtonText }}</a>
+                    {{- end -}}
+                    {{- if $secondaryButtonText -}}
+                    <a href="{{ $secondaryButtonLink }}" class="btn btn-secondary btn-large">{{ $secondaryButtonText
+                        }}</a>
+                    {{- end -}}
+                </div>
+                {{- end -}}
+            </div>
+            {{- if and $jsApp (not $image) -}}
+            <!-- JS-APP MODE: {{ $jsApp }} -->
+            <div class="hero-app-container">
+                {{- if eq $jsApp "triangle-gol" -}}
+                {{- partial "triangle-gol.html" (dict "width" 600 "height" 600) -}}
+                {{- else -}}
+                <div class="hero-image-placeholder">
+                    <p>Unknown js-app: {{ $jsApp }}</p>
+                </div>
+                {{- end -}}
+            </div>
+            {{- else if $image -}}
+            <div class="hero-image">
+                <img src="{{ $image }}" alt="{{ $imageAlt }}"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="hero-image-placeholder" style="display: none;">
+                    <p>{{ $imageAlt }}</p>
+                </div>
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</section>
+{{- end -}}

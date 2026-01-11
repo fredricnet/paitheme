@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="dictionary-page">
+    <header class="dictionary-header">
+        <h1 class="dictionary-title">{{ .Title }}</h1>
+        {{- if .Description -}}
+        <p class="dictionary-description">{{ .Description }}</p>
+        {{- end -}}
+    </header>
+    
+    <div class="dictionary-content-wrapper">
+        {{- /* Optional content from _index.md */ -}}
+        {{ .Content }}
+        
+        {{- /* Define the alphabet */ -}}
+        {{- $alphabet := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" -}}
+        
+        {{- /* Get all dictionary entries sorted alphabetically by title */ -}}
+        {{- $allPages := .Pages.ByTitle -}}
+        
+        {{- /* Iterate through each letter of the alphabet */ -}}
+        {{- range $letter := $alphabet -}}
+            {{- /* Filter pages that start with this letter */ -}}
+            {{- $letterPages := slice -}}
+            {{- range $allPages -}}
+                {{- $firstChar := upper (substr .Title 0 1) -}}
+                {{- if eq $firstChar $letter -}}
+                    {{- $letterPages = $letterPages | append . -}}
+                {{- end -}}
+            {{- end -}}
+            
+            {{- /* Only render the letter section if there are pages for it */ -}}
+            {{- if gt (len $letterPages) 0 -}}
+            <section class="dictionary-section">
+                <h2 class="dictionary-letter" id="{{ $letter }}">{{ $letter }}</h2>
+                <div class="dictionary-letter-underline"></div>
+                
+                <div class="dictionary-entries">
+                    {{- range $letterPages -}}
+                    <details class="dictionary-entry">
+                        <summary class="dictionary-entry-summary">
+                            <span class="dictionary-entry-title">{{ .Title }}</span>
+                            {{- if .Description -}}
+                            <span class="dictionary-entry-description">{{ .Description }}</span>
+                            {{- end -}}
+                            <span class="dictionary-entry-arrow">
+                                {{- partial "utils/icon.html" (dict "name" "chevron-down" "attributes" "height=16 width=16") -}}
+                            </span>
+                        </summary>
+                        <div class="dictionary-entry-content">
+                            {{ .Content }}
+                        </div>
+                    </details>
+                    {{- end -}}
+                </div>
+            </section>
+            {{- end -}}
+        {{- end -}}
+        
+        {{- /* Show message if no entries exist */ -}}
+        {{- if eq (len $allPages) 0 -}}
+        <div class="dictionary-empty">
+            <p>No dictionary entries yet. Add markdown files to the <code>content/dictionary/</code> folder to populate this dictionary.</p>
+        </div>
+        {{- end -}}
+    </div>
+</div>
+{{ end }}
+

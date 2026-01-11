@@ -1,0 +1,14 @@
+{{/* 
+  Triangle Game of Life Partial
+  Usage: {{ partial "triangle-gol.html" (dict "width" 800 "height" 600) }}
+*/}}
+{{- $width := .width | default 800 -}}
+{{- $height := .height | default 600 -}}
+<div id="triangle-gol-container" 
+     class="triangle-game-of-life" 
+     data-width="{{ $width }}" 
+     data-height="{{ $height }}"
+     style="width: 100%; max-width: {{ $width }}px; margin: 0 auto; min-height: {{ $height }}px; background: transparent;">
+</div>
+<script src="{{ "js/triangle-game-of-life.js" | relURL }}"></script>
+

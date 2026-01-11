@@ -1,0 +1,61 @@
+<aside class="dashboard-sidebar">
+    <div class="dashboard-sidebar-header">
+        <a href="/" class="dashboard-logo">
+            <div class="logo-icon-wrapper">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 20 L4 6 L20 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" class="logo-triangle"/>
+                </svg>
+            </div>
+            <span class="logo-text">{{ site.Title }}</span>
+        </a>
+    </div>
+    <nav class="dashboard-nav">
+        <a href="/dashboard/marketing" class="dashboard-nav-item{{ if eq .RelPermalink "/dashboard/marketing/" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Overview</span>
+        </a>
+        <a href="/dashboard/marketing/campaigns" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/marketing/campaigns" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12c0 1.66-1 3-2.5 3S16 13.66 16 12s1-3 2.5-3 2.5 1.34 2.5 3z"></path>
+                <path d="M16 8h5"></path>
+                <path d="M21 12c0 1.66-1 3-2.5 3S16 13.66 16 12s1-3 2.5-3 2.5 1.34 2.5 3z"></path>
+                <path d="M7 12h10"></path>
+            </svg>
+            <span>Campaigns</span>
+        </a>
+        <a href="/dashboard/marketing/analytics" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/marketing/analytics" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="M18 7c0 4-3 6-6 6s-6-2-6-6"></path>
+                <path d="M12 3v18"></path>
+            </svg>
+            <span>Analytics</span>
+        </a>
+        <a href="/dashboard/marketing/leads" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/marketing/leads" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Leads</span>
+        </a>
+        <a href="/dashboard/marketing/content" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/marketing/content" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+            </svg>
+            <span>Content</span>
+        </a>
+        <a href="/dashboard/marketing/channels" class="dashboard-nav-item{{ if hasPrefix .RelPermalink "/dashboard/marketing/channels" }} active{{ end }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                <path d="M2 10h20"></path>
+            </svg>
+            <span>Channels</span>
+        </a>
+    </nav>
+</aside>
+

@@ -1,0 +1,35 @@
+{{/* Text Center Narrow Shortcode
+Parameters:
+- title: Section title (optional)
+- subtitle: Section subtitle (optional)
+- tag-text: Text for the tag badge (optional)
+- tag-icon: Icon type for tag badge (optional, default: "star")
+- tag-icon-count: Number of icons in tag badge (optional, default: 5)
+- tag-icon-color: Color of tag icons (optional, default: "#3b82f6")
+- published: Whether to render this section (optional, default: "true")
+*/}}
+{{- $published := .Get "published" | default "true" -}}
+{{- if ne $published "false" -}}
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+
+<section class="text-center-narrow-section" style="padding: 6rem 0;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+        <div class="text-content" style="text-align: left;">
+            {{- partial "tag-badge.html" (dict "text" (.Get "tag-text") "icon" (.Get "tag-icon") "count" (.Get
+            "tag-icon-count") "color" (.Get "tag-icon-color")) -}}
+
+            {{- if $title -}}
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">{{ $title }}</h2>
+            {{- end -}}
+            {{- if $subtitle -}}
+            <p class="section-subtitle" style="margin-bottom: 2rem; color: var(--text-muted);">{{ $subtitle }}</p>
+            {{- end -}}
+
+            <div class="section-body" style="font-size: 1.125rem; line-height: 1.7;">
+                {{ .Inner }}
+            </div>
+        </div>
+    </div>
+</section>
+{{- end -}}

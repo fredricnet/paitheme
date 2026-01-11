@@ -1,0 +1,57 @@
+{{- /*
+  Alert Shortcode (Wrapper for callout)
+  Maps alert types to callout types for backward compatibility.
+  
+  @param {string} type The alert type: success, error, warning, info (default: info)
+  @param {string} title Optional title for the alert
+  @param {string} icon Optional icon name
+  
+  @example {{< alert type="error" title="Error" >}}
+    This is an error message.
+  {{< /alert >}}
+*/ -}}
+{{- $type := .Get "type" | default "info" -}}
+{{- $title := .Get "title" -}}
+{{- $icon := .Get "icon" -}}
+
+{{- /* Map alert types to callout types */ -}}
+{{- $typeMap := dict 
+    "success" "tip"
+    "error" "danger"
+    "warning" "warning"
+    "info" "info"
+-}}
+{{- $calloutType := index $typeMap $type | default "info" -}}
+
+{{- /* Render using callout partial logic */ -}}
+{{- $defaultIcons := dict 
+    "tip" "check-circle"
+    "warning" "warning-outline"
+    "danger" "x-circle"
+    "info" "information-circle"
+-}}
+{{- if not $icon -}}
+    {{- $icon = index $defaultIcons $calloutType | default "information-circle" -}}
+{{- end -}}
+
+{{- $colors := dict 
+    "tip" "#10b981"
+    "warning" "#f59e0b"
+    "danger" "#ef4444"
+    "info" "#3b82f6"
+-}}
+{{- $color := index $colors $calloutType | default "#3b82f6" -}}
+
+<div class="pai-callout pai-callout-{{ $calloutType }}" style="--callout-color: {{ $color }};">
+    <div class="pai-callout-icon" style="color: {{ $color }};">
+        {{- partial "utils/icon.html" (dict "name" $icon "attributes" "height=20 width=20") -}}
+    </div>
+    <div class="pai-callout-content">
+        {{- if $title -}}
+        <div class="pai-callout-title">{{ $title }}</div>
+        {{- end -}}
+        <div class="pai-callout-body">
+            {{ .Inner | markdownify }}
+        </div>
+    </div>
+</div>

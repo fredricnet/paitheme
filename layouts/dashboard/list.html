@@ -1,0 +1,262 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <!-- Dashboard Content -->
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <!-- Stats Cards Row -->
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Agents Running</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">24</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        3 active in last hour
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">API Executions</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">1,247</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        Last 24 hours
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Workflows Running</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">8</div>
+                    <div class="dashboard-stat-change neutral">
+                        All systems operational
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card dashboard-stat-card-error">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Agent Errors</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">2</div>
+                    <div class="dashboard-stat-change negative">
+                        <a href="/dashboard/errors" class="dashboard-stat-link">Inspect errors →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Status Overview -->
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Agent Status</h3>
+                        <div class="dashboard-card-actions">
+                            <a href="/dashboard/agents" class="dashboard-link">View all</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-agent-status-list">
+                            <div class="dashboard-agent-status-item">
+                                <div class="dashboard-agent-status-indicator active"></div>
+                                <div class="dashboard-agent-status-info">
+                                    <span class="dashboard-agent-status-name">Data Processing Agent</span>
+                                    <span class="dashboard-agent-status-detail">Running • Last execution: 2m ago</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-agent-status-item">
+                                <div class="dashboard-agent-status-indicator active"></div>
+                                <div class="dashboard-agent-status-info">
+                                    <span class="dashboard-agent-status-name">Customer Support Agent</span>
+                                    <span class="dashboard-agent-status-detail">Running • Last execution: 5m ago</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-agent-status-item">
+                                <div class="dashboard-agent-status-indicator error"></div>
+                                <div class="dashboard-agent-status-info">
+                                    <span class="dashboard-agent-status-name">Email Parser Agent</span>
+                                    <span class="dashboard-agent-status-detail">Error • Connection timeout</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-agent-status-item">
+                                <div class="dashboard-agent-status-indicator active"></div>
+                                <div class="dashboard-agent-status-info">
+                                    <span class="dashboard-agent-status-name">Report Generator Agent</span>
+                                    <span class="dashboard-agent-status-detail">Running • Last execution: 1m ago</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-agent-status-item">
+                                <div class="dashboard-agent-status-indicator warning"></div>
+                                <div class="dashboard-agent-status-info">
+                                    <span class="dashboard-agent-status-name">API Gateway Agent</span>
+                                    <span class="dashboard-agent-status-detail">Warning • High latency</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Workflow Errors</h3>
+                        <div class="dashboard-card-actions">
+                            <a href="/dashboard/errors" class="dashboard-link">View all</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-error-list">
+                            <div class="dashboard-error-item">
+                                <div class="dashboard-error-icon error">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                    </svg>
+                                </div>
+                                <div class="dashboard-error-info">
+                                    <span class="dashboard-error-title">Email Parser Agent</span>
+                                    <span class="dashboard-error-detail">Connection timeout after 30s</span>
+                                    <span class="dashboard-error-time">2 minutes ago</span>
+                                </div>
+                                <a href="/dashboard/errors" class="dashboard-error-link">Inspect →</a>
+                            </div>
+                            <div class="dashboard-error-item">
+                                <div class="dashboard-error-icon error">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                    </svg>
+                                </div>
+                                <div class="dashboard-error-info">
+                                    <span class="dashboard-error-title">Data Sync Workflow</span>
+                                    <span class="dashboard-error-detail">Failed to authenticate with external API</span>
+                                    <span class="dashboard-error-time">15 minutes ago</span>
+                                </div>
+                                <a href="/dashboard/errors" class="dashboard-error-link">Inspect →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Execution Chart -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">API Execution Trends</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18"></path>
+                                <path d="m19 9-5 5-4-4-3 3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-chart-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 400 200" fill="none">
+                            <!-- Chart grid lines -->
+                            <line x1="0" y1="180" x2="400" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="140" x2="400" y2="140" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="60" x2="400" y2="60" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="20" x2="400" y2="20" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <!-- Chart line -->
+                            <polyline points="20,160 60,150 100,140 140,120 180,100 220,90 260,85 300,80 340,75 380,70" 
+                                stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Area fill -->
+                            <polygon points="20,160 60,150 100,140 140,120 180,100 220,90 260,85 300,80 340,75 380,70 380,180 20,180" 
+                                fill="rgba(59,130,246,0.1)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Recent Activity</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="/dashboard/activity" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Agent</th>
+                                    <th>Action</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2m ago</td>
+                                    <td>Data Processing Agent</td>
+                                    <td>Processed 1,247 records</td>
+                                    <td class="text-right"><span class="dashboard-status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5m ago</td>
+                                    <td>Customer Support Agent</td>
+                                    <td>Responded to 3 tickets</td>
+                                    <td class="text-right"><span class="dashboard-status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>8m ago</td>
+                                    <td>Email Parser Agent</td>
+                                    <td>Connection timeout</td>
+                                    <td class="text-right"><span class="dashboard-status-badge error">Error</span></td>
+                                </tr>
+                                <tr>
+                                    <td>12m ago</td>
+                                    <td>Report Generator Agent</td>
+                                    <td>Generated monthly report</td>
+                                    <td class="text-right"><span class="dashboard-status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>15m ago</td>
+                                    <td>Data Sync Workflow</td>
+                                    <td>Authentication failed</td>
+                                    <td class="text-right"><span class="dashboard-status-badge error">Error</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

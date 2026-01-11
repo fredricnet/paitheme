@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="docs-article">
+    <header class="docs-article-header">
+        <h1 class="docs-article-title">{{ .Title }}</h1>
+        {{- if .Description -}}
+        <p class="docs-article-description">{{ .Description }}</p>
+        {{- end -}}
+    </header>
+    
+    <div class="docs-article-content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}
+

@@ -1,0 +1,251 @@
+{{ define "main" }}
+{{- /* Special handling for icons page */ -}}
+{{- if eq .File.BaseFileName "icons" -}}
+<article class="docs-article">
+    <header class="docs-article-header">
+        <h1 class="docs-article-title">{{ .Title }}</h1>
+        {{- if .Description -}}
+        <p class="docs-article-description">{{ .Description }}</p>
+        {{- end -}}
+    </header>
+    
+    <div class="docs-article-content">
+        {{ .Content }}
+        
+        <div class="icons-search-wrapper" style="margin: 2rem 0;">
+            <input 
+                type="text" 
+                id="icon-search" 
+                placeholder="Search icons by name..." 
+                style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius); background: var(--bg-color); color: var(--text-color); font-size: 1rem;"
+            />
+        </div>
+        
+        <div class="icons-grid" id="icons-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; margin-top: 2rem;">
+            {{- range $name, $svg := site.Data.icons -}}
+            <div class="icon-item" data-name="{{ $name }}" style="display: flex; flex-direction: column; align-items: center; padding: 1rem; background: var(--accent-bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); transition: var(--transition); cursor: pointer; position: relative;" title="Click to copy: {{ $name }}">
+                <div class="icon-display" style="margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; height: 48px; width: 48px; color: var(--text-color);">
+                    {{- partial "utils/icon.html" (dict "name" $name "attributes" "height=32 width=32") -}}
+                </div>
+                <code class="icon-name" style="font-size: 0.75rem; color: var(--text-muted); text-align: center; word-break: break-all; line-height: 1.3;">{{ $name }}</code>
+            </div>
+            {{- end -}}
+        </div>
+        
+        <div id="copy-notification" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--accent-bg-card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1rem 1.5rem; box-shadow: var(--shadow-lg); display: none; z-index: 1000;">
+            <span style="color: var(--text-color);">Icon name copied!</span>
+        </div>
+        
+        <script>
+        (function() {
+            const searchInput = document.getElementById('icon-search');
+            const iconsGrid = document.getElementById('icons-grid');
+            const iconItems = iconsGrid.querySelectorAll('.icon-item');
+            const copyNotification = document.getElementById('copy-notification');
+            
+            // Search functionality
+            if (searchInput && iconItems.length > 0) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase().trim();
+                    
+                    iconItems.forEach(function(item) {
+                        const iconName = item.getAttribute('data-name').toLowerCase();
+                        if (iconName.includes(searchTerm)) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+                
+                // Copy to clipboard functionality
+                iconItems.forEach(function(item) {
+                    item.addEventListener('click', function() {
+                        const iconName = this.getAttribute('data-name');
+                        // Build shortcode string using character codes to avoid Hugo parsing
+                        const char123 = String.fromCharCode(123);
+                        const char60 = String.fromCharCode(60);
+                        const char62 = String.fromCharCode(62);
+                        const char125 = String.fromCharCode(125);
+                        const shortcode = char123 + char123 + char60 + ' icon name="' + iconName + '" ' + char62 + char125 + char125;
+                        
+                        // Copy to clipboard
+                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                            navigator.clipboard.writeText(shortcode).then(function() {
+                                showNotification();
+                            });
+                        } else {
+                            // Fallback for older browsers
+                            const textArea = document.createElement('textarea');
+                            textArea.value = shortcode;
+                            textArea.style.position = 'fixed';
+                            textArea.style.opacity = '0';
+                            document.body.appendChild(textArea);
+                            textArea.select();
+                            try {
+                                document.execCommand('copy');
+                                showNotification();
+                            } catch (err) {
+                                console.error('Failed to copy:', err);
+                            }
+                            document.body.removeChild(textArea);
+                        }
+                    });
+                    
+                    // Hover effect
+                    item.addEventListener('mouseenter', function() {
+                        this.style.borderColor = 'var(--primary-color)';
+                        this.style.transform = 'translateY(-2px)';
+                        this.style.boxShadow = 'var(--shadow-md)';
+                    });
+                    
+                    item.addEventListener('mouseleave', function() {
+                        this.style.borderColor = 'var(--border-color)';
+                        this.style.transform = 'translateY(0)';
+                        this.style.boxShadow = 'none';
+                    });
+                });
+                
+                function showNotification() {
+                    if (copyNotification) {
+                        copyNotification.style.display = 'block';
+                        setTimeout(function() {
+                            copyNotification.style.display = 'none';
+                        }, 2000);
+                    }
+                }
+            }
+        })();
+        </script>
+    </div>
+    
+    {{- /* Build flattened list of all styleguide pages, sorted by weight */ -}}
+    {{- $styleguideSection := site.GetPage "section" "dev/styleguide" -}}
+    {{- $allPages := slice -}}
+    {{- if $styleguideSection -}}
+        {{- /* Start with the styleguide index page */ -}}
+        {{- $allPages = $allPages | append $styleguideSection -}}
+        {{- /* Collect all pages from styleguide section */ -}}
+        {{- range $styleguideSection.Pages.ByWeight -}}
+            {{- $allPages = $allPages | append . -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- /* Find current page position and get prev/next */ -}}
+    {{- $prevPage := false -}}
+    {{- $nextPage := false -}}
+    {{- $currentIndex := -1 -}}
+    {{- range $index, $page := $allPages -}}
+        {{- if eq $page.RelPermalink $.RelPermalink -}}
+            {{- $currentIndex = $index -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if ge $currentIndex 0 -}}
+        {{- if gt $currentIndex 0 -}}
+            {{- $prevPage = index $allPages (sub $currentIndex 1) -}}
+        {{- end -}}
+        {{- if lt $currentIndex (sub (len $allPages) 1) -}}
+            {{- $nextPage = index $allPages (add $currentIndex 1) -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- if or (ne $prevPage false) (ne $nextPage false) -}}
+    <nav class="docs-nav">
+        {{- if ne $prevPage false -}}
+        <a href="{{ $prevPage.RelPermalink }}" class="docs-nav-link docs-nav-prev">
+            <div class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-left" "attributes" "height=20 width=20") -}}
+            </div>
+            <div class="docs-nav-content">
+                <div class="docs-nav-label">Previous</div>
+                <div class="docs-nav-title">{{ $prevPage.Title }}</div>
+            </div>
+        </a>
+        {{- end -}}
+        {{- if ne $nextPage false -}}
+        <a href="{{ $nextPage.RelPermalink }}" class="docs-nav-link docs-nav-next">
+            <div class="docs-nav-content">
+                <div class="docs-nav-label">Next</div>
+                <div class="docs-nav-title">{{ $nextPage.Title }}</div>
+            </div>
+            <div class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-right" "attributes" "height=20 width=20") -}}
+            </div>
+        </a>
+        {{- end -}}
+    </nav>
+    {{- end -}}
+</article>
+{{- else -}}
+<article class="docs-article">
+    <header class="docs-article-header">
+        <h1 class="docs-article-title">{{ .Title }}</h1>
+        {{- if .Description -}}
+        <p class="docs-article-description">{{ .Description }}</p>
+        {{- end -}}
+    </header>
+    
+    <div class="docs-article-content">
+        {{ .Content }}
+    </div>
+    
+    {{- /* Build flattened list of all styleguide pages, sorted by weight */ -}}
+    {{- $styleguideSection := site.GetPage "section" "dev/styleguide" -}}
+    {{- $allPages := slice -}}
+    {{- if $styleguideSection -}}
+        {{- /* Start with the styleguide index page */ -}}
+        {{- $allPages = $allPages | append $styleguideSection -}}
+        {{- /* Collect all pages from styleguide section */ -}}
+        {{- range $styleguideSection.Pages.ByWeight -}}
+            {{- $allPages = $allPages | append . -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- /* Find current page position and get prev/next */ -}}
+    {{- $prevPage := false -}}
+    {{- $nextPage := false -}}
+    {{- $currentIndex := -1 -}}
+    {{- range $index, $page := $allPages -}}
+        {{- if eq $page.RelPermalink $.RelPermalink -}}
+            {{- $currentIndex = $index -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if ge $currentIndex 0 -}}
+        {{- if gt $currentIndex 0 -}}
+            {{- $prevPage = index $allPages (sub $currentIndex 1) -}}
+        {{- end -}}
+        {{- if lt $currentIndex (sub (len $allPages) 1) -}}
+            {{- $nextPage = index $allPages (add $currentIndex 1) -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- if or (ne $prevPage false) (ne $nextPage false) -}}
+    <nav class="docs-nav">
+        {{- if ne $prevPage false -}}
+        <a href="{{ $prevPage.RelPermalink }}" class="docs-nav-link docs-nav-prev">
+            <div class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-left" "attributes" "height=20 width=20") -}}
+            </div>
+            <div class="docs-nav-content">
+                <div class="docs-nav-label">Previous</div>
+                <div class="docs-nav-title">{{ $prevPage.Title }}</div>
+            </div>
+        </a>
+        {{- end -}}
+        {{- if ne $nextPage false -}}
+        <a href="{{ $nextPage.RelPermalink }}" class="docs-nav-link docs-nav-next">
+            <div class="docs-nav-content">
+                <div class="docs-nav-label">Next</div>
+                <div class="docs-nav-title">{{ $nextPage.Title }}</div>
+            </div>
+            <div class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-right" "attributes" "height=20 width=20") -}}
+            </div>
+        </a>
+        {{- end -}}
+    </nav>
+    {{- end -}}
+</article>
+{{- end -}}
+{{ end }}
+

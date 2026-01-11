@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<!-- All content sections rendered from content/_index.md via shortcodes -->
+{{- if .Content -}}
+{{ .Content }}
+{{- else -}}
+<!-- Fallback content if no markdown provided -->
+{{ partial "hero/hero-fallback.html" . }}
+{{ partial "features/features-fallback.html" . }}
+{{- end -}}
+
+{{/* Testimonials section will be rendered from content/_index.md using shortcodes */}}
+
+{{/* Value proposition image section will be rendered from content/_index.md using shortcode */}}
+
+{{/* Value proposition features section will be rendered from content/_index.md using shortcode */}}
+
+{{/* FAQ section will be rendered from content/_index.md using shortcode */}}
+
+{{ end }}
+

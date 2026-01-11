@@ -1,0 +1,144 @@
+{{ define "main" }}
+<!-- Features Hero Section -->
+<section class="features-hero-section">
+    <div class="container">
+        <div class="features-hero-content">
+            <h1 class="features-hero-title">{{ .Title }}</h1>
+            {{- if .Description -}}
+            <p class="features-hero-subtitle">{{ .Description }}</p>
+            {{- end -}}
+        </div>
+    </div>
+</section>
+
+<!-- Features Video Section -->
+<section class="features-video-section">
+    <div class="container">
+        <div class="features-video-wrapper">
+            <img src="/images/features/thumbnail.webp" alt="Features preview" class="features-video-thumbnail" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="features-video-placeholder" style="display: none;">
+                <p>Features preview video</p>
+            </div>
+            <button class="features-video-play-button" aria-label="Play demo video">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Features Cards Section -->
+<section class="features-cards-section">
+    <div class="container">
+        <div class="features-cards-grid">
+            {{- if and .Content (gt (len .Content) 0) -}}
+            {{ .Content }}
+            {{- else -}}
+            <!-- Fallback: If no content, show default cards -->
+            {{ partial "platform/feature-cards-fallback.html" . }}
+            {{- end -}}
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="testimonials-header">
+            <h2 class="section-title">What Our Customers Are Saying</h2>
+            <p class="section-subtitle">Don't just take our word for it—see how our platform is empowering teams to achieve more, streamline workflows, and transform their day-to-day operations.</p>
+            <div class="testimonials-stars-wrapper">
+                <div class="testimonials-stars">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                    </svg>
+                </div>
+            </div>
+            <p class="testimonials-label">Real Results.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <a href="https://mercury.com" target="_blank" class="testimonial-logo-link">
+                        <img src="/images/logos/mercury.svg" alt="Mercury" class="testimonial-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                        <span style="display: none;" class="testimonial-company">Mercury</span>
+                    </a>
+                </div>
+                <p class="testimonial-text">"Since integrating Performance's unified dashboard, we've consolidated all our Mercury accounts into one view—no more juggling multiple logins or spreadsheets."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JD</div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">John Doe</div>
+                        <div class="testimonial-role">Mercury, Inc.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <a href="https://watershed.com" target="_blank" class="testimonial-logo-link">
+                        <img src="/images/logos/watershed.svg" alt="Watershed" class="testimonial-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                        <span style="display: none;" class="testimonial-company">Watershed</span>
+                    </a>
+                </div>
+                <p class="testimonial-text">"Performance has been a game-changer for our Watershed team—real-time balances and built-in analytics keep us on top of cash flow like never before."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">JS</div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Jane Smith</div>
+                        <div class="testimonial-role">Watershed Labs</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <a href="https://retool.com" target="_blank" class="testimonial-logo-link">
+                        <img src="/images/logos/retool.svg" alt="Retool" class="testimonial-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                        <span style="display: none;" class="testimonial-company">Retool</span>
+                    </a>
+                </div>
+                <p class="testimonial-text">"Building internal tools with Retool used to feel disjointed—now with Performance's APIs and dashboards, everything flows seamlessly in one place."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AL</div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Alex Li</div>
+                        <div class="testimonial-role">Retool</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-top">
+                    <a href="https://descript.com" target="_blank" class="testimonial-logo-link">
+                        <img src="/images/logos/descript.svg" alt="Descript" class="testimonial-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                        <span style="display: none;" class="testimonial-company">Descript</span>
+                    </a>
+                </div>
+                <p class="testimonial-text">"Our whole content team loves how Performance surfaces real-time spending data alongside our Descript workflows—insights we never had before."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">EN</div>
+                    <div class="testimonial-info">
+                        <div class="testimonial-name">Emily Nguyen</div>
+                        <div class="testimonial-role">Descript</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,204 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Views</span>
+                    </div>
+                    <div class="dashboard-stat-value">124.5K</div>
+                    <div class="dashboard-stat-change positive">+22.3% vs last month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Engagement Rate</span>
+                    </div>
+                    <div class="dashboard-stat-value">6.8%</div>
+                    <div class="dashboard-stat-change positive">+1.2% improvement</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Content Pieces</span>
+                    </div>
+                    <div class="dashboard-stat-value">247</div>
+                    <div class="dashboard-stat-change positive">+18 new this month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Time on Page</span>
+                    </div>
+                    <div class="dashboard-stat-value">4:32</div>
+                    <div class="dashboard-stat-change positive">+18.7% increase</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Top Performing Content</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="#" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Content Title</th>
+                                    <th>Type</th>
+                                    <th>Views</th>
+                                    <th>Engagement</th>
+                                    <th class="text-right">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10 Ways to Improve Performance</td>
+                                    <td>Blog Post</td>
+                                    <td>18,450</td>
+                                    <td class="positive">8.4%</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 95%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Product Launch Video</td>
+                                    <td>Video</td>
+                                    <td>15,280</td>
+                                    <td class="positive">7.2%</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 88%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Industry Trends 2024</td>
+                                    <td>Whitepaper</td>
+                                    <td>12,640</td>
+                                    <td class="positive">9.1%</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 92%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Customer Success Stories</td>
+                                    <td>Case Study</td>
+                                    <td>10,820</td>
+                                    <td class="positive">6.8%</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 85%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>How-to Guide: Getting Started</td>
+                                    <td>Blog Post</td>
+                                    <td>9,240</td>
+                                    <td class="positive">5.9%</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 78%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Content by Type</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-content-types">
+                            <div class="dashboard-content-type-item">
+                                <span class="dashboard-content-type-label">Blog Posts</span>
+                                <span class="dashboard-content-type-value">124</span>
+                                <div class="dashboard-content-type-bar">
+                                    <div class="dashboard-content-type-bar-fill" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-type-item">
+                                <span class="dashboard-content-type-label">Videos</span>
+                                <span class="dashboard-content-type-value">48</span>
+                                <div class="dashboard-content-type-bar">
+                                    <div class="dashboard-content-type-bar-fill" style="width: 19%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-type-item">
+                                <span class="dashboard-content-type-label">Whitepapers</span>
+                                <span class="dashboard-content-type-value">32</span>
+                                <div class="dashboard-content-type-bar">
+                                    <div class="dashboard-content-type-bar-fill" style="width: 13%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-type-item">
+                                <span class="dashboard-content-type-label">Case Studies</span>
+                                <span class="dashboard-content-type-value">28</span>
+                                <div class="dashboard-content-type-bar">
+                                    <div class="dashboard-content-type-bar-fill" style="width: 11%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-type-item">
+                                <span class="dashboard-content-type-label">Other</span>
+                                <span class="dashboard-content-type-value">15</span>
+                                <div class="dashboard-content-type-bar">
+                                    <div class="dashboard-content-type-bar-fill" style="width: 6%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Content Engagement Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">6.0%</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 113%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">6.8%</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value positive">+0.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

@@ -1,0 +1,204 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Channels</span>
+                    </div>
+                    <div class="dashboard-stat-value">8</div>
+                    <div class="dashboard-stat-change neutral">Active channels</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Spend</span>
+                    </div>
+                    <div class="dashboard-stat-value">$105.6K</div>
+                    <div class="dashboard-stat-change neutral">This month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Channel ROI</span>
+                    </div>
+                    <div class="dashboard-stat-value">3.8x</div>
+                    <div class="dashboard-stat-change positive">+12.3% increase</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Best Performing</span>
+                    </div>
+                    <div class="dashboard-stat-value">Email</div>
+                    <div class="dashboard-stat-change positive">4.5x ROI</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Channel Performance</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Channel</th>
+                                    <th>Spend</th>
+                                    <th>Leads</th>
+                                    <th>Cost/Lead</th>
+                                    <th>ROI</th>
+                                    <th class="text-right">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Email Marketing</td>
+                                    <td>$32.4K</td>
+                                    <td>847</td>
+                                    <td>$38</td>
+                                    <td class="positive">4.5x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 100%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Social Media</td>
+                                    <td>$28.6K</td>
+                                    <td>624</td>
+                                    <td>$46</td>
+                                    <td class="positive">3.9x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 87%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PPC/Paid Search</td>
+                                    <td>$24.2K</td>
+                                    <td>542</td>
+                                    <td>$45</td>
+                                    <td class="positive">3.6x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 80%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Content Marketing</td>
+                                    <td>$20.4K</td>
+                                    <td>489</td>
+                                    <td>$42</td>
+                                    <td class="positive">4.2x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 93%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>SEO/Organic</td>
+                                    <td>$0</td>
+                                    <td>345</td>
+                                    <td>$0</td>
+                                    <td class="positive">∞</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 76%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Channel Spend Distribution</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-channel-spend">
+                            <div class="dashboard-channel-spend-item">
+                                <span class="dashboard-channel-spend-label">Email</span>
+                                <span class="dashboard-channel-spend-value">$32.4K</span>
+                                <div class="dashboard-channel-spend-bar">
+                                    <div class="dashboard-channel-spend-bar-fill" style="width: 31%"></div>
+                                </div>
+                                <span class="dashboard-channel-spend-percentage">31%</span>
+                            </div>
+                            <div class="dashboard-channel-spend-item">
+                                <span class="dashboard-channel-spend-label">Social Media</span>
+                                <span class="dashboard-channel-spend-value">$28.6K</span>
+                                <div class="dashboard-channel-spend-bar">
+                                    <div class="dashboard-channel-spend-bar-fill" style="width: 27%"></div>
+                                </div>
+                                <span class="dashboard-channel-spend-percentage">27%</span>
+                            </div>
+                            <div class="dashboard-channel-spend-item">
+                                <span class="dashboard-channel-spend-label">PPC</span>
+                                <span class="dashboard-channel-spend-value">$24.2K</span>
+                                <div class="dashboard-channel-spend-bar">
+                                    <div class="dashboard-channel-spend-bar-fill" style="width: 23%"></div>
+                                </div>
+                                <span class="dashboard-channel-spend-percentage">23%</span>
+                            </div>
+                            <div class="dashboard-channel-spend-item">
+                                <span class="dashboard-channel-spend-label">Content</span>
+                                <span class="dashboard-channel-spend-value">$20.4K</span>
+                                <div class="dashboard-channel-spend-bar">
+                                    <div class="dashboard-channel-spend-bar-fill" style="width: 19%"></div>
+                                </div>
+                                <span class="dashboard-channel-spend-percentage">19%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Channel ROI Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target ROI</span>
+                                <span class="dashboard-scorecard-value">3.5x</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 109%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual ROI</span>
+                                <span class="dashboard-scorecard-value">3.8x</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value positive">+0.3x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

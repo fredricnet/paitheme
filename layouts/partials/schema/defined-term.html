@@ -1,0 +1,64 @@
+{{- /*
+    DefinedTerm Schema (JSON-LD)
+    
+    Outputs DefinedTerm structured data for dictionary/glossary entries.
+    Perfect for terminology pages that AI can reference.
+    
+    Reference: https://schema.org/DefinedTerm
+*/ -}}
+
+{{- $siteConfig := site.Data.site -}}
+{{- $schema := $siteConfig.schema -}}
+{{- $org := $schema.organization -}}
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": {{ .Title | jsonify }},
+    {{- if .Description }}
+    "description": {{ .Description | jsonify }},
+    {{- end }}
+    "url": {{ .Permalink | jsonify }},
+    "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": {{ .Parent.Title | default "Dictionary" | jsonify }},
+        "url": {{ .Parent.Permalink | default (printf "%sdictionary/" site.BaseURL) | jsonify }}
+    },
+    {{- if not .Date.IsZero }}
+    "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+    {{- end }}
+    {{- if not .Lastmod.IsZero }}
+    "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+    {{- end }}
+    {{- if $org }}
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ $org.name | default site.Title | jsonify }}
+    },
+    {{- end }}
+    "inLanguage": {{ site.Language.Lang | default "en" | jsonify }}
+}
+</script>
+
+{{- /*
+    Also output a FAQPage schema if the term has Q&A structure
+    This helps with Google's FAQ rich results
+*/ -}}
+{{- if .Description -}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+        "@type": "Question",
+        "name": {{ printf "What is %s?" .Title | jsonify }},
+        "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ .Description | jsonify }}
+        }
+    }]
+}
+</script>
+{{- end -}}
+

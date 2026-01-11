@@ -1,0 +1,126 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Q4 Forecast</span>
+                    </div>
+                    <div class="dashboard-stat-value">$2.8M</div>
+                    <div class="dashboard-stat-change positive">+16.7% growth</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Confidence Level</span>
+                    </div>
+                    <div class="dashboard-stat-value">87%</div>
+                    <div class="dashboard-stat-change positive">High confidence</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Forecast Accuracy</span>
+                    </div>
+                    <div class="dashboard-stat-value">94.2%</div>
+                    <div class="dashboard-stat-change positive">+2.1% improvement</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Risk Score</span>
+                    </div>
+                    <div class="dashboard-stat-value">Low</div>
+                    <div class="dashboard-stat-change positive">Stable outlook</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Revenue Forecast</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-forecast-scorecard">
+                            <div class="dashboard-forecast-item">
+                                <span class="dashboard-forecast-label">Current</span>
+                                <span class="dashboard-forecast-value">$2.4M</span>
+                            </div>
+                            <div class="dashboard-forecast-item">
+                                <span class="dashboard-forecast-label">Next Month</span>
+                                <span class="dashboard-forecast-value">$2.6M</span>
+                                <span class="dashboard-forecast-change positive">+8.3%</span>
+                            </div>
+                            <div class="dashboard-forecast-item">
+                                <span class="dashboard-forecast-label">Next Quarter</span>
+                                <span class="dashboard-forecast-value">$2.8M</span>
+                                <span class="dashboard-forecast-change positive">+16.7%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Expense Forecast</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-forecast-scorecard">
+                            <div class="dashboard-forecast-item">
+                                <span class="dashboard-forecast-label">Current</span>
+                                <span class="dashboard-forecast-value">$1.8M</span>
+                            </div>
+                            <div class="dashboard-forecast-item">
+                                <span class="dashboard-forecast-label">Next Month</span>
+                                <span class="dashboard-forecast-value">$1.85M</span>
+                                <span class="dashboard-forecast-change negative">+2.8%</span>
+                            </div>
+                            <div class="dashboard-forecast-item">
+                                <span class="dashboard-forecast-label">Next Quarter</span>
+                                <span class="dashboard-forecast-value">$1.9M</span>
+                                <span class="dashboard-forecast-change negative">+5.6%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Forecast Trend</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-chart-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="300" viewBox="0 0 600 300" fill="none">
+                            <line x1="0" y1="250" x2="600" y2="250" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <!-- Historical -->
+                            <polyline points="30,200 90,180 150,160 210,140 270,120 330,100 390,90 450,80" 
+                                stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Forecast -->
+                            <polyline points="450,80 510,70 570,60" 
+                                stroke="#10b981" stroke-width="3" stroke-dasharray="5,5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polygon points="30,200 90,180 150,160 210,140 270,120 330,100 390,90 450,80 450,250 30,250" 
+                                fill="rgba(16,185,129,0.1)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

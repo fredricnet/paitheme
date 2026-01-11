@@ -1,0 +1,15 @@
+{{- /*
+    Global Schema Partial
+    
+    Includes Organization, WebSite (homepage only), WebPage, and Breadcrumb schemas.
+    Used across all baseof.html templates.
+*/ -}}
+
+{{- /* JSON-LD Structured Data for SEO & AI Search */ -}}
+{{- partial "schema/organization.html" . -}}
+{{- if .IsHome -}}
+{{- partial "schema/website.html" . -}}
+{{- end -}}
+{{- partial "schema/webpage.html" . -}}
+{{- partial "schema/breadcrumb.html" . -}}
+

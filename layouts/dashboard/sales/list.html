@@ -1,0 +1,281 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Revenue</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">$2.4M</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +24.5% vs last month
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Active Deals</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">124</div>
+                    <div class="dashboard-stat-change positive">+18 new this month</div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Win Rate</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">34.2%</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +3.8% improvement
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Deal Size</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M3 3v18h18"></path>
+                            <path d="m7 12 5 5 5-5"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">$19.4K</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +12.3% increase
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance AI Sales Impact -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Performance AI Sales Impact</h3>
+                    <div class="dashboard-card-actions">
+                        <span class="dashboard-savings-total">Total Value: <strong>$412,800</strong></span>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-savings-grid">
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Sales Process Automation</span>
+                                <span class="dashboard-savings-percentage">+42%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$156,200</div>
+                            <div class="dashboard-savings-description">AI-powered sales workflows reduced deal cycle time by 28% and increased close rates</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 42%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Lead Qualification</span>
+                                <span class="dashboard-savings-percentage">+28%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$98,400</div>
+                            <div class="dashboard-savings-description">AI lead scoring improved qualification accuracy by 35%, reducing wasted sales time</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 28%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Forecast Accuracy</span>
+                                <span class="dashboard-savings-percentage">+18%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$64,800</div>
+                            <div class="dashboard-savings-description">Predictive analytics improved forecast accuracy from 68% to 92%</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 18%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Customer Insights</span>
+                                <span class="dashboard-savings-percentage">+8%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$28,800</div>
+                            <div class="dashboard-savings-description">AI-powered customer analysis increased upsell/cross-sell success by 24%</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 8%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Sales Operations</span>
+                                <span class="dashboard-savings-percentage">+4%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$64,600</div>
+                            <div class="dashboard-savings-description">Automated reporting and data entry saved 450 hours/month in administrative tasks</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 4%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Scorecards -->
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Revenue Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">$2.5M</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 96%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">$2.4M</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value negative">-$100K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Deals Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">130</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">124</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value negative">-6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Pipeline Visualization -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Sales Pipeline Overview</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-sales-pipeline">
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Prospecting</div>
+                            <div class="dashboard-pipeline-value">$1.2M</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">48 deals</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Qualification</div>
+                            <div class="dashboard-pipeline-value">$840K</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 70%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">34 deals</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Proposal</div>
+                            <div class="dashboard-pipeline-value">$580K</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 48%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">24 deals</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Negotiation</div>
+                            <div class="dashboard-pipeline-value">$320K</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 27%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">18 deals</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Closed Won</div>
+                            <div class="dashboard-pipeline-value">$2.4M</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">124 deals</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales Trend Chart -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Sales Performance Trend</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-chart-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="250" viewBox="0 0 600 250" fill="none">
+                            <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <polyline points="30,180 90,170 150,160 210,150 270,140 330,130 390,120 450,110 510,100 570,90" 
+                                stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polygon points="30,180 90,170 150,160 210,150 270,140 330,130 390,120 450,110 510,100 570,90 570,200 30,200" 
+                                fill="rgba(16,185,129,0.15)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,19 @@
+{{- /*
+  Cards Shortcode
+  Container for multiple cards in a grid layout
+  
+  @param {string} columns Number of columns (default: 3)
+  @param {string} class Additional CSS classes
+  
+  @example {{< cards columns="2" >}}
+    {{< card title="Card 1" >}}Content{{< /card >}}
+    {{< card title="Card 2" >}}Content{{< /card >}}
+  {{< /cards >}}
+*/ -}}
+{{- $columns := .Get "columns" | default "3" -}}
+{{- $class := .Get "class" | default "" -}}
+
+<div class="pai-cards" data-columns="{{ $columns }}{{ if $class }} {{ $class }}{{ end }}">
+    {{ .Inner }}
+</div>
+

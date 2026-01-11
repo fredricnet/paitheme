@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {{- /* Theme initialization script - always use dark mode */ -}}
+    <script>
+        (function() {
+            // Always enforce dark mode - remove any light theme attribute
+            document.documentElement.removeAttribute('data-theme');
+        })();
+    </script>
+    
+    {{- /* Title */ -}}
+    <title>{{ .Title }} | {{ site.Title }}</title>
+    
+    {{- /* Canonical URL */ -}}
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    {{- /* Robots meta tag - noindex for dev pages */ -}}
+    <meta name="robots" content="noindex, nofollow">
+    
+    {{- /* Favicon */ -}}
+    <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+    <link rel="alternate icon" href="{{ "favicon.svg" | relURL }}">
+    
+    {{- /* Font preconnect for performance */ -}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    {{- /* Google Fonts - Inter for modern look */ -}}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    {{- /* Stylesheet */ -}}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{- /* Custom CSS Overrides */ -}}
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+    
+    {{- /* Custom styles for background page */ -}}
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            min-height: 1440px;
+            height: 1440px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    {{- /* Empty body - only shows background */ -}}
+</body>
+</html>
+

@@ -1,0 +1,277 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <!-- Time Period Filter -->
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <!-- Marketing KPIs -->
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Leads</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">2,847</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +18.5% vs last month
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Conversion Rate</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">4.2%</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +0.8% improvement
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Marketing ROI</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">3.8x</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +12.3% increase
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Cost per Lead</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M3 3v18h18"></path>
+                            <path d="m7 12 5 5 5-5"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">$42</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                        -15.2% reduction
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance AI Marketing Impact -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Performance AI Marketing Impact</h3>
+                    <div class="dashboard-card-actions">
+                        <span class="dashboard-savings-total">Total Value: <strong>$324,500</strong></span>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-savings-grid">
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Lead Generation Automation</span>
+                                <span class="dashboard-savings-percentage">+38%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$124,200</div>
+                            <div class="dashboard-savings-description">AI-powered lead scoring and nurturing increased qualified leads by 1,240/month</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 38%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Content Optimization</span>
+                                <span class="dashboard-savings-percentage">+24%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$78,400</div>
+                            <div class="dashboard-savings-description">AI content recommendations improved engagement rates by 34%</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 24%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Campaign Performance</span>
+                                <span class="dashboard-savings-percentage">+18%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$58,500</div>
+                            <div class="dashboard-savings-description">Predictive analytics optimized ad spend, reducing waste by 28%</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 18%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Channel Attribution</span>
+                                <span class="dashboard-savings-percentage">+12%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$39,000</div>
+                            <div class="dashboard-savings-description">Multi-touch attribution improved budget allocation efficiency by 22%</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 12%"></div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-savings-item">
+                            <div class="dashboard-savings-header">
+                                <span class="dashboard-savings-label">Marketing Operations</span>
+                                <span class="dashboard-savings-percentage">+8%</span>
+                            </div>
+                            <div class="dashboard-savings-value">$24,400</div>
+                            <div class="dashboard-savings-description">Automated workflows saved 320 hours/month in manual tasks</div>
+                            <div class="dashboard-savings-bar">
+                                <div class="dashboard-savings-bar-fill" style="width: 8%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Scorecards -->
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Lead Generation Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">3,000</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">2,847</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value negative">-153</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Marketing Spend Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Budget</span>
+                                <span class="dashboard-scorecard-value">$120K</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Spent</span>
+                                <span class="dashboard-scorecard-value">$105.6K</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Remaining</span>
+                                <span class="dashboard-scorecard-value positive">$14.4K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Funnel -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Marketing Funnel Performance</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-marketing-funnel">
+                        <div class="dashboard-funnel-stage">
+                            <div class="dashboard-funnel-label">Awareness</div>
+                            <div class="dashboard-funnel-bar" style="width: 100%">
+                                <div class="dashboard-funnel-value">12,450</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-funnel-stage">
+                            <div class="dashboard-funnel-label">Interest</div>
+                            <div class="dashboard-funnel-bar" style="width: 65%">
+                                <div class="dashboard-funnel-value">8,092</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-funnel-stage">
+                            <div class="dashboard-funnel-label">Consideration</div>
+                            <div class="dashboard-funnel-bar" style="width: 42%">
+                                <div class="dashboard-funnel-value">5,229</div>
+                            </div>
+                        </div>
+                        <div class="dashboard-funnel-stage">
+                            <div class="dashboard-funnel-label">Conversion</div>
+                            <div class="dashboard-funnel-bar" style="width: 23%">
+                                <div class="dashboard-funnel-value">2,847</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Trend Chart -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Marketing Performance Trend</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-chart-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="250" viewBox="0 0 600 250" fill="none">
+                            <!-- Grid lines -->
+                            <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <!-- Leads line -->
+                            <polyline points="30,150 90,140 150,130 210,120 270,110 330,100 390,95 450,90 510,85 570,80" 
+                                stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Area fill -->
+                            <polygon points="30,150 90,140 150,130 210,120 270,110 330,100 390,95 450,90 510,85 570,80 570,200 30,200" 
+                                fill="rgba(16,185,129,0.15)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,57 @@
+# Demo site configuration for PAI Theme
+
+# Brand / Logo
+brand:
+  name: "PAI Theme"
+  logo:
+    use_svg_icon: true
+    alt: "PAI Theme Logo"
+  favicon: "/brand/favicon.svg"
+
+# Header
+header:
+  cta:
+    text: "Get Started"
+    url: "/docs/"
+    style: "btn-primary"
+
+# Footer
+footer:
+  sections:
+    - title: "Theme"
+      links:
+        - text: "Documentation"
+          url: "/docs/"
+        - text: "Dictionary"
+          url: "/dictionary/"
+        - text: "Blog"
+          url: "/blog/"
+        - text: "Styleguide"
+          url: "/dev/styleguide/"
+  
+  social:
+    - platform: "github"
+      url: "https://github.com/fredricnet/pai-theme"
+      icon: "github"
+  
+  copyright:
+    text: "PAI Theme"
+  
+  legal:
+    - text: "License"
+      url: "/docs/license"
+
+# Schema / Structured Data
+schema:
+  organization:
+    name: "PAI Theme"
+    description: "A modern, dark-mode Hugo theme"
+    url: "https://github.com/fredricnet/pai-theme"
+    logo: "https://github.com/fredricnet/pai-theme/static/brand/logo.svg"
+  
+  website:
+    search_enabled: false
+  
+  default_author:
+    name: "PAI Theme"
+    url: "https://github.com/fredricnet/pai-theme"

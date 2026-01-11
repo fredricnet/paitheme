@@ -1,0 +1,45 @@
+{{/* Chart Section Shortcode
+Parameters:
+- title: Section title (required)
+- text: Section text (required)
+- cta-text: CTA button text (optional)
+- cta-link: CTA button URL (optional)
+- image: Image path (required)
+- image-left: Whether image should be on the left (optional, default: "false")
+- tag-text: Text for the tag badge (optional)
+- tag-icon: Icon type for tag badge (optional, default: "star")
+- tag-icon-count: Number of icons in tag badge (optional, default: 5)
+- tag-icon-color: Color of tag icons (optional, default: "#3b82f6")
+- published: Whether to render this section (optional, default: "true")
+*/}}
+{{- $published := .Get "published" | default "true" -}}
+{{- if ne $published "false" -}}
+{{- $title := .Get "title" -}}
+{{- $text := .Get "text" -}}
+{{- $ctaText := .Get "cta-text" -}}
+{{- $ctaLink := .Get "cta-link" -}}
+{{- $image := .Get "image" -}}
+{{- $imageLeft := .Get "image-left" | default "false" -}}
+
+<section class="chart-section">
+    <div class="container">
+        <div class="chart-wrapper {{ if eq $imageLeft " true" }}image-left{{ end }}">
+            <div class="chart-content">
+                {{- partial "tag-badge.html" (dict "text" (.Get "tag-text") "icon" (.Get "tag-icon") "count" (.Get
+                "tag-icon-count") "color" (.Get "tag-icon-color")) -}}
+
+                <h2 class="chart-title">{{ $title }}</h2>
+                <p class="chart-description">{{ $text }}</p>
+                {{- if $ctaText -}}
+                <a href="{{ $ctaLink }}" class="btn btn-primary">{{ $ctaText }}</a>
+                {{- end -}}
+            </div>
+            <div class="chart-visual">
+                <div class="chart-container">
+                    <img src="{{ $image }}" alt="{{ $title }}" class="chart-image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{- end -}}

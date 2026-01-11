@@ -1,0 +1,56 @@
+{{ define "main" }}
+<!-- FAQ Hero Section -->
+<section class="faq-hero-section">
+    <div class="container">
+        <div class="faq-hero-content">
+            <h1 class="hero-title">{{ .Title }}</h1>
+            {{- if .Description -}}
+            <p class="hero-description">{{ .Description }}</p>
+            {{- end -}}
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        {{- $categories := slice "Support" "Account" "Features" "Security" "Other" -}}
+        {{- range $categories -}}
+            {{- $category := . -}}
+            {{- $faqs := where $.Pages "Params.category" $category -}}
+            {{- $sortedFaqs := sort $faqs "Params.index" "asc" -}}
+            {{- if $sortedFaqs -}}
+                <div class="faq-category">
+                    <h2 class="faq-category-title">{{ $category }}</h2>
+                    {{- if eq $category "Support" -}}
+                        <p class="faq-category-description">Need help using Performance? Our team, docs, and community are ready to assist.</p>
+                    {{- else if eq $category "Account" -}}
+                        <p class="faq-category-description">Everything related to creating, managing, and securing your Performance account.</p>
+                    {{- else if eq $category "Features" -}}
+                        <p class="faq-category-description">Discover what Performance can do and learn how to tailor the platform to your workflow.</p>
+                    {{- else if eq $category "Security" -}}
+                        <p class="faq-category-description">We take security seriously. These FAQs explain how we keep your data safe.</p>
+                    {{- else if eq $category "Other" -}}
+                        <p class="faq-category-description">Pricing, integrations, export options, and anything else that doesn't fit above.</p>
+                    {{- end -}}
+                    <div class="faq-list">
+                        {{- range $sortedFaqs -}}
+                        <div class="faq-item">
+                            <button class="faq-question" type="button">
+                                {{ .Title }}
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    {{ .Content }}
+                                </div>
+                            </div>
+                        </div>
+                        {{- end -}}
+                    </div>
+                </div>
+            {{- end -}}
+        {{- end -}}
+    </div>
+</section>
+{{ end }}
+

@@ -1,0 +1,20 @@
+{{- /*
+  Tabs Shortcode
+  Creates a tabbed interface
+  
+  @param {string} id Unique identifier for the tabs group
+  @param {string} class Additional CSS classes
+  
+  @example {{< tabs id="example" >}}
+    {{< tab title="Tab 1" >}}Content 1{{< /tab >}}
+    {{< tab title="Tab 2" >}}Content 2{{< /tab >}}
+  {{< /tabs >}}
+*/ -}}
+{{- $id := .Get "id" | default (printf "tabs-%d" now.Unix) -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $content := .Inner -}}
+
+<div class="pai-tabs{{ if $class }} {{ $class }}{{ end }}" data-tabs-id="{{ $id }}">
+    {{ $content | markdownify }}
+</div>
+

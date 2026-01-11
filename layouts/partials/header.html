@@ -1,0 +1,36 @@
+{{- /* 
+    Site Header Partial
+    
+    Configuration via data/site.yaml:
+    - header.cta.text: Button text
+    - header.cta.url: Button URL
+    - header.cta.style: Button style class (btn-primary, btn-secondary, btn-ghost)
+    
+    Navigation items from hugo.yaml menus.main
+*/ -}}
+
+{{- $siteConfig := site.Data.site -}}
+{{- $header := $siteConfig.header -}}
+
+<header class="site-header">
+    <div class="container">
+        {{- partial "brand/logo.html" (dict "context" .) -}}
+        <nav class="nav-menu" id="nav-menu">
+            {{- range site.Menus.main -}}
+            <a href="{{ .URL }}" class="nav-link{{- if $.IsMenuCurrent "main" . }} active{{- end -}}">{{ .Name }}</a>
+            {{- end -}}
+        </nav>
+        <div class="header-actions">
+            {{- if and $header $header.cta -}}
+            <a href="{{ $header.cta.url | default "/contact" }}" class="btn {{ $header.cta.style | default "btn-secondary" }}">{{ $header.cta.text | default "Login" }}</a>
+            {{- else -}}
+            <a href="/contact" class="btn btn-secondary">Login</a>
+            {{- end -}}
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,203 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Active Campaigns</span>
+                    </div>
+                    <div class="dashboard-stat-value">24</div>
+                    <div class="dashboard-stat-change positive">8 running</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Spend</span>
+                    </div>
+                    <div class="dashboard-stat-value">$105.6K</div>
+                    <div class="dashboard-stat-change neutral">This month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. ROI</span>
+                    </div>
+                    <div class="dashboard-stat-value">3.8x</div>
+                    <div class="dashboard-stat-change positive">+12.3% increase</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Campaign CTR</span>
+                    </div>
+                    <div class="dashboard-stat-value">4.2%</div>
+                    <div class="dashboard-stat-change positive">+0.8% improvement</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Top Performing Campaigns</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="#" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Campaign</th>
+                                    <th>Status</th>
+                                    <th>Spend</th>
+                                    <th>Leads</th>
+                                    <th>ROI</th>
+                                    <th class="text-right">Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Q4 Product Launch</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td>$24,500</td>
+                                    <td>847</td>
+                                    <td class="positive">4.2x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 95%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Brand Awareness 2024</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td>$18,200</td>
+                                    <td>624</td>
+                                    <td class="positive">3.9x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 88%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email Nurture Series</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td>$12,800</td>
+                                    <td>489</td>
+                                    <td class="positive">4.5x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 92%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Social Media Push</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td>$15,600</td>
+                                    <td>542</td>
+                                    <td class="positive">3.6x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 85%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Webinar Promotion</td>
+                                    <td><span class="dashboard-status-badge">Paused</span></td>
+                                    <td>$8,400</td>
+                                    <td>312</td>
+                                    <td class="positive">3.2x</td>
+                                    <td class="text-right">
+                                        <div class="dashboard-performance-bar">
+                                            <div class="dashboard-performance-fill" style="width: 78%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Campaign Performance by Channel</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-channel-performance">
+                            <div class="dashboard-channel-item">
+                                <span class="dashboard-channel-label">Email</span>
+                                <span class="dashboard-channel-value">$32.4K</span>
+                                <div class="dashboard-channel-bar">
+                                    <div class="dashboard-channel-bar-fill" style="width: 31%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-channel-item">
+                                <span class="dashboard-channel-label">Social Media</span>
+                                <span class="dashboard-channel-value">$28.6K</span>
+                                <div class="dashboard-channel-bar">
+                                    <div class="dashboard-channel-bar-fill" style="width: 27%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-channel-item">
+                                <span class="dashboard-channel-label">PPC</span>
+                                <span class="dashboard-channel-value">$24.2K</span>
+                                <div class="dashboard-channel-bar">
+                                    <div class="dashboard-channel-bar-fill" style="width: 23%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-channel-item">
+                                <span class="dashboard-channel-label">Content</span>
+                                <span class="dashboard-channel-value">$20.4K</span>
+                                <div class="dashboard-channel-bar">
+                                    <div class="dashboard-channel-bar-fill" style="width: 19%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Campaign ROI Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target ROI</span>
+                                <span class="dashboard-scorecard-value">3.5x</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 109%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual ROI</span>
+                                <span class="dashboard-scorecard-value">3.8x</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value positive">+0.3x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

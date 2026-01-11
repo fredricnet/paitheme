@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+    {{- partial "head/meta.html" . -}}
+    
+    {{- /* Global JSON-LD Schemas */ -}}
+    {{- partial "head/schema-global.html" . -}}
+    {{- if .IsPage -}}
+    {{- partial "schema/tech-article.html" . -}}
+    {{- end -}}
+    
+    {{- /* Force all nav groups to be collapsed on initial load */ -}}
+    <style>
+        .docs-nav-group-content { display: none !important; }
+        .docs-nav-group.is-expanded > .docs-nav-group-content { display: block !important; }
+        /* Hide TOC for styleguide */
+        .docs-toc { display: none !important; }
+        /* Make content use full width when TOC is hidden */
+        .docs-main { 
+            max-width: 100% !important; 
+            grid-column: 2 / -1 !important;
+        }
+        .docs-content { 
+            max-width: 100% !important; 
+            padding: 0 2rem !important;
+        }
+    </style>
+    
+    {{- block "head" . }}{{ end -}}
+</head>
+<body class="docs-layout">
+    {{- partial "header.html" . -}}
+
+    <div class="docs-container">
+        {{- partial "docs/sidebar.html" . -}}
+        
+        <main class="docs-main">
+            <div class="docs-content">
+                {{- block "main" . }}{{ end -}}
+            </div>
+        </main>
+    </div>
+
+    {{- partial "footer.html" . -}}
+
+    {{- /* JavaScript */ -}}
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    <script src="{{ "js/docs.js" | relURL }}"></script>
+    {{- block "scripts" . }}{{ end -}}
+</body>
+</html>
+

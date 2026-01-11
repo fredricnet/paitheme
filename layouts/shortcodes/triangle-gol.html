@@ -1,0 +1,13 @@
+{{/* 
+  Triangle Game of Life Shortcode
+  Parameters:
+  - width: Container width (optional, default: 800)
+  - height: Container height (optional, default: 600)
+  
+  Usage:
+  {{< triangle-gol width="800" height="600" >}}
+*/}}
+{{- $width := .Get "width" | default 800 -}}
+{{- $height := .Get "height" | default 600 -}}
+{{- partial "triangle-gol.html" (dict "width" $width "height" $height) -}}
+

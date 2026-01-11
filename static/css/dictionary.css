@@ -1,0 +1,331 @@
+/* Dictionary Layout Styles */
+
+/* Dictionary Layout - centered content with right TOC sidebar */
+.dictionary-layout {
+    /* Use global accent variables from variables.css */
+    --section-bg-card: var(--accent-bg-card);
+    --section-bg-secondary: var(--accent-bg-secondary);
+    --section-bg-accent: var(--accent-bg-light);
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dictionary-container {
+    display: grid;
+    grid-template-columns: 280px 1fr 240px;
+    gap: 0;
+    flex: 1;
+    margin-top: calc(1.5rem + var(--header-height) + 1.5rem);
+    min-height: calc(100vh - var(--header-height) - 3rem);
+    position: relative;
+}
+
+.dictionary-main {
+    grid-column: 2;
+    overflow-x: hidden;
+    padding: 2rem 3rem;
+    width: 100%;
+    min-width: 0;
+}
+
+.dictionary-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Right sidebar TOC positioning */
+.dictionary-layout .docs-toc {
+    grid-column: 3;
+}
+
+/* Dictionary Page Header */
+.dictionary-page {
+    width: 100%;
+}
+
+.dictionary-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dictionary-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.dictionary-description {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Dictionary content inherits styles from docs.css */
+.dictionary-content-wrapper {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Dictionary Section - Each Letter */
+.dictionary-section {
+    margin-bottom: 3rem;
+}
+
+.dictionary-letter {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
+}
+
+.dictionary-letter-underline {
+    height: 1px;
+    background: var(--border-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Dictionary Entries Container */
+.dictionary-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Dictionary Entry - Expandable Box */
+.dictionary-entry {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.dictionary-entry:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Entry Summary (always visible) */
+.dictionary-entry-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--section-bg-card);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: var(--transition);
+    position: relative;
+}
+
+.dictionary-entry-summary::-webkit-details-marker {
+    display: none;
+}
+
+.dictionary-entry-summary:hover {
+    background: var(--section-bg-accent);
+}
+
+/* Entry Title */
+.dictionary-entry-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    padding-right: 2rem;
+}
+
+/* Entry Description - visible in collapsed state */
+.dictionary-entry-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding-right: 2rem;
+}
+
+/* Arrow Icon */
+.dictionary-entry-arrow {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dictionary-entry[open] .dictionary-entry-arrow {
+    transform: rotate(180deg);
+}
+
+/* Entry Content - visible when expanded */
+.dictionary-entry-content {
+    padding: 1.25rem 1.5rem;
+    background: var(--section-bg-secondary);
+    border-top: 1px solid var(--border-color);
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.dictionary-entry-content p {
+    margin-bottom: 1rem;
+}
+
+.dictionary-entry-content p:last-child {
+    margin-bottom: 0;
+}
+
+.dictionary-entry-content ul,
+.dictionary-entry-content ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.dictionary-entry-content li {
+    margin-bottom: 0.5rem;
+}
+
+.dictionary-entry-content code {
+    background: var(--accent-bg-inline-code);
+    padding: 0.125rem 0.375rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875em;
+    font-family: var(--font-family-mono);
+    color: var(--primary-color);
+}
+
+.dictionary-entry-content pre {
+    background: var(--accent-bg-code);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.dictionary-entry-content pre code {
+    background: none;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.dictionary-entry-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.dictionary-entry-content a:hover {
+    color: var(--primary-hover);
+}
+
+/* Empty State */
+.dictionary-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--section-bg-card);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+}
+
+.dictionary-empty code {
+    background: var(--accent-bg-inline-code);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875em;
+}
+
+/* Dictionary Navigation */
+.dictionary-nav {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.dictionary-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--section-bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.dictionary-nav-link:hover {
+    border-color: var(--border-hover);
+    background: var(--section-bg-accent);
+}
+
+.dictionary-nav-icon {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .dictionary-container {
+        grid-template-columns: 240px 1fr 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .dictionary-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .dictionary-main {
+        grid-column: 1;
+        padding: 2rem 1.5rem;
+    }
+    
+    .dictionary-layout .docs-toc {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .dictionary-container {
+        padding: 0 1rem;
+    }
+    
+    .dictionary-main {
+        padding: 1.5rem 0;
+    }
+    
+    .dictionary-title {
+        font-size: 2rem;
+    }
+    
+    .dictionary-letter {
+        font-size: 1.75rem;
+    }
+    
+    .dictionary-entry-summary {
+        padding: 1rem 1.25rem;
+    }
+    
+    .dictionary-entry-title {
+        font-size: 1.125rem;
+    }
+    
+    .dictionary-entry-content {
+        padding: 1rem 1.25rem;
+    }
+    
+    .dictionary-entry-arrow {
+        top: 1rem;
+        right: 1.25rem;
+    }
+}
+

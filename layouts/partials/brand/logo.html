@@ -1,0 +1,35 @@
+{{- /* 
+    Brand Logo Partial
+    
+    Usage: {{ partial "brand/logo.html" (dict "context" . "class" "optional-class") }}
+    
+    This partial renders the site logo based on site.yaml configuration.
+    If use_svg_icon is true, it uses the built-in SVG triangle icon.
+    Otherwise, it uses the logo image file specified in site.yaml.
+*/ -}}
+
+{{- $class := .class | default "" -}}
+{{- $siteConfig := site.Data.site -}}
+{{- $brand := $siteConfig.brand -}}
+
+<a href="{{ site.Home.RelPermalink }}" class="logo {{ $class }}">
+    {{- if and $brand $brand.logo $brand.logo.use_svg_icon -}}
+    <div class="logo-icon-wrapper">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <!-- Triangle pointing down -->
+            <path d="M12 20 L4 6 L20 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" class="logo-triangle"/>
+        </svg>
+    </div>
+    {{- else if and $brand $brand.logo $brand.logo.image -}}
+    <img src="{{ $brand.logo.image }}" alt="{{ $brand.logo.alt | default "Logo" }}" class="logo-image" />
+    {{- else -}}
+    {{- /* Fallback to SVG icon */ -}}
+    <div class="logo-icon-wrapper">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 20 L4 6 L20 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none" class="logo-triangle"/>
+        </svg>
+    </div>
+    {{- end -}}
+    <span class="logo-text">{{ site.Title }}</span>
+</a>
+

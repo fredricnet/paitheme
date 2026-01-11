@@ -1,0 +1,79 @@
+{{ define "main" }}
+<article class="docs-article">
+    <header class="docs-article-header">
+        <h1 class="docs-article-title">{{ .Title }}</h1>
+        {{- if .Description -}}
+        <p class="docs-article-description">{{ .Description }}</p>
+        {{- end -}}
+    </header>
+    
+    <div class="docs-article-content">
+        {{ .Content }}
+    </div>
+    
+    {{- /* Build flattened list of all docs pages across all folders, sorted by weight */ -}}
+    {{- $docsSection := site.GetPage "section" "docs" -}}
+    {{- $allPages := slice -}}
+    {{- if $docsSection -}}
+        {{- /* Start with the docs index page */ -}}
+        {{- $allPages = $allPages | append $docsSection -}}
+        {{- /* Recursively collect all pages from docs section and subsections */ -}}
+        {{- range $docsSection.Pages.ByWeight -}}
+            {{- if .Pages -}}
+                {{- /* It's a section, recursively collect its pages */ -}}
+                {{- $subPages := partial "docs/collect-pages" . -}}
+                {{- $allPages = $allPages | append $subPages -}}
+            {{- else -}}
+                {{- /* It's a regular page */ -}}
+                {{- $allPages = $allPages | append . -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- /* Find current page position and get prev/next */ -}}
+    {{- $prevPage := false -}}
+    {{- $nextPage := false -}}
+    {{- $currentIndex := -1 -}}
+    {{- range $index, $page := $allPages -}}
+        {{- if eq $page.RelPermalink $.RelPermalink -}}
+            {{- $currentIndex = $index -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if ge $currentIndex 0 -}}
+        {{- if gt $currentIndex 0 -}}
+            {{- $prevPage = index $allPages (sub $currentIndex 1) -}}
+        {{- end -}}
+        {{- if lt $currentIndex (sub (len $allPages) 1) -}}
+            {{- $nextPage = index $allPages (add $currentIndex 1) -}}
+        {{- end -}}
+    {{- end -}}
+    
+    {{- if or (ne $prevPage false) (ne $nextPage false) -}}
+    <nav class="docs-nav">
+        {{- if ne $prevPage false -}}
+        <a href="{{ $prevPage.RelPermalink }}" class="docs-nav-link docs-nav-prev">
+            <div class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-left" "attributes" "height=20 width=20") -}}
+            </div>
+            <div class="docs-nav-content">
+                <div class="docs-nav-label">Previous</div>
+                <div class="docs-nav-title">{{ $prevPage.Title }}</div>
+            </div>
+        </a>
+        {{- end -}}
+        {{- if ne $nextPage false -}}
+        <a href="{{ $nextPage.RelPermalink }}" class="docs-nav-link docs-nav-next">
+            <div class="docs-nav-content">
+                <div class="docs-nav-label">Next</div>
+                <div class="docs-nav-title">{{ $nextPage.Title }}</div>
+            </div>
+            <div class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-right" "attributes" "height=20 width=20") -}}
+            </div>
+        </a>
+        {{- end -}}
+    </nav>
+    {{- end -}}
+</article>
+{{ end }}
+

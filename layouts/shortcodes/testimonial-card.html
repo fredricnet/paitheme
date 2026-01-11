@@ -1,0 +1,56 @@
+{{/* Testimonial Card Shortcode - Creates a single testimonial card
+  Parameters:
+  - logo: Path to company logo image (optional)
+  - logo-url: URL for company logo link (optional)
+  - logo-alt: Alt text for logo (optional)
+  - text: Testimonial text (required)
+  - name: Author name (required)
+  - role: Author role/company (optional)
+  - avatar: Avatar initials (optional, will use first letters of name if not provided)
+  
+  Usage:
+  testimonial-card logo="/images/logos/mercury.svg" logo-url="https://mercury.com" logo-alt="Mercury" text="Since integrating Performance's unified dashboard..." name="John Doe" role="Mercury, Inc." avatar="JD"
+*/}}
+{{- $logo := .Get "logo" -}}
+{{- $logoUrl := .Get "logo-url" -}}
+{{- $logoAlt := .Get "logo-alt" -}}
+{{- $text := .Get "text" -}}
+{{- $name := .Get "name" -}}
+{{- $role := .Get "role" -}}
+{{- $avatar := .Get "avatar" -}}
+
+{{- if and $text $name -}}
+{{- if not $avatar -}}
+{{- $nameParts := split $name " " -}}
+{{- $avatar = "" -}}
+{{- range $nameParts -}}
+{{- $avatar = printf "%s%s" $avatar (substr . 0 1 | upper) -}}
+{{- end -}}
+{{- end -}}
+
+<div class="testimonial-card">
+    {{- if $logo -}}
+    <div class="testimonial-top">
+        {{- if $logoUrl -}}
+        <a href="{{ $logoUrl }}" target="_blank" class="testimonial-logo-link">
+        {{- end -}}
+            <img src="{{ $logo }}" alt="{{ $logoAlt | default $name }}" class="testimonial-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <span style="display: none;" class="testimonial-company">{{ $logoAlt | default $name }}</span>
+        {{- if $logoUrl -}}
+        </a>
+        {{- end -}}
+    </div>
+    {{- end -}}
+    <p class="testimonial-text">"{{ $text }}"</p>
+    <div class="testimonial-author">
+        <div class="testimonial-avatar">{{ $avatar }}</div>
+        <div class="testimonial-info">
+            <div class="testimonial-name">{{ $name }}</div>
+            {{- if $role -}}
+            <div class="testimonial-role">{{ $role }}</div>
+            {{- end -}}
+        </div>
+    </div>
+</div>
+{{- end -}}
+

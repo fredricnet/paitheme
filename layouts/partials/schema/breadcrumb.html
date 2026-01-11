@@ -1,0 +1,50 @@
+{{- /*
+    BreadcrumbList Schema (JSON-LD)
+    
+    Outputs breadcrumb navigation structured data.
+    Automatically generates based on page hierarchy.
+    
+    Reference: https://schema.org/BreadcrumbList
+*/ -}}
+
+{{- /* Build breadcrumb items */ -}}
+{{- $breadcrumbs := slice -}}
+
+{{- /* Add Home */ -}}
+{{- $breadcrumbs = $breadcrumbs | append (dict "name" "Home" "url" site.BaseURL "position" 1) -}}
+
+{{- /* Add ancestors */ -}}
+{{- $position := 2 -}}
+{{- range .Ancestors.Reverse -}}
+    {{- if not .IsHome -}}
+        {{- $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) -}}
+        {{- $position = add $position 1 -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Add current page (if not home) */ -}}
+{{- if not .IsHome -}}
+    {{- $breadcrumbs = $breadcrumbs | append (dict "name" .Title "url" .Permalink "position" $position) -}}
+{{- end -}}
+
+{{- /* Only output if we have more than just home */ -}}
+{{- if gt (len $breadcrumbs) 1 -}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {{- range $i, $crumb := $breadcrumbs }}
+        {{- if $i }},{{ end }}
+        {
+            "@type": "ListItem",
+            "position": {{ $crumb.position }},
+            "name": {{ $crumb.name | jsonify }},
+            "item": {{ $crumb.url | jsonify }}
+        }
+        {{- end }}
+    ]
+}
+</script>
+{{- end -}}
+

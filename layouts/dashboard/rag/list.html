@@ -1,0 +1,84 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{ partial "dashboard/sidebar.html" . }}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+        <main class="dashboard-content">
+            {{ .Content }}
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">RAG Knowledge Base</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn dashboard-btn-primary">Add Document</button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-stats-grid">
+                        <div class="dashboard-stat-card">
+                            <div class="dashboard-stat-header">
+                                <span class="dashboard-stat-label">Documents Indexed</span>
+                            </div>
+                            <div class="dashboard-stat-value">1,234</div>
+                            <div class="dashboard-stat-change positive">+12 today</div>
+                        </div>
+                        <div class="dashboard-stat-card">
+                            <div class="dashboard-stat-header">
+                                <span class="dashboard-stat-label">Queries Processed</span>
+                            </div>
+                            <div class="dashboard-stat-value">5,678</div>
+                            <div class="dashboard-stat-change positive">Last 24 hours</div>
+                        </div>
+                        <div class="dashboard-stat-card">
+                            <div class="dashboard-stat-header">
+                                <span class="dashboard-stat-label">Embeddings</span>
+                            </div>
+                            <div class="dashboard-stat-value">2.4M</div>
+                            <div class="dashboard-stat-change neutral">Total vectors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Recent Queries</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Query</th>
+                                    <th>Agent</th>
+                                    <th>Results</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2m ago</td>
+                                    <td>Customer support best practices</td>
+                                    <td>Customer Support Agent</td>
+                                    <td>12 matches</td>
+                                </tr>
+                                <tr>
+                                    <td>8m ago</td>
+                                    <td>Data processing patterns</td>
+                                    <td>Data Processing Agent</td>
+                                    <td>8 matches</td>
+                                </tr>
+                                <tr>
+                                    <td>15m ago</td>
+                                    <td>API error handling</td>
+                                    <td>API Gateway Agent</td>
+                                    <td>15 matches</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

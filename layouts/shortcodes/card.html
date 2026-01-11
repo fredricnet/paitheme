@@ -1,0 +1,49 @@
+{{- /*
+  Card Shortcode
+  Creates a card component with optional icon, title, and content
+  
+  @param {string} title The card title
+  @param {string} icon The icon name (from icons.yaml)
+  @param {string} icon-color The icon color (default: currentColor)
+  @param {string} href Optional link URL
+  @param {string} class Additional CSS classes
+  
+  @example {{< card title="Getting Started" icon="star" >}}
+    Content here
+  {{< /card >}}
+*/ -}}
+{{- $title := .Get "title" -}}
+{{- $icon := .Get "icon" -}}
+{{- $iconColor := .Get "icon-color" | default "currentColor" -}}
+{{- $href := .Get "href" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $content := .Inner -}}
+
+<div class="pai-card{{ if $class }} {{ $class }}{{ end }}">
+    {{- if $href -}}
+    <a href="{{ $href }}" class="pai-card-link">
+    {{- end -}}
+        <div class="pai-card-content">
+            {{- if or $icon $title -}}
+            <div class="pai-card-header">
+                {{- if $icon -}}
+                <div class="pai-card-icon" style="color: {{ $iconColor }};">
+                    {{- partial "utils/icon.html" (dict "name" $icon "attributes" "height=24 width=24") -}}
+                </div>
+                {{- end -}}
+                {{- if $title -}}
+                <h3 class="pai-card-title">{{ $title }}</h3>
+                {{- end -}}
+            </div>
+            {{- end -}}
+            {{- if $content -}}
+            <div class="pai-card-body">
+                {{ $content | markdownify }}
+            </div>
+            {{- end -}}
+        </div>
+    {{- if $href -}}
+    </a>
+    {{- end -}}
+</div>
+

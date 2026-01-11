@@ -1,0 +1,51 @@
+{{- /*
+    WebSite Schema (JSON-LD)
+    
+    Outputs WebSite structured data for the homepage.
+    Includes SearchAction for Google sitelinks search box.
+    Configuration via data/site.yaml under schema.website
+    
+    Reference: https://schema.org/WebSite
+*/ -}}
+
+{{- $siteConfig := site.Data.site -}}
+{{- $schema := $siteConfig.schema -}}
+{{- $org := $schema.organization -}}
+{{- $website := $schema.website -}}
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.Title | jsonify }},
+    "url": {{ site.BaseURL | jsonify }},
+    {{- if and $org $org.description }}
+    "description": {{ $org.description | jsonify }},
+    {{- end }}
+    {{- if $org }}
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ $org.name | default site.Title | jsonify }},
+        {{- if $org.logo }}
+        "logo": {
+            "@type": "ImageObject",
+            "url": {{ $org.logo | jsonify }}
+        }
+        {{- end }}
+    },
+    {{- end }}
+    {{- if and $website $website.search_enabled }}
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": {{ (printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) ($website.search_url | default "/search?q={search_term_string}")) | jsonify }}
+        },
+        "query-input": "required name=search_term_string"
+    }
+    {{- else }}
+    "potentialAction": []
+    {{- end }}
+}
+</script>
+

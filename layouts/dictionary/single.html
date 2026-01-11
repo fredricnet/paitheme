@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="dictionary-page">
+    <header class="dictionary-header">
+        <h1 class="dictionary-title">{{ .Title }}</h1>
+        {{- if .Description -}}
+        <p class="dictionary-description">{{ .Description }}</p>
+        {{- end -}}
+    </header>
+    
+    <div class="dictionary-content-wrapper">
+        {{ .Content }}
+    </div>
+    
+    {{- /* Back to Dictionary link */ -}}
+    <nav class="dictionary-nav">
+        <a href="{{ .Parent.RelPermalink }}" class="dictionary-nav-link">
+            <span class="dictionary-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" "chevron-left" "attributes" "height=16 width=16") -}}
+            </span>
+            <span>Back to Dictionary</span>
+        </a>
+    </nav>
+</div>
+{{ end }}
+

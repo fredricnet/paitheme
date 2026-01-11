@@ -1,0 +1,24 @@
+{{/* Value Proposition Header Section Shortcode - Creates a reusable two-column header section
+  Parameters:
+  - title: Main heading text (required)
+  - description: Description/subtitle text (optional)
+  
+  Usage:
+  value-proposition-header-section title="See Every Dollar, Understand Every Trend, and Act with Unmatched Speed" description="Our unified dashboard brings all your accounts..."
+*/}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+
+{{- if $title -}}
+<section class="value-proposition-header-section">
+    <div class="container">
+        <div class="value-proposition-header">
+            <h2 class="value-proposition-title">{{ $title }}</h2>
+            {{- if $description -}}
+            <p class="value-proposition-description">{{ $description }}</p>
+            {{- end -}}
+        </div>
+    </div>
+</section>
+{{- end -}}
+

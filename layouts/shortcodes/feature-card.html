@@ -1,0 +1,102 @@
+{{/* Feature Card Shortcode - For platform/features page cards
+  Parameters:
+  - title: Card title (required)
+  - description: Card description (required)
+  - image: Main image path (required)
+  - bg-image: Background image path (optional, for feature cards)
+  - link: Link URL (optional)
+  - link-text: Link text (default: "Read more")
+  - size: Card size (default: "1", options: "1", "2", or "full")
+       "1" = 1 column (1/3 width in 3-col grid)
+       "2" = 2 columns (2/3 width in 3-col grid)
+       "full" = full width
+  - icon: Icon name (optional, e.g., "book-user", "arrow-down-up", "smartphone-nfc", "file-lock2", "zap", "chart-line", "shield", "settings")
+  - icon-color: Icon color (optional, default: currentColor)
+*/}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $image := .Get "image" -}}
+{{- $bgImage := .Get "bg-image" -}}
+{{- $link := .Get "link" -}}
+{{- $linkText := .Get "link-text" | default "Read more" -}}
+{{- $size := .Get "size" | default "1" -}}
+{{- $icon := .Get "icon" -}}
+{{- $iconColor := .Get "icon-color" | default "currentColor" -}}
+
+<div class="feature-card{{ if eq $size "2" }} feature-card-large{{ else if eq $size "full" }} feature-card-full{{ end }}">
+    <div class="feature-card-image-wrapper">
+        <div class="feature-card-image-container">
+            {{- if $image -}}
+            <img src="{{ $image }}" alt="{{ $title }}" onerror="this.style.display='none';" />
+            {{- end -}}
+        </div>
+        {{- if $bgImage -}}
+        <img src="{{ $bgImage }}" alt="tabs background" class="feature-card-bg" onerror="this.style.display='none';" />
+        {{- end -}}
+    </div>
+    <div class="feature-card-content">
+        <h3 class="feature-card-title">
+            {{- if $icon -}}
+            <span class="feature-card-icon" style="color: {{ $iconColor }};">
+                {{- if eq $icon "book-user" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 13a3 3 0 1 0-6 0"></path>
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"></path>
+                    <circle cx="12" cy="8" r="2"></circle>
+                </svg>
+                {{- else if eq $icon "arrow-down-up" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 16 4 4 4-4"></path>
+                    <path d="M7 20V4"></path>
+                    <path d="m21 8-4-4-4 4"></path>
+                    <path d="M17 4v16"></path>
+                </svg>
+                {{- else if eq $icon "smartphone-nfc" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="7" height="12" x="2" y="6" rx="1"></rect>
+                    <path d="M13 8.32a7.43 7.43 0 0 1 0 7.36"></path>
+                    <path d="M16.46 6.21a11.76 11.76 0 0 1 0 11.58"></path>
+                    <path d="M19.91 4.1a15.91 15.91 0 0 1 .01 15.8"></path>
+                </svg>
+                {{- else if eq $icon "file-lock2" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v1"></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <rect width="8" height="5" x="2" y="13" rx="1"></rect>
+                    <path d="M8 13v-2a2 2 0 1 0-4 0v2"></path>
+                </svg>
+                {{- else if eq $icon "zap" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                </svg>
+                {{- else if eq $icon "chart-line" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18"></path>
+                    <path d="m19 9-5 5-4-4-3 3"></path>
+                </svg>
+                {{- else if eq $icon "shield" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg>
+                {{- else if eq $icon "settings" -}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path>
+                    <path d="M18.22 6h-.44a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z"></path>
+                    <path d="M6.22 10h-.44a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2V12a2 2 0 0 0-2-2z"></path>
+                </svg>
+                {{- end -}}
+            </span>
+            {{- end -}}
+            {{- if $link -}}
+            <a href="{{ $link }}">{{ $title }}</a>
+            {{- else -}}
+            {{ $title }}
+            {{- end -}}
+        </h3>
+        <p class="feature-card-description">{{ $description }}</p>
+        {{- if $link -}}
+        <a href="{{ $link }}" class="feature-card-link">{{ $linkText }}<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-card-link-icon"><path d="m9 18 6-6-6-6"></path></svg></a>
+        {{- end -}}
+    </div>
+</div>
+

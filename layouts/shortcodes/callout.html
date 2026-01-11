@@ -1,0 +1,53 @@
+{{- /*
+  Callout Shortcode
+  Creates a callout/alert box with different types
+  
+  @param {string} type The callout type: note, tip, warning, danger, info (default: note)
+  @param {string} title Optional title for the callout
+  @param {string} icon Optional icon name (overrides default icon for type)
+  
+  @example {{< callout type="warning" title="Important" >}}
+    This is a warning message.
+  {{< /callout >}}
+*/ -}}
+{{- $type := .Get "type" | default "note" -}}
+{{- $title := .Get "title" -}}
+{{- $icon := .Get "icon" -}}
+{{- $content := .Inner -}}
+
+{{- /* Default icons for each type */ -}}
+{{- $defaultIcons := dict 
+    "note" "document"
+    "tip" "lightbulb-outline"
+    "warning" "warning-outline"
+    "danger" "x-circle"
+    "info" "information-circle"
+-}}
+{{- if not $icon -}}
+    {{- $icon = index $defaultIcons $type | default "document" -}}
+{{- end -}}
+
+{{- /* Default colors for each type */ -}}
+{{- $colors := dict 
+    "note" "#3b82f6"
+    "tip" "#10b981"
+    "warning" "#f59e0b"
+    "danger" "#ef4444"
+    "info" "#3b82f6"
+-}}
+{{- $color := index $colors $type | default "#3b82f6" -}}
+
+<div class="pai-callout pai-callout-{{ $type }}" style="--callout-color: {{ $color }};">
+    <div class="pai-callout-icon" style="color: {{ $color }};">
+        {{- partial "utils/icon.html" (dict "name" $icon "attributes" "height=20 width=20") -}}
+    </div>
+    <div class="pai-callout-content">
+        {{- if $title -}}
+        <div class="pai-callout-title">{{ $title }}</div>
+        {{- end -}}
+        <div class="pai-callout-body">
+            {{ $content | markdownify }}
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,87 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{ partial "dashboard/sidebar.html" . }}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+        <main class="dashboard-content">
+            {{ .Content }}
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">All Activities</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn dashboard-btn-secondary">Filter</button>
+                        <button class="dashboard-btn dashboard-btn-secondary">Export</button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Agent/Workflow</th>
+                                    <th>Action</th>
+                                    <th>Status</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 minutes ago</td>
+                                    <td>Data Processing Agent</td>
+                                    <td>Processed 1,247 records</td>
+                                    <td><span class="dashboard-status-badge success">Success</span></td>
+                                    <td>2.3s</td>
+                                </tr>
+                                <tr>
+                                    <td>5 minutes ago</td>
+                                    <td>Customer Support Agent</td>
+                                    <td>Responded to 3 tickets</td>
+                                    <td><span class="dashboard-status-badge success">Success</span></td>
+                                    <td>1.8s</td>
+                                </tr>
+                                <tr>
+                                    <td>8 minutes ago</td>
+                                    <td>Email Parser Agent</td>
+                                    <td>Connection timeout</td>
+                                    <td><span class="dashboard-status-badge error">Error</span></td>
+                                    <td>30.0s</td>
+                                </tr>
+                                <tr>
+                                    <td>12 minutes ago</td>
+                                    <td>Report Generator Agent</td>
+                                    <td>Generated monthly report</td>
+                                    <td><span class="dashboard-status-badge success">Success</span></td>
+                                    <td>5.2s</td>
+                                </tr>
+                                <tr>
+                                    <td>15 minutes ago</td>
+                                    <td>Data Sync Workflow</td>
+                                    <td>Authentication failed</td>
+                                    <td><span class="dashboard-status-badge error">Error</span></td>
+                                    <td>0.5s</td>
+                                </tr>
+                                <tr>
+                                    <td>18 minutes ago</td>
+                                    <td>API Gateway Agent</td>
+                                    <td>Routed 45 requests</td>
+                                    <td><span class="dashboard-status-badge success">Success</span></td>
+                                    <td>0.8s</td>
+                                </tr>
+                                <tr>
+                                    <td>22 minutes ago</td>
+                                    <td>Content Moderation Agent</td>
+                                    <td>Analyzed 89 items</td>
+                                    <td><span class="dashboard-status-badge success">Success</span></td>
+                                    <td>3.1s</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

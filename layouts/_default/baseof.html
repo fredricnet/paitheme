@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+    {{- partial "head/meta.html" . -}}
+    
+    {{- /* Global JSON-LD Schemas */ -}}
+    {{- partial "head/schema-global.html" . -}}
+    
+    {{- block "head" . }}{{ end -}}
+</head>
+<body>
+    {{- partial "header.html" . -}}
+
+    <main>
+        {{- block "main" . }}{{ end -}}
+    </main>
+
+    {{- partial "footer.html" . -}}
+
+    {{- /* JavaScript */ -}}
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    {{- /* docs.js is loaded only in docs/baseof.html and dictionary/baseof.html */ -}}
+    
+    {{- /* Mermaid.js for chart rendering */ -}}
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#7877c6',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#9d9cff',
+                lineColor: '#7877c6',
+                secondaryColor: '#3b82f6',
+                tertiaryColor: '#8b5cf6',
+                background: 'transparent',
+                mainBkgColor: '#7877c6',
+                textColor: '#ffffff'
+            }
+        });
+    </script>
+    {{- block "scripts" . }}{{ end -}}
+</body>
+</html>

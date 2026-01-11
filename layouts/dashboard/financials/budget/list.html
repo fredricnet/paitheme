@@ -1,0 +1,180 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <!-- Time Period Filter -->
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <!-- Budget KPIs -->
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Budget</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <line x1="12" x2="12" y1="2" y2="22"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">$12.5M</div>
+                    <div class="dashboard-stat-change neutral">Annual budget</div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Budget Used</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M3 3v18h18"></path>
+                            <path d="m7 12 5 5 5-5"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">$8.2M</div>
+                    <div class="dashboard-stat-change neutral">65.6% utilized</div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Remaining Budget</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">$4.3M</div>
+                    <div class="dashboard-stat-change positive">34.4% remaining</div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Budget Variance</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">-$120K</div>
+                    <div class="dashboard-stat-change negative">Under budget</div>
+                </div>
+            </div>
+
+            <!-- Budget Scorecard -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Budget Allocation Scorecard</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-budget-breakdown">
+                        <div class="dashboard-budget-item">
+                            <div class="dashboard-budget-header">
+                                <span class="dashboard-budget-category">Operations</span>
+                                <span class="dashboard-budget-amount">$4.8M / $5.0M</span>
+                            </div>
+                            <div class="dashboard-budget-bar">
+                                <div class="dashboard-budget-bar-fill" style="width: 96%"></div>
+                            </div>
+                            <div class="dashboard-budget-footer">
+                                <span class="dashboard-budget-percentage">96%</span>
+                                <span class="dashboard-budget-remaining positive">$200K remaining</span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-budget-item">
+                            <div class="dashboard-budget-header">
+                                <span class="dashboard-budget-category">Technology</span>
+                                <span class="dashboard-budget-amount">$2.1M / $2.5M</span>
+                            </div>
+                            <div class="dashboard-budget-bar">
+                                <div class="dashboard-budget-bar-fill" style="width: 84%"></div>
+                            </div>
+                            <div class="dashboard-budget-footer">
+                                <span class="dashboard-budget-percentage">84%</span>
+                                <span class="dashboard-budget-remaining positive">$400K remaining</span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-budget-item">
+                            <div class="dashboard-budget-header">
+                                <span class="dashboard-budget-category">Marketing</span>
+                                <span class="dashboard-budget-amount">$1.2M / $1.5M</span>
+                            </div>
+                            <div class="dashboard-budget-bar">
+                                <div class="dashboard-budget-bar-fill" style="width: 80%"></div>
+                            </div>
+                            <div class="dashboard-budget-footer">
+                                <span class="dashboard-budget-percentage">80%</span>
+                                <span class="dashboard-budget-remaining positive">$300K remaining</span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-budget-item">
+                            <div class="dashboard-budget-header">
+                                <span class="dashboard-budget-category">Human Resources</span>
+                                <span class="dashboard-budget-amount">$2.8M / $3.0M</span>
+                            </div>
+                            <div class="dashboard-budget-bar">
+                                <div class="dashboard-budget-bar-fill" style="width: 93%"></div>
+                            </div>
+                            <div class="dashboard-budget-footer">
+                                <span class="dashboard-budget-percentage">93%</span>
+                                <span class="dashboard-budget-remaining positive">$200K remaining</span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-budget-item">
+                            <div class="dashboard-budget-header">
+                                <span class="dashboard-budget-category">Research & Development</span>
+                                <span class="dashboard-budget-amount">$1.5M / $2.0M</span>
+                            </div>
+                            <div class="dashboard-budget-bar">
+                                <div class="dashboard-budget-bar-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="dashboard-budget-footer">
+                                <span class="dashboard-budget-percentage">75%</span>
+                                <span class="dashboard-budget-remaining positive">$500K remaining</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Trend Chart -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Budget Utilization Trend</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-chart-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="250" viewBox="0 0 600 250" fill="none">
+                            <!-- Grid lines -->
+                            <line x1="0" y1="200" x2="600" y2="200" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                            <!-- Budget line -->
+                            <polyline points="30,50 90,60 150,70 210,80 270,85 330,90 390,95 450,100 510,105 570,110" 
+                                stroke="#7877c6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Used line -->
+                            <polyline points="30,150 90,140 150,130 210,120 270,115 330,110 390,105 450,100 510,95 570,90" 
+                                stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Area fills -->
+                            <polygon points="30,50 90,60 150,70 210,80 270,85 330,90 390,95 450,100 510,105 570,110 570,200 30,200" 
+                                fill="rgba(120,119,198,0.1)"/>
+                            <polygon points="30,150 90,140 150,130 210,120 270,115 330,110 390,105 450,100 510,95 570,90 570,200 30,200" 
+                                fill="rgba(16,185,129,0.1)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

@@ -1,0 +1,2297 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .triangle-other {
+        fill: white;
+        stroke: white;
+        stroke-width: 0.5;
+      }
+      .triangle-large {
+        fill: white;
+        stroke: white;
+        stroke-width: 0.5;
+      }
+      .triangle-pattern {
+        fill: white;
+        stroke: white;
+        stroke-width: 0.5;
+      }
+    </style>
+  </defs>
+  <g id="all-triangles">
+    <path id="tri-0-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-0-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,0)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-9" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-1-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-1-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,30)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-3" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-2-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-8" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-2-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-10" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-2-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-21" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-2-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-2-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,60)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-2" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-4" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-7" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-9" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-11" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-20" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-22" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-3-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-3-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,90)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-1" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-4-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-3" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-4-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-5" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-4-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-19" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-4-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-21" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-4-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-23" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-4-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-4-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,120)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-5-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-5-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,150)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-12" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-6-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-6-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-6-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,180)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-11" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-7-12" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-7-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-7-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-7-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,210)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-2" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-8-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-10" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-8-11" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-8-12" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-8-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-8-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-23" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-8-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-8-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,240)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-1" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-3" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-9" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-10" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-11" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-12" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-22" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-9-24" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-9-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,270)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-0" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-2" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-4" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-8" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-9" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-10" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-11" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-12" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-21" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-23" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-10-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-10-25" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,300)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-0" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-1" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-3" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-5" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-7" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-8" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-9" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-10" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-11" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-12" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-13" class="triangle-large" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-20" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-22" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-11-24" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-11-25" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,330)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-12-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-12-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,360)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-13-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,390)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-14-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,420)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-3" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-15-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-21" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-15-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-15-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,450)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-2" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-16-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-4" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-16-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-20" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-16-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-22" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-16-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-16-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,480)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-1" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-3" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-5" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-9" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-19" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-21" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-23" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-17-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-17-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,510)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.550s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.600s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.650s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.700s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.750s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-7" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.800s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-8" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.850s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-18-9" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.900s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-10" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.950s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-18-11" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.000s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.050s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.100s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.150s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.200s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.250s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.300s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.350s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.400s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.450s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-18-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,540)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-0" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(0,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-1" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(30,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.525s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-2" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(60,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.575s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-3" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(90,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.625s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-4" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(120,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.675s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-5" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(150,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.725s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-6" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(180,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.775s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-7" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(210,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.825s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-19-8" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(240,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.875s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-9" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(270,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.925s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-19-10" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(300,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="0.975s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-11" class="triangle-pattern" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(330,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.025s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="fill" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+      <animate attributeName="stroke" values="white;#7877c6" begin="2s" dur="1s" fill="freeze"/>
+    </path>
+    <path id="tri-19-12" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(360,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.075s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-13" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(390,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.125s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-14" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(420,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.175s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-15" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(450,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.225s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-16" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(480,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.275s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-17" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(510,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.325s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-18" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(540,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.375s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-19" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(570,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.425s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-20" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(600,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.475s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-21" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(630,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-22" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(660,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-23" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(690,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-24" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(720,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+    <path id="tri-19-25" class="triangle-other" d="M 0,0 L 15,0 L 7.5,15 Z" transform="translate(750,570)">
+      <animate attributeName="opacity" values="0;0.4;0" dur="2s" begin="1.500s" repeatCount="1" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0.3;0.1;0" begin="2s" dur="2s" fill="freeze"/>
+    </path>
+  </g>
+  <script><![CDATA[
+    (function() {
+      const GRID_WIDTH = 26;
+      const GRID_HEIGHT = 20;
+      
+      // Initial purple triangles (from first animation)
+      const initialPurpleTriangles = [(1, 9), (2, 3), (2, 8), (2, 10), (2, 21), (3, 2), (3, 4), (3, 7), (3, 9), (3, 11), (3, 20), (3, 22), (4, 1), (4, 3), (4, 5), (4, 19), (4, 21), (4, 23), (5, 13), (6, 12), (6, 13), (7, 11), (7, 12), (7, 13), (8, 2), (8, 10), (8, 11), (8, 12), (8, 13), (8, 23), (9, 1), (9, 3), (9, 9), (9, 10), (9, 11), (9, 12), (9, 13), (9, 22), (9, 24), (10, 0), (10, 2), (10, 4), (10, 8), (10, 9), (10, 10), (10, 11), (10, 12), (10, 13), (10, 21), (10, 23), (10, 25), (11, 0), (11, 1), (11, 3), (11, 5), (11, 7), (11, 8), (11, 9), (11, 10), (11, 11), (11, 12), (11, 13), (11, 20), (11, 22), (11, 24), (11, 25), (15, 3), (15, 21), (16, 2), (16, 4), (16, 20), (16, 22), (17, 1), (17, 3), (17, 5), (17, 9), (17, 19), (17, 21), (17, 23), (18, 8), (18, 10), (19, 7), (19, 9), (19, 11)];
+      
+      // Target perfect upside-down triangle in center
+      function isTargetCell(row, col) {
+        const centerRow = 9;
+        const centerCol = 12;
+        const rowOffset = row - centerRow;
+        const colOffset = Math.abs(col - centerCol);
+        return rowOffset >= 0 && rowOffset < 7 && colOffset <= rowOffset;
+      }
+      
+      let grid = Array(GRID_HEIGHT).fill(null).map(() => Array(GRID_WIDTH).fill(false));
+      
+      function getCell(row, col) {
+        return document.getElementById(`tri-${row}-${col}`);
+      }
+      
+      function countNeighbors(row, col) {
+        let count = 0;
+        for (let dr = -1; dr <= 1; dr++) {
+          for (let dc = -1; dc <= 1; dc++) {
+            if (dr === 0 && dc === 0) continue;
+            const nr = row + dr;
+            const nc = col + dc;
+            if (nr >= 0 && nr < GRID_HEIGHT && nc >= 0 && nc < GRID_WIDTH) {
+              if (grid[nr][nc]) count++;
+            }
+          }
+        }
+        return count;
+      }
+      
+      // Standard Conway's Game of Life rules (with slight bias toward target)
+      function shouldBeAlive(row, col, neighbors) {
+        const isTarget = isTargetCell(row, col);
+        const currentlyAlive = grid[row][col];
+        
+        // Standard Conway rules
+        if (currentlyAlive) {
+          // Survival: 2-3 neighbors
+          if (neighbors === 2 || neighbors === 3) return true;
+        } else {
+          // Birth: exactly 3 neighbors
+          if (neighbors === 3) return true;
+        }
+        
+        // Slight bias: target cells with 2 neighbors are more likely to stay alive
+        if (isTarget && currentlyAlive && neighbors === 2) {
+          return true; // Always keep target cells alive with 2 neighbors
+        }
+        
+        return false;
+      }
+      
+      function updateCell(row, col, alive) {
+        const cell = getCell(row, col);
+        if (!cell) return;
+        
+        if (alive) {
+          cell.setAttribute('fill', '#7877c6');
+          cell.setAttribute('stroke', '#7877c6');
+          cell.setAttribute('opacity', '1');
+        } else {
+          cell.setAttribute('opacity', '0');
+        }
+      }
+      
+      function gameOfLifeStep() {
+        const nextGrid = Array(GRID_HEIGHT).fill(null).map(() => Array(GRID_WIDTH).fill(false));
+        
+        // Calculate next generation
+        for (let row = 0; row < GRID_HEIGHT; row++) {
+          for (let col = 0; col < GRID_WIDTH; col++) {
+            const neighbors = countNeighbors(row, col);
+            nextGrid[row][col] = shouldBeAlive(row, col, neighbors);
+          }
+        }
+        
+        // Update grid and visuals
+        for (let row = 0; row < GRID_HEIGHT; row++) {
+          for (let col = 0; col < GRID_WIDTH; col++) {
+            grid[row][col] = nextGrid[row][col];
+            updateCell(row, col, grid[row][col]);
+          }
+        }
+      }
+      
+      // Initialize Game of Life after 4 seconds (when purple triangles are shown)
+      setTimeout(function() {
+        // Set initial state from purple triangles
+        initialPurpleTriangles.forEach(([row, col]) => {
+          if (row >= 0 && row < GRID_HEIGHT && col >= 0 && col < GRID_WIDTH) {
+            grid[row][col] = true;
+            updateCell(row, col, true);
+          }
+        });
+        
+        // Start Game of Life simulation
+        const interval = setInterval(gameOfLifeStep, 400);
+        
+      }, 4000); // Start after 4 seconds
+      
+    })();
+  ]]></script>
+</svg>

@@ -1,0 +1,481 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{ partial "dashboard/sidebar.html" . }}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <!-- Security Overview Stats -->
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Security Score</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">94%</div>
+                    <div class="dashboard-stat-change positive">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m18 15-6-6-6 6"></path>
+                        </svg>
+                        +2% from last week
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Active Threats</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">2</div>
+                    <div class="dashboard-stat-change warning">
+                        Requires attention
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Security Checks</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">1,247</div>
+                    <div class="dashboard-stat-change positive">
+                        Last 24 hours
+                    </div>
+                </div>
+
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Data Leakage Alerts</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dashboard-stat-icon">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="dashboard-stat-value">5</div>
+                    <div class="dashboard-stat-change warning">
+                        Sensitive data detected
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Overview -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Network Topology</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn dashboard-btn-secondary">Refresh</button>
+                        <button class="dashboard-btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="19" cy="12" r="1"></circle>
+                                <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-network-topology">
+                        <!-- Internet Gateway -->
+                        <div class="dashboard-network-node gateway">
+                            <div class="dashboard-network-node-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-network-node-label">Internet Gateway</div>
+                            <div class="dashboard-network-node-status success"></div>
+                        </div>
+
+                        <!-- Firewall -->
+                        <div class="dashboard-network-connector"></div>
+                        <div class="dashboard-network-node firewall">
+                            <div class="dashboard-network-node-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-network-node-label">Main Firewall</div>
+                            <div class="dashboard-network-node-status success"></div>
+                            <div class="dashboard-network-node-meta">2,456 rules active</div>
+                        </div>
+
+                        <!-- Network Segments -->
+                        <div class="dashboard-network-connector"></div>
+                        <div class="dashboard-network-segment">
+                            <div class="dashboard-network-segment-label">DMZ Network</div>
+                            <div class="dashboard-network-nodes-group">
+                                <div class="dashboard-network-node server">
+                                    <div class="dashboard-network-node-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dashboard-network-node-label">Web Server</div>
+                                    <div class="dashboard-network-node-status success"></div>
+                                </div>
+                                <div class="dashboard-network-node server">
+                                    <div class="dashboard-network-node-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dashboard-network-node-label">API Gateway</div>
+                                    <div class="dashboard-network-node-status success"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-network-connector"></div>
+                        <div class="dashboard-network-segment isolated">
+                            <div class="dashboard-network-segment-label">Internal Network (Isolated)</div>
+                            <div class="dashboard-network-nodes-group">
+                                <div class="dashboard-network-node workstation">
+                                    <div class="dashboard-network-node-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dashboard-network-node-label">Workstation-01</div>
+                                    <div class="dashboard-network-node-status success"></div>
+                                </div>
+                                <div class="dashboard-network-node workstation">
+                                    <div class="dashboard-network-node-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dashboard-network-node-label">Workstation-02</div>
+                                    <div class="dashboard-network-node-status warning"></div>
+                                </div>
+                                <div class="dashboard-network-node server">
+                                    <div class="dashboard-network-node-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dashboard-network-node-label">Database Server</div>
+                                    <div class="dashboard-network-node-status success"></div>
+                                </div>
+                                <div class="dashboard-network-node server">
+                                    <div class="dashboard-network-node-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect>
+                                            <rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect>
+                                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dashboard-network-node-label">App Server</div>
+                                    <div class="dashboard-network-node-status success"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Checks & Workflows -->
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Security Checks</h3>
+                        <div class="dashboard-card-actions">
+                            <a href="#" class="dashboard-link">View all</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-security-checks-list">
+                            <div class="dashboard-security-check-item">
+                                <div class="dashboard-security-check-icon success">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dashboard-security-check-info">
+                                    <span class="dashboard-security-check-name">Firewall Rules</span>
+                                    <span class="dashboard-security-check-detail">All rules active and up to date</span>
+                                </div>
+                                <span class="dashboard-status-badge success">Pass</span>
+                            </div>
+                            <div class="dashboard-security-check-item">
+                                <div class="dashboard-security-check-icon success">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dashboard-security-check-info">
+                                    <span class="dashboard-security-check-name">SSL Certificates</span>
+                                    <span class="dashboard-security-check-detail">All certificates valid</span>
+                                </div>
+                                <span class="dashboard-status-badge success">Pass</span>
+                            </div>
+                            <div class="dashboard-security-check-item">
+                                <div class="dashboard-security-check-icon warning">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="dashboard-security-check-info">
+                                    <span class="dashboard-security-check-name">Password Policy</span>
+                                    <span class="dashboard-security-check-detail">3 users with weak passwords</span>
+                                </div>
+                                <span class="dashboard-status-badge warning">Warning</span>
+                            </div>
+                            <div class="dashboard-security-check-item">
+                                <div class="dashboard-security-check-icon success">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dashboard-security-check-info">
+                                    <span class="dashboard-security-check-name">Intrusion Detection</span>
+                                    <span class="dashboard-security-check-detail">No threats detected</span>
+                                </div>
+                                <span class="dashboard-status-badge success">Pass</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Security Workflows</h3>
+                        <div class="dashboard-card-actions">
+                            <a href="#" class="dashboard-link">View all</a>
+                        </div>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-workflow-list">
+                            <div class="dashboard-workflow-item">
+                                <div class="dashboard-workflow-item-header">
+                                    <span class="dashboard-workflow-item-name">Automated Threat Response</span>
+                                    <span class="dashboard-status-badge success">Active</span>
+                                </div>
+                                <p class="dashboard-workflow-item-description">Automatically blocks suspicious IPs and triggers alerts</p>
+                                <div class="dashboard-workflow-item-meta">Last run: 5m ago</div>
+                            </div>
+                            <div class="dashboard-workflow-item">
+                                <div class="dashboard-workflow-item-header">
+                                    <span class="dashboard-workflow-item-name">Vulnerability Scanning</span>
+                                    <span class="dashboard-status-badge success">Active</span>
+                                </div>
+                                <p class="dashboard-workflow-item-description">Daily scans for system vulnerabilities</p>
+                                <div class="dashboard-workflow-item-meta">Last run: 2h ago</div>
+                            </div>
+                            <div class="dashboard-workflow-item">
+                                <div class="dashboard-workflow-item-header">
+                                    <span class="dashboard-workflow-item-name">Data Leakage Detection</span>
+                                    <span class="dashboard-status-badge success">Active</span>
+                                </div>
+                                <p class="dashboard-workflow-item-description">Monitors conversations and data transfers</p>
+                                <div class="dashboard-workflow-item-meta">Last run: 1m ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Report & Breach Incidents -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Security Report & Breach Incidents</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn dashboard-btn-secondary">Export Report</button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Incident Type</th>
+                                    <th>Severity</th>
+                                    <th>Source</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2 hours ago</td>
+                                    <td>Unauthorized Access Attempt</td>
+                                    <td><span class="dashboard-status-badge error">High</span></td>
+                                    <td>External IP: 192.168.1.100</td>
+                                    <td><span class="dashboard-status-badge success">Blocked</span></td>
+                                    <td><a href="#" class="dashboard-link">Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5 hours ago</td>
+                                    <td>Data Leakage Detected</td>
+                                    <td><span class="dashboard-status-badge warning">Medium</span></td>
+                                    <td>Customer Support Agent</td>
+                                    <td><span class="dashboard-status-badge warning">Under Review</span></td>
+                                    <td><a href="#" class="dashboard-link">Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1 day ago</td>
+                                    <td>Suspicious File Transfer</td>
+                                    <td><span class="dashboard-status-badge warning">Medium</span></td>
+                                    <td>Workstation-02</td>
+                                    <td><span class="dashboard-status-badge success">Resolved</span></td>
+                                    <td><a href="#" class="dashboard-link">Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3 days ago</td>
+                                    <td>Brute Force Attack</td>
+                                    <td><span class="dashboard-status-badge error">High</span></td>
+                                    <td>External IP: 203.0.113.45</td>
+                                    <td><span class="dashboard-status-badge success">Blocked</span></td>
+                                    <td><a href="#" class="dashboard-link">Details</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Leakage Reports -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Data Leakage Detection Reports</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn dashboard-btn-secondary">Configure Alerts</button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-error-list">
+                        <div class="dashboard-error-item">
+                            <div class="dashboard-error-icon warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-error-info">
+                                <span class="dashboard-error-title">Sensitive Data in Conversation</span>
+                                <span class="dashboard-error-detail">Customer Support Agent: Credit card number detected in chat conversation (last 4 digits: 4532)</span>
+                                <span class="dashboard-error-time">2 hours ago</span>
+                            </div>
+                            <a href="#" class="dashboard-error-link">Review →</a>
+                        </div>
+                        <div class="dashboard-error-item">
+                            <div class="dashboard-error-icon warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-error-info">
+                                <span class="dashboard-error-title">API Key Exposed</span>
+                                <span class="dashboard-error-detail">Data Processing Agent: API key found in log file output</span>
+                                <span class="dashboard-error-time">5 hours ago</span>
+                            </div>
+                            <a href="#" class="dashboard-error-link">Review →</a>
+                        </div>
+                        <div class="dashboard-error-item">
+                            <div class="dashboard-error-icon warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-error-info">
+                                <span class="dashboard-error-title">SSN Pattern Detected</span>
+                                <span class="dashboard-error-detail">Email Parser Agent: Social Security Number pattern detected in email content</span>
+                                <span class="dashboard-error-time">1 day ago</span>
+                            </div>
+                            <a href="#" class="dashboard-error-link">Review →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Security Settings</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-settings-list">
+                        <div class="dashboard-setting-item">
+                            <div class="dashboard-setting-info">
+                                <span class="dashboard-setting-name">Two-Factor Authentication</span>
+                                <span class="dashboard-setting-description">Require 2FA for all user accounts</span>
+                            </div>
+                            <label class="dashboard-toggle">
+                                <input type="checkbox" checked>
+                                <span class="dashboard-toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="dashboard-setting-item">
+                            <div class="dashboard-setting-info">
+                                <span class="dashboard-setting-name">Automatic Threat Blocking</span>
+                                <span class="dashboard-setting-description">Automatically block IPs after failed login attempts</span>
+                            </div>
+                            <label class="dashboard-toggle">
+                                <input type="checkbox" checked>
+                                <span class="dashboard-toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="dashboard-setting-item">
+                            <div class="dashboard-setting-info">
+                                <span class="dashboard-setting-name">Data Leakage Monitoring</span>
+                                <span class="dashboard-setting-description">Monitor conversations and data transfers for sensitive information</span>
+                            </div>
+                            <label class="dashboard-toggle">
+                                <input type="checkbox" checked>
+                                <span class="dashboard-toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="dashboard-setting-item">
+                            <div class="dashboard-setting-info">
+                                <span class="dashboard-setting-name">Intrusion Detection System</span>
+                                <span class="dashboard-setting-description">Real-time monitoring for suspicious network activity</span>
+                            </div>
+                            <label class="dashboard-toggle">
+                                <input type="checkbox" checked>
+                                <span class="dashboard-toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="dashboard-setting-item">
+                            <div class="dashboard-setting-info">
+                                <span class="dashboard-setting-name">SSL/TLS Enforcement</span>
+                                <span class="dashboard-setting-description">Require encrypted connections for all services</span>
+                            </div>
+                            <label class="dashboard-toggle">
+                                <input type="checkbox" checked>
+                                <span class="dashboard-toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

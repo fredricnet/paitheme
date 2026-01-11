@@ -1,0 +1,71 @@
+{{- /*
+    TechArticle Schema (JSON-LD)
+    
+    Outputs TechArticle structured data for documentation pages.
+    Includes technical proficiency level and dependencies if specified.
+    
+    Reference: https://schema.org/TechArticle
+*/ -}}
+
+{{- $siteConfig := site.Data.site -}}
+{{- $schema := $siteConfig.schema -}}
+{{- $org := $schema.organization -}}
+{{- $defaultAuthor := $schema.default_author -}}
+
+{{- /* Get author from frontmatter or default */ -}}
+{{- $authorName := .Params.author | default ($defaultAuthor.name | default "Documentation Team") -}}
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": {{ .Title | jsonify }},
+    {{- if .Description }}
+    "description": {{ .Description | jsonify }},
+    {{- end }}
+    "url": {{ .Permalink | jsonify }},
+    {{- if .Params.image }}
+    "image": {{ .Params.image | absURL | jsonify }},
+    {{- end }}
+    {{- if not .PublishDate.IsZero }}
+    "datePublished": {{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+    {{- else if not .Date.IsZero }}
+    "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+    {{- end }}
+    {{- if not .Lastmod.IsZero }}
+    "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+    {{- end }}
+    "author": {
+        "@type": "Organization",
+        "name": {{ $authorName | jsonify }}
+    },
+    {{- if $org }}
+    "publisher": {
+        "@type": "Organization",
+        "name": {{ $org.name | default site.Title | jsonify }},
+        {{- if $org.logo }}
+        "logo": {
+            "@type": "ImageObject",
+            "url": {{ $org.logo | jsonify }}
+        }
+        {{- end }}
+    },
+    {{- end }}
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ .Permalink | jsonify }}
+    },
+    "inLanguage": {{ site.Language.Lang | default "en" | jsonify }},
+    {{- /* Technical article specific fields */ -}}
+    {{- if .Params.proficiency_level }}
+    "proficiencyLevel": {{ .Params.proficiency_level | jsonify }},
+    {{- else }}
+    "proficiencyLevel": "Beginner",
+    {{- end }}
+    {{- if .Params.dependencies }}
+    "dependencies": {{ .Params.dependencies | jsonify }},
+    {{- end }}
+    "articleSection": {{ .Section | title | jsonify }}
+}
+</script>
+

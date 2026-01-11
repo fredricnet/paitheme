@@ -1,0 +1,25 @@
+{{/* KPI Item Shortcode - Defines a single KPI
+  Parameters:
+  - value: KPI number value (required, e.g., "99.9", "1.2M", "500K")
+  - unit: Unit symbol (optional, e.g., "%", "€", "$", "M", "K")
+  - description: KPI description text (required)
+  - prefix: Prefix symbol before value (optional, e.g., "$", "€")
+*/}}
+{{- $value := .Get "value" -}}
+{{- $unit := .Get "unit" -}}
+{{- $description := .Get "description" -}}
+{{- $prefix := .Get "prefix" -}}
+
+{{- if $value -}}
+<div class="kpi-item">
+    <div class="kpi-value">
+        {{- if $prefix -}}<span class="kpi-prefix">{{ $prefix }}</span>{{- end -}}
+        <span class="kpi-number">{{ $value }}</span>
+        {{- if $unit -}}<span class="kpi-unit">{{ $unit }}</span>{{- end -}}
+    </div>
+    {{- if $description -}}
+    <p class="kpi-description">{{ $description }}</p>
+    {{- end -}}
+</div>
+{{- end -}}
+

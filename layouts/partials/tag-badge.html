@@ -1,0 +1,77 @@
+{{/* Tag Badge Partial
+Usage: {{ partial "tag-badge.html" (dict "text" "Real Results" "icon" "star" "count" 5 "color" "#3b82f6") }}
+*/}}
+{{- $text := .text -}}
+{{- $iconName := .icon | default "star" -}}
+{{- $count := .count | default 5 -}}
+{{- $color := .color | default "#3b82f6" -}}
+
+{{- if $text -}}
+{{- $uppercaseText := $text | upper -}}
+{{- $iconSvg := index site.Data.icons $iconName -}}
+{{- if not $iconSvg -}}
+  {{- errorf "Icon %q not found in icons.yaml" $iconName -}}
+{{- end -}}
+<div class="testimonials-stars-wrapper" style="margin-bottom: {{ .margin | default "1.5rem" }};">
+    <div class="border-animation">
+        <div class="border-animation-inner testimonials-stars">
+            {{- range seq $count -}}
+            {{- $icon := $iconSvg -}}
+            {{- /* Check if this is an outlined icon (fill="none") - must check BEFORE any replacements */ -}}
+            {{- $isOutlined := findRE `fill="none"` $icon -}}
+            {{- /* Apply color to the icon - replace currentColor with actual color */ -}}
+            {{- $icon = replaceRE `stroke="currentColor"` (printf `stroke="%s"` $color) $icon -}}
+            {{- /* Only replace fill="currentColor", NEVER touch fill="none" */ -}}
+            {{- if not $isOutlined -}}
+              {{- $icon = replaceRE `fill="currentColor"` (printf `fill="%s"` $color) $icon -}}
+            {{- end -}}
+            {{- /* For outlined icons, explicitly set fill="none" on path elements to ensure they stay outlined */ -}}
+            {{- if $isOutlined -}}
+              {{- /* Remove any existing fill from path elements first */ -}}
+              {{- $icon = replaceRE `(<path[^>]*?)\s+fill="[^"]*"` `${1}` $icon -}}
+              {{- $icon = replaceRE `(<path[^>]*?)\s+fill='[^']*'` `${1}` $icon -}}
+              {{- /* Explicitly add fill="none" right after <path to override any browser defaults */ -}}
+              {{- $icon = replaceRE `(<path)([^>]*?>)` `${1} fill="none"${2}` $icon -}}
+            {{- end -}}
+            {{- /* Update or add width and height - use a safer method that preserves fill="none" */ -}}
+            {{- $hasWidth := findRE `\swidth\s*=` $icon -}}
+            {{- $hasHeight := findRE `\sheight\s*=` $icon -}}
+            {{- if $hasWidth -}}
+              {{- $icon = replaceRE `\swidth\s*=\s*"[^"]*"` ` width="20"` $icon -}}
+            {{- end -}}
+            {{- if $hasHeight -}}
+              {{- $icon = replaceRE `\sheight\s*=\s*"[^"]*"` ` height="20"` $icon -}}
+            {{- end -}}
+            {{- /* Add width/height if missing - insert after viewBox or fill, before closing > */ -}}
+            {{- if and (not $hasWidth) (not $hasHeight) -}}
+              {{- if findRE `viewBox=` $icon -}}
+                {{- $icon = replaceRE `(viewBox="[^"]*")` `${1} width="20" height="20"` $icon -}}
+              {{- else if findRE `fill="none"` $icon -}}
+                {{- $icon = replaceRE `(fill="none")` `${1} width="20" height="20"` $icon -}}
+              {{- else -}}
+                {{- $icon = replaceRE `(<svg[^>]+)(\s*>)` `${1} width="20" height="20"${2}` $icon -}}
+              {{- end -}}
+            {{- else if not $hasWidth -}}
+              {{- if findRE `viewBox=` $icon -}}
+                {{- $icon = replaceRE `(viewBox="[^"]*")` `${1} width="20"` $icon -}}
+              {{- else if findRE `fill="none"` $icon -}}
+                {{- $icon = replaceRE `(fill="none")` `${1} width="20"` $icon -}}
+              {{- else -}}
+                {{- $icon = replaceRE `(<svg[^>]+)(\s*>)` `${1} width="20"${2}` $icon -}}
+              {{- end -}}
+            {{- else if not $hasHeight -}}
+              {{- if findRE `viewBox=` $icon -}}
+                {{- $icon = replaceRE `(viewBox="[^"]*")` `${1} height="20"` $icon -}}
+              {{- else if findRE `fill="none"` $icon -}}
+                {{- $icon = replaceRE `(fill="none")` `${1} height="20"` $icon -}}
+              {{- else -}}
+                {{- $icon = replaceRE `(<svg[^>]+)(\s*>)` `${1} height="20"${2}` $icon -}}
+              {{- end -}}
+            {{- end -}}
+            {{- $icon | safeHTML -}}
+            {{- end -}}
+            <span class="testimonials-label">{{ $uppercaseText }}</span>
+        </div>
+    </div>
+</div>
+{{- end -}}

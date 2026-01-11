@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {{- /* Theme initialization script - always use dark mode */ -}}
+    <script>
+        (function() {
+            // Always enforce dark mode - remove any light theme attribute
+            document.documentElement.removeAttribute('data-theme');
+        })();
+    </script>
+    
+    {{- /* Title */ -}}
+    <title>{{- if .IsHome -}}{{ site.Title }}{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}</title>
+    
+    {{- /* Description */ -}}
+    {{- $description := .Description -}}
+    {{- if not $description -}}
+        {{- $description = site.Params.description -}}
+    {{- end -}}
+    <meta name="description" content="{{ $description | default "All Your Financial Accounts in One Unified Dashboard" }}">
+    
+    {{- /* Canonical URL */ -}}
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    {{- /* Robots meta tag */ -}}
+    {{- $noindex := .Params.noindex | default false -}}
+    {{- if and (hugo.IsProduction) (not $noindex) -}}
+    <meta name="robots" content="index, follow">
+    {{- else -}}
+    <meta name="robots" content="noindex, nofollow">
+    {{- end -}}
+    
+    {{- /* Favicon */ -}}
+    <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+    <link rel="alternate icon" href="{{ "favicon.svg" | relURL }}">
+    
+    {{- /* Font preconnect for performance */ -}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    {{- /* Google Fonts - Inter for modern look */ -}}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    {{- /* Stylesheet */ -}}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{- /* Custom CSS Overrides */ -}}
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+    
+    {{- block "head" . }}{{ end -}}
+</head>
+<body>
+    {{- block "main" . }}{{ end -}}
+
+    {{- /* JavaScript */ -}}
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    {{- block "scripts" . }}{{ end -}}
+</body>
+</html>
+

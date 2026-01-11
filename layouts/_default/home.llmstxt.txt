@@ -1,0 +1,95 @@
+{{- /*
+    LLMs.txt - AI-readable site index
+    
+    This file helps AI systems (LLMs, chatbots, AI search engines) understand
+    and index the content of this website.
+    
+    Format: https://llmstxt.org/
+*/ -}}
+# {{ site.Title }}
+
+> {{ site.Params.description | default site.Title }}
+
+{{ with site.Data.site.schema.organization -}}
+{{ if .description }}{{ .description }}{{ end }}
+{{- end }}
+
+## About This Site
+
+This is the official website for {{ site.Title }}. Below you'll find a structured index of all content available on this site.
+
+## Main Sections
+
+{{- range site.Menus.main }}
+- [{{ .Name }}]({{ .URL | absURL }}): {{ .Name }} section
+{{- end }}
+
+## Documentation
+{{ $docs := site.GetPage "section" "docs" -}}
+{{ if $docs }}
+The documentation section contains technical guides and API references.
+
+{{ range $docs.Pages.ByWeight -}}
+{{ if .IsSection -}}
+### {{ .Title }}
+{{ if .Description }}{{ .Description }}{{ end }}
+{{ range .Pages.ByWeight -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Title }}
+{{ end }}
+{{ else -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Title }}
+{{ end -}}
+{{ end -}}
+{{ end }}
+
+## Dictionary / Glossary
+{{ $dictionary := site.GetPage "section" "dictionary" -}}
+{{ if $dictionary }}
+A comprehensive glossary of terms and definitions.
+
+{{ range $dictionary.Pages.ByTitle -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Title }}
+{{ end -}}
+{{ end }}
+
+## Blog
+{{ $blog := site.GetPage "section" "blog" -}}
+{{ if $blog }}
+Latest articles and insights.
+
+{{ range first 20 $blog.Pages.ByDate.Reverse -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Title }}
+{{ end -}}
+{{ end }}
+
+## All Pages
+
+Complete list of all pages on this site:
+
+{{ range site.RegularPages -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description | default .Title }}
+{{ end }}
+
+---
+
+## Contact & Social
+
+{{ with site.Data.site.schema.organization -}}
+{{ if .contact -}}
+{{ if .contact.email }}- Email: {{ .contact.email }}{{ end }}
+{{ if .contact.phone }}- Phone: {{ .contact.phone }}{{ end }}
+{{ end -}}
+
+{{ if .social_profiles -}}
+### Social Profiles
+{{ range .social_profiles -}}
+- {{ . }}
+{{ end -}}
+{{ end -}}
+{{ end }}
+
+---
+
+Generated: {{ now.Format "2006-01-02T15:04:05Z07:00" }}
+Site URL: {{ site.BaseURL }}
+

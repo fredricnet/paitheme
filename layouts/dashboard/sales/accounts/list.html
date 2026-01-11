@@ -1,0 +1,195 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Accounts</span>
+                    </div>
+                    <div class="dashboard-stat-value">342</div>
+                    <div class="dashboard-stat-change positive">+24 new this month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Active Accounts</span>
+                    </div>
+                    <div class="dashboard-stat-value">287</div>
+                    <div class="dashboard-stat-change positive">83.9% active rate</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Account Value</span>
+                    </div>
+                    <div class="dashboard-stat-value">$8.2M</div>
+                    <div class="dashboard-stat-change positive">+18.5% increase</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Account Size</span>
+                    </div>
+                    <div class="dashboard-stat-value">$24K</div>
+                    <div class="dashboard-stat-change positive">+8.3% increase</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Top Accounts</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="#" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>Industry</th>
+                                    <th>Status</th>
+                                    <th>Value</th>
+                                    <th>Owner</th>
+                                    <th class="text-right">Last Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TechCorp Inc.</td>
+                                    <td>Technology</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td class="positive">$425K</td>
+                                    <td>Sarah Johnson</td>
+                                    <td class="text-right">2 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Global Systems</td>
+                                    <td>Enterprise Software</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td class="positive">$298K</td>
+                                    <td>Mike Davis</td>
+                                    <td class="text-right">5 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>DataFlow Solutions</td>
+                                    <td>Data Analytics</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td class="positive">$276K</td>
+                                    <td>Emily Wilson</td>
+                                    <td class="text-right">1 week ago</td>
+                                </tr>
+                                <tr>
+                                    <td>CloudTech Industries</td>
+                                    <td>Cloud Services</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td class="positive">$342K</td>
+                                    <td>David Brown</td>
+                                    <td class="text-right">1 week ago</td>
+                                </tr>
+                                <tr>
+                                    <td>InnovateNow LLC</td>
+                                    <td>Consulting</td>
+                                    <td><span class="dashboard-status-badge success">Active</span></td>
+                                    <td class="positive">$164K</td>
+                                    <td>Sarah Johnson</td>
+                                    <td class="text-right">2 weeks ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Accounts by Industry</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-accounts-industry">
+                            <div class="dashboard-account-industry-item">
+                                <span class="dashboard-account-industry-label">Technology</span>
+                                <span class="dashboard-account-industry-value">124</span>
+                                <div class="dashboard-account-industry-bar">
+                                    <div class="dashboard-account-industry-bar-fill" style="width: 36%"></div>
+                                </div>
+                                <span class="dashboard-account-industry-percentage">36%</span>
+                            </div>
+                            <div class="dashboard-account-industry-item">
+                                <span class="dashboard-account-industry-label">Enterprise Software</span>
+                                <span class="dashboard-account-industry-value">87</span>
+                                <div class="dashboard-account-industry-bar">
+                                    <div class="dashboard-account-industry-bar-fill" style="width: 25%"></div>
+                                </div>
+                                <span class="dashboard-account-industry-percentage">25%</span>
+                            </div>
+                            <div class="dashboard-account-industry-item">
+                                <span class="dashboard-account-industry-label">Data Analytics</span>
+                                <span class="dashboard-account-industry-value">64</span>
+                                <div class="dashboard-account-industry-bar">
+                                    <div class="dashboard-account-industry-bar-fill" style="width: 19%"></div>
+                                </div>
+                                <span class="dashboard-account-industry-percentage">19%</span>
+                            </div>
+                            <div class="dashboard-account-industry-item">
+                                <span class="dashboard-account-industry-label">Cloud Services</span>
+                                <span class="dashboard-account-industry-value">42</span>
+                                <div class="dashboard-account-industry-bar">
+                                    <div class="dashboard-account-industry-bar-fill" style="width: 12%"></div>
+                                </div>
+                                <span class="dashboard-account-industry-percentage">12%</span>
+                            </div>
+                            <div class="dashboard-account-industry-item">
+                                <span class="dashboard-account-industry-label">Other</span>
+                                <span class="dashboard-account-industry-value">25</span>
+                                <div class="dashboard-account-industry-bar">
+                                    <div class="dashboard-account-industry-bar-fill" style="width: 7%"></div>
+                                </div>
+                                <span class="dashboard-account-industry-percentage">7%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Account Health Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">85%</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 99%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">83.9%</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value negative">-1.1%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

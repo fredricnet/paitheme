@@ -1,0 +1,120 @@
+{{- /* 
+    Site Footer Partial
+    
+    Configuration via data/site.yaml:
+    - footer.sections: Array of footer link sections
+    - footer.social: Array of social media links
+    - footer.disclaimer: Regulatory disclaimer text
+    - footer.logo: Footer logo settings
+    - footer.copyright: Copyright text
+    - footer.legal: Legal links array
+*/ -}}
+
+{{- $siteConfig := site.Data.site -}}
+{{- $footer := $siteConfig.footer -}}
+
+<footer class="site-footer">
+    <div class="container">
+        <!-- First Row: Product, Company, Social Links -->
+        <div class="footer-top">
+            {{- /* Footer Link Sections */ -}}
+            {{- if and $footer $footer.sections -}}
+                {{- range $footer.sections -}}
+                <div class="footer-section">
+                    <h3>{{ .title }}</h3>
+                    <ul class="footer-links">
+                        {{- range .links -}}
+                        <li><a href="{{ .url }}">{{ .text }}</a></li>
+                        {{- end -}}
+                    </ul>
+                </div>
+                {{- end -}}
+            {{- else -}}
+            {{- /* Fallback if no config */ -}}
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/platform">Features</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">FAQ</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            {{- end -}}
+            
+            {{- /* Social Links */ -}}
+            <div class="footer-section footer-social">
+                <div class="footer-social-links">
+                    {{- if and $footer $footer.social -}}
+                        {{- range $footer.social -}}
+                        <a href="{{ .url }}" aria-label="{{ .platform }}" class="footer-social-link">
+                            {{- partial (printf "icons/social/%s.html" .icon) -}}
+                        </a>
+                        {{- end -}}
+                    {{- else -}}
+                    {{- /* Fallback social links */ -}}
+                    <a href="https://facebook.com" aria-label="Facebook" class="footer-social-link">
+                        {{- partial "icons/social/facebook.html" -}}
+                    </a>
+                    <a href="https://twitter.com" aria-label="Twitter" class="footer-social-link">
+                        {{- partial "icons/social/twitter.html" -}}
+                    </a>
+                    <a href="https://linkedin.com" aria-label="LinkedIn" class="footer-social-link">
+                        {{- partial "icons/social/linkedin.html" -}}
+                    </a>
+                    {{- end -}}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Row: Disclaimer and Logo -->
+        <div class="footer-middle">
+            <div class="footer-disclaimer-wrapper">
+                {{- if and $footer $footer.disclaimer -}}
+                <p class="footer-disclaimer-label">{{ $footer.disclaimer.label | default "Regulatory disclaimer" }}</p>
+                <p class="footer-disclaimer-text">{{ $footer.disclaimer.text }}</p>
+                {{- else -}}
+                <p class="footer-disclaimer-label">Regulatory disclaimer</p>
+                <p class="footer-disclaimer-text">Performance is a financial technology company, not a bank. Banking services are provided by partner institutions and are FDIC-insured up to applicable limits.</p>
+                {{- end -}}
+            </div>
+            <div class="footer-logo-wrapper">
+                <a href="{{ site.Home.RelPermalink }}">
+                    {{- if and $footer $footer.logo $footer.logo.image -}}
+                    <img src="{{ $footer.logo.image }}" alt="{{ $footer.logo.alt | default "Logo" }}" class="footer-logo-img" onerror="this.style.display='none';" />
+                    {{- else -}}
+                    <img src="/images/layout/logo.svg" alt="Logo" class="footer-logo-img" onerror="this.style.display='none';" />
+                    {{- end -}}
+                </a>
+            </div>
+        </div>
+        
+        <!-- Third Row: Copyright and Legal Links -->
+        <div class="footer-bottom">
+            {{- if and $footer $footer.copyright -}}
+            <p class="footer-copyright">&copy; {{ now.Year }} {{ $footer.copyright.text | default site.Title }}</p>
+            {{- else -}}
+            <p class="footer-copyright">&copy; {{ now.Year }} {{ site.Title }}</p>
+            {{- end -}}
+            <div class="footer-legal-links">
+                {{- if and $footer $footer.legal -}}
+                    {{- range $footer.legal -}}
+                    <a href="{{ .url }}" class="footer-legal-link">{{ .text }}</a>
+                    {{- end -}}
+                {{- else -}}
+                <a href="/privacy" class="footer-legal-link">Privacy Policy</a>
+                <a href="/cookie-policy" class="footer-legal-link">Cookie Settings</a>
+                <a href="/terms" class="footer-legal-link">Terms of Service</a>
+                {{- end -}}
+            </div>
+        </div>
+    </div>
+</footer>

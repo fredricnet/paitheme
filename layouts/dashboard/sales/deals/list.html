@@ -1,0 +1,171 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Won Deals</span>
+                    </div>
+                    <div class="dashboard-stat-value">124</div>
+                    <div class="dashboard-stat-change positive">+18 this month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Lost Deals</span>
+                    </div>
+                    <div class="dashboard-stat-value">28</div>
+                    <div class="dashboard-stat-change neutral">Win rate: 81.6%</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Value</span>
+                    </div>
+                    <div class="dashboard-stat-value">$2.4M</div>
+                    <div class="dashboard-stat-change positive">+24.5% vs last month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Deal Size</span>
+                    </div>
+                    <div class="dashboard-stat-value">$19.4K</div>
+                    <div class="dashboard-stat-change positive">+12.3% increase</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Recent Deals</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="#" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Deal Name</th>
+                                    <th>Account</th>
+                                    <th>Status</th>
+                                    <th>Value</th>
+                                    <th>Owner</th>
+                                    <th class="text-right">Closed Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Enterprise License</td>
+                                    <td>TechCorp Inc.</td>
+                                    <td><span class="dashboard-status-badge success">Won</span></td>
+                                    <td class="positive">$125K</td>
+                                    <td>Sarah Johnson</td>
+                                    <td class="text-right">2 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Platform Subscription</td>
+                                    <td>Global Systems</td>
+                                    <td><span class="dashboard-status-badge success">Won</span></td>
+                                    <td class="positive">$98K</td>
+                                    <td>Mike Davis</td>
+                                    <td class="text-right">5 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Contract</td>
+                                    <td>DataFlow Solutions</td>
+                                    <td><span class="dashboard-status-badge">Lost</span></td>
+                                    <td>$76K</td>
+                                    <td>Emily Wilson</td>
+                                    <td class="text-right">1 week ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise Package</td>
+                                    <td>CloudTech Industries</td>
+                                    <td><span class="dashboard-status-badge success">Won</span></td>
+                                    <td class="positive">$142K</td>
+                                    <td>David Brown</td>
+                                    <td class="text-right">1 week ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Multi-Year Deal</td>
+                                    <td>InnovateNow LLC</td>
+                                    <td><span class="dashboard-status-badge success">Won</span></td>
+                                    <td class="positive">$64K</td>
+                                    <td>Sarah Johnson</td>
+                                    <td class="text-right">2 weeks ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Deals by Stage</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-deals-by-stage">
+                            <div class="dashboard-deal-stage-item">
+                                <span class="dashboard-deal-stage-label">Won</span>
+                                <span class="dashboard-deal-stage-value">124</span>
+                                <div class="dashboard-deal-stage-bar">
+                                    <div class="dashboard-deal-stage-bar-fill" style="width: 82%"></div>
+                                </div>
+                                <span class="dashboard-deal-stage-percentage">81.6%</span>
+                            </div>
+                            <div class="dashboard-deal-stage-item">
+                                <span class="dashboard-deal-stage-label">Lost</span>
+                                <span class="dashboard-deal-stage-value">28</span>
+                                <div class="dashboard-deal-stage-bar">
+                                    <div class="dashboard-deal-stage-bar-fill" style="width: 18%"></div>
+                                </div>
+                                <span class="dashboard-deal-stage-percentage">18.4%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Deal Value Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">$2.5M</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 96%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">$2.4M</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value negative">-$100K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

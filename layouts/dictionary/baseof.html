@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+    {{- partial "head/meta.html" . -}}
+    
+    {{- /* Dictionary-specific CSS */ -}}
+    <link rel="stylesheet" href="{{ "css/dictionary.css" | relURL }}">
+    
+    {{- /* Global JSON-LD Schemas */ -}}
+    {{- partial "head/schema-global.html" . -}}
+    {{- if .IsPage -}}
+    {{- partial "schema/defined-term.html" . -}}
+    {{- end -}}
+    
+    {{- block "head" . }}{{ end -}}
+</head>
+<body class="dictionary-layout">
+    {{- partial "header.html" . -}}
+
+    <div class="dictionary-container">
+        <main class="dictionary-main">
+            <div class="dictionary-content">
+                {{- block "main" . }}{{ end -}}
+            </div>
+        </main>
+        
+        {{- partial "docs/toc.html" . -}}
+    </div>
+
+    {{- partial "footer.html" . -}}
+
+    {{- /* JavaScript */ -}}
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    <script src="{{ "js/docs.js" | relURL }}"></script>
+    {{- block "scripts" . }}{{ end -}}
+</body>
+</html>

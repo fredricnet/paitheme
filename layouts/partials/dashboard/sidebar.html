@@ -1,0 +1,32 @@
+{{- /* Determine role based on URL path */ -}}
+{{- $role := "ai-manager" -}}
+{{- if hasPrefix .RelPermalink "/dashboard/financials" -}}
+    {{- $role = "financials" -}}
+{{- else if hasPrefix .RelPermalink "/dashboard/marketing" -}}
+    {{- $role = "marketing" -}}
+{{- else if hasPrefix .RelPermalink "/dashboard/product" -}}
+    {{- $role = "product" -}}
+{{- else if hasPrefix .RelPermalink "/dashboard/sales" -}}
+    {{- $role = "sales" -}}
+{{- else if hasPrefix .RelPermalink "/dashboard/board" -}}
+    {{- $role = "board" -}}
+{{- else if hasPrefix .RelPermalink "/dashboard/hr" -}}
+    {{- $role = "hr" -}}
+{{- end -}}
+
+{{- if eq $role "financials" -}}
+    {{- partial "dashboard/sidebar-financials.html" . -}}
+{{- else if eq $role "marketing" -}}
+    {{- partial "dashboard/sidebar-marketing.html" . -}}
+{{- else if eq $role "product" -}}
+    {{- partial "dashboard/sidebar-product.html" . -}}
+{{- else if eq $role "sales" -}}
+    {{- partial "dashboard/sidebar-sales.html" . -}}
+{{- else if eq $role "board" -}}
+    {{- partial "dashboard/sidebar-board.html" . -}}
+{{- else if eq $role "hr" -}}
+    {{- partial "dashboard/sidebar-hr.html" . -}}
+{{- else -}}
+    {{- partial "dashboard/sidebar-ai-manager.html" . -}}
+{{- end -}}
+

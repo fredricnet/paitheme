@@ -1,0 +1,160 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Pipeline</span>
+                    </div>
+                    <div class="dashboard-stat-value">$2.94M</div>
+                    <div class="dashboard-stat-change positive">+18.5% vs last month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Weighted Pipeline</span>
+                    </div>
+                    <div class="dashboard-stat-value">$1.68M</div>
+                    <div class="dashboard-stat-change positive">Based on stage probability</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Deal Size</span>
+                    </div>
+                    <div class="dashboard-stat-value">$19.4K</div>
+                    <div class="dashboard-stat-change positive">+12.3% increase</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Avg. Sales Cycle</span>
+                    </div>
+                    <div class="dashboard-stat-value">42 days</div>
+                    <div class="dashboard-stat-change positive">-8 days improvement</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Pipeline by Stage</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-sales-pipeline">
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Prospecting</div>
+                            <div class="dashboard-pipeline-value">$1.2M</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 100%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">48 deals (41%)</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Qualification</div>
+                            <div class="dashboard-pipeline-value">$840K</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 70%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">34 deals (29%)</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Proposal</div>
+                            <div class="dashboard-pipeline-value">$580K</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 48%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">24 deals (20%)</div>
+                        </div>
+                        <div class="dashboard-pipeline-stage">
+                            <div class="dashboard-pipeline-label">Negotiation</div>
+                            <div class="dashboard-pipeline-value">$320K</div>
+                            <div class="dashboard-pipeline-bar">
+                                <div class="dashboard-pipeline-bar-fill" style="width: 27%"></div>
+                            </div>
+                            <div class="dashboard-pipeline-count">18 deals (15%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Top Pipeline Deals</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="#" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Deal Name</th>
+                                    <th>Account</th>
+                                    <th>Stage</th>
+                                    <th>Value</th>
+                                    <th>Probability</th>
+                                    <th class="text-right">Expected Close</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Enterprise License</td>
+                                    <td>TechCorp Inc.</td>
+                                    <td><span class="dashboard-status-badge success">Negotiation</span></td>
+                                    <td class="positive">$125K</td>
+                                    <td>85%</td>
+                                    <td class="text-right">15 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Platform Subscription</td>
+                                    <td>Global Systems</td>
+                                    <td><span class="dashboard-status-badge">Proposal</span></td>
+                                    <td class="positive">$98K</td>
+                                    <td>60%</td>
+                                    <td class="text-right">28 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual Contract</td>
+                                    <td>DataFlow Solutions</td>
+                                    <td><span class="dashboard-status-badge success">Negotiation</span></td>
+                                    <td class="positive">$76K</td>
+                                    <td>75%</td>
+                                    <td class="text-right">22 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Enterprise Package</td>
+                                    <td>CloudTech Industries</td>
+                                    <td><span class="dashboard-status-badge">Qualification</span></td>
+                                    <td class="positive">$142K</td>
+                                    <td>40%</td>
+                                    <td class="text-right">45 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Multi-Year Deal</td>
+                                    <td>InnovateNow LLC</td>
+                                    <td><span class="dashboard-status-badge">Proposal</span></td>
+                                    <td class="positive">$64K</td>
+                                    <td>55%</td>
+                                    <td class="text-right">35 days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

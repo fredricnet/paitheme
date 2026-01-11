@@ -1,0 +1,136 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{ partial "dashboard/sidebar.html" . }}
+
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <!-- Workflow Submenu -->
+            <div class="dashboard-workflow-submenu">
+                <a href="/dashboard/workflows" class="dashboard-workflow-submenu-item active">All Workflows</a>
+                <a href="/dashboard/workflows/data-processing" class="dashboard-workflow-submenu-item">Data Processing</a>
+                <a href="/dashboard/workflows/customer-support" class="dashboard-workflow-submenu-item">Customer Support</a>
+                <a href="/dashboard/workflows/automation" class="dashboard-workflow-submenu-item">Automation</a>
+                <a href="/dashboard/workflows/integration" class="dashboard-workflow-submenu-item">Integration</a>
+            </div>
+
+            <!-- Workflow Visualization -->
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Data Sync Workflow</h3>
+                    <div class="dashboard-card-actions">
+                        <span class="dashboard-status-badge success">Running</span>
+                        <button class="dashboard-btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="19" cy="12" r="1"></circle>
+                                <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-workflow-visualization">
+                        <div class="dashboard-workflow-node start">
+                            <div class="dashboard-workflow-node-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="dashboard-workflow-node-label">Start</div>
+                        </div>
+                        <div class="dashboard-workflow-connector"></div>
+                        <div class="dashboard-workflow-node agent">
+                            <div class="dashboard-workflow-node-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-workflow-node-label">Data Processing Agent</div>
+                        </div>
+                        <div class="dashboard-workflow-connector"></div>
+                        <div class="dashboard-workflow-node agent">
+                            <div class="dashboard-workflow-node-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-workflow-node-label">API Gateway Agent</div>
+                        </div>
+                        <div class="dashboard-workflow-connector"></div>
+                        <div class="dashboard-workflow-node end">
+                            <div class="dashboard-workflow-node-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="dashboard-workflow-node-label">End</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflows List -->
+            <div class="dashboard-workflows-grid">
+                <div class="dashboard-workflow-card">
+                    <div class="dashboard-workflow-card-header">
+                        <h4 class="dashboard-workflow-card-title">Data Sync Workflow</h4>
+                        <span class="dashboard-status-badge success">Running</span>
+                    </div>
+                    <p class="dashboard-workflow-card-description">Synchronizes data between multiple sources, validates integrity, and triggers notifications on completion.</p>
+                    <div class="dashboard-workflow-card-meta">
+                        <span>3 agents</span>
+                        <span>•</span>
+                        <span>Last run: 5m ago</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-workflow-card">
+                    <div class="dashboard-workflow-card-header">
+                        <h4 class="dashboard-workflow-card-title">Customer Onboarding</h4>
+                        <span class="dashboard-status-badge success">Running</span>
+                    </div>
+                    <p class="dashboard-workflow-card-description">Automates customer onboarding process, sends welcome emails, creates accounts, and sets up initial configurations.</p>
+                    <div class="dashboard-workflow-card-meta">
+                        <span>5 agents</span>
+                        <span>•</span>
+                        <span>Last run: 12m ago</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-workflow-card">
+                    <div class="dashboard-workflow-card-header">
+                        <h4 class="dashboard-workflow-card-title">Report Generation</h4>
+                        <span class="dashboard-status-badge success">Running</span>
+                    </div>
+                    <p class="dashboard-workflow-card-description">Collects data from multiple sources, generates comprehensive reports, and distributes to stakeholders.</p>
+                    <div class="dashboard-workflow-card-meta">
+                        <span>2 agents</span>
+                        <span>•</span>
+                        <span>Last run: 1h ago</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-workflow-card">
+                    <div class="dashboard-workflow-card-header">
+                        <h4 class="dashboard-workflow-card-title">Content Moderation</h4>
+                        <span class="dashboard-status-badge success">Running</span>
+                    </div>
+                    <p class="dashboard-workflow-card-description">Monitors user-generated content, flags violations, and escalates cases requiring human review.</p>
+                    <div class="dashboard-workflow-card-meta">
+                        <span>4 agents</span>
+                        <span>•</span>
+                        <span>Last run: 30s ago</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

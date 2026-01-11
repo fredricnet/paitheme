@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{- /* Check if page is published - don't render if publish is false */ -}}
+{{- $isPublished := ne (.Params.publish | default true) false -}}
+{{- if $isPublished -}}
+<article class="single-page">
+    <div class="container">
+        <header class="blog-post-header">
+            {{- if .Params.image -}}
+            <div class="blog-post-header-image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+            </div>
+            {{- end -}}
+            <div class="blog-post-header-content">
+                {{- if .Params.category -}}
+                {{- /* Get category icon and color from categories.yaml */ -}}
+                {{- $categorySpec := index site.Data.categories.categories .Params.category -}}
+                {{- $fallback := site.Data.categories.fallback -}}
+                {{- $categoryIcon := "tag" -}}
+                {{- $categoryColor := "#3b82f6" -}}
+                {{- $iconCount := 1 -}}
+                {{- if $categorySpec -}}
+                  {{- $categoryIcon = $categorySpec.icon | default $fallback.icon -}}
+                  {{- $categoryColor = index $categorySpec "icon-color" | default (index $fallback "icon-color") -}}
+                  {{- $iconCount = index $categorySpec "icon-count" | default (index $fallback "icon-count") -}}
+                {{- else -}}
+                  {{- $categoryIcon = $fallback.icon -}}
+                  {{- $categoryColor = index $fallback "icon-color" -}}
+                  {{- $iconCount = index $fallback "icon-count" -}}
+                {{- end -}}
+                {{- partial "tag-badge.html" (dict "text" .Params.category "icon" $categoryIcon "count" $iconCount "color" $categoryColor "margin" "0") -}}
+                {{- end -}}
+                <h1 class="blog-post-title">{{ .Title }}</h1>
+                {{- if .Description -}}
+                <p class="blog-post-description">{{ .Description }}</p>
+                {{- end -}}
+            </div>
+        </header>
+        
+        <div class="page-content">
+            {{ .Content }}
+        </div>
+    </div>
+</article>
+{{- else -}}
+{{- /* Unpublished page - don't render content */ -}}
+{{- end -}}
+{{ end }}
+

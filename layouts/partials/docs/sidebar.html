@@ -1,0 +1,120 @@
+{{- /*
+  Documentation Sidebar
+  Displays navigation tree for documentation sections
+  
+  Pages are sorted by weight (ascending). To control order:
+  - Add `weight: 1` to frontmatter for first item
+  - Add `weight: 2` for second item, etc.
+  - Lower numbers appear first (higher in the menu)
+  - Pages without weight default to 0 and are sorted together
+*/ -}}
+<aside class="docs-sidebar" id="docs-sidebar">
+    <button class="docs-sidebar-toggle" id="docs-sidebar-toggle" aria-label="Toggle sidebar">
+        {{- partial "utils/icon.html" (dict "name" "menu" "attributes" "height=24 width=24") -}}
+    </button>
+    
+    <div class="docs-sidebar-header">
+    </div>
+    
+    <nav class="docs-sidebar-nav">
+        {{- $currentPage := . -}}
+        {{- $section := .Section -}}
+        
+        {{- /* Determine which section to use based on current page path */ -}}
+        {{- $targetSection := false -}}
+        {{- if hasPrefix $currentPage.RelPermalink "/dev/styleguide" -}}
+            {{- $targetSection = site.GetPage "section" "dev/styleguide" -}}
+        {{- else -}}
+            {{- $targetSection = site.GetPage "section" "docs" -}}
+        {{- end -}}
+        
+        {{- if $targetSection -}}
+        {{- /* Show the index page as a link at the top */ -}}
+        {{- $isIndexActive := eq $targetSection.RelPermalink $currentPage.RelPermalink -}}
+        <a href="{{ $targetSection.RelPermalink }}" class="docs-nav-item{{ if $isIndexActive }} is-active{{ end }}">
+            {{- if $targetSection.Params.icon -}}
+            <span class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" $targetSection.Params.icon "attributes" "height=16 width=16") -}}
+            </span>
+            {{- end -}}
+            <span class="docs-nav-text">{{ $targetSection.Title }}</span>
+        </a>
+        {{- /* Then show child pages directly (not wrapped in a group) */ -}}
+        {{- range $targetSection.Pages.ByWeight -}}
+        {{- $childIsActive := eq .RelPermalink $currentPage.RelPermalink -}}
+        {{- if .Pages -}}
+        {{- /* Child has pages, so render it as a nested group */ -}}
+        {{- template "docs-nav-tree" (dict "page" . "current" $currentPage "level" 1) -}}
+        {{- else -}}
+        {{- /* Child has no pages, so render it as a link */ -}}
+        <a href="{{ .RelPermalink }}" class="docs-nav-item{{ if $childIsActive }} is-active{{ end }}">
+            {{- if .Params.icon -}}
+            <span class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" .Params.icon "attributes" "height=16 width=16") -}}
+            </span>
+            {{- end -}}
+            <span class="docs-nav-text">{{ .Title }}</span>
+        </a>
+        {{- end -}}
+        {{- end -}}
+        {{- end -}}
+    </nav>
+</aside>
+
+{{- define "docs-nav-tree" -}}
+{{- $page := .page -}}
+{{- $current := .current -}}
+{{- $level := .level -}}
+{{- $isActive := eq $page.RelPermalink $current.RelPermalink -}}
+{{- $isAncestor := $current.IsDescendant $page -}}
+{{- /* All groups are collapsed by default - users can expand by clicking */ -}}
+{{- $isExpanded := false -}}
+{{- $groupId := $page.RelPermalink | replaceRE "[^a-zA-Z0-9]" "-" | lower -}}
+
+{{- if $page.Pages -}}
+<div class="docs-nav-group{{ if $isExpanded }} is-expanded{{ end }}">
+    <button type="button" class="docs-nav-group-toggle" aria-expanded="{{ $isExpanded }}" aria-controls="nav-group-{{ $groupId }}">
+        <span class="docs-nav-group-icon">
+            {{- partial "utils/icon.html" (dict "name" "chevron-right" "attributes" "height=16 width=16") -}}
+        </span>
+        <a href="{{ $page.RelPermalink }}" class="docs-nav-group-link{{ if $isActive }} is-active{{ end }}">
+            {{- if $page.Params.icon -}}
+            <span class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" $page.Params.icon "attributes" "height=18 width=18") -}}
+            </span>
+            {{- end -}}
+            <span class="docs-nav-text">{{ $page.Title }}</span>
+        </a>
+    </button>
+    <div class="docs-nav-group-content" id="nav-group-{{ $groupId }}">
+        {{- /* Show child pages only (index page is linked via the group title) */ -}}
+        {{- range $page.Pages.ByWeight -}}
+        {{- $childIsActive := eq .RelPermalink $current.RelPermalink -}}
+        {{- if .Pages -}}
+        {{- /* Child has pages, so render it as a nested group */ -}}
+        {{- template "docs-nav-tree" (dict "page" . "current" $current "level" (add $level 1)) -}}
+        {{- else -}}
+        {{- /* Child has no pages, so render it as a link */ -}}
+        <a href="{{ .RelPermalink }}" class="docs-nav-item{{ if $childIsActive }} is-active{{ end }}">
+            {{- if .Params.icon -}}
+            <span class="docs-nav-icon">
+                {{- partial "utils/icon.html" (dict "name" .Params.icon "attributes" "height=16 width=16") -}}
+            </span>
+            {{- end -}}
+            <span class="docs-nav-text">{{ .Title }}</span>
+        </a>
+        {{- end -}}
+        {{- end -}}
+    </div>
+</div>
+{{- else -}}
+<a href="{{ $page.RelPermalink }}" class="docs-nav-item{{ if $isActive }} is-active{{ end }}">
+    {{- if $page.Params.icon -}}
+    <span class="docs-nav-icon">
+        {{- partial "utils/icon.html" (dict "name" $page.Params.icon "attributes" "height=16 width=16") -}}
+    </span>
+    {{- end -}}
+    <span class="docs-nav-text">{{ $page.Title }}</span>
+</a>
+{{- end -}}
+{{- end -}}

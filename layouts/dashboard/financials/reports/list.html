@@ -1,0 +1,152 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Reports Generated</span>
+                    </div>
+                    <div class="dashboard-stat-value">247</div>
+                    <div class="dashboard-stat-change positive">This month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Automated Reports</span>
+                    </div>
+                    <div class="dashboard-stat-value">189</div>
+                    <div class="dashboard-stat-change positive">76% automated</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Time Saved</span>
+                    </div>
+                    <div class="dashboard-stat-value">420h</div>
+                    <div class="dashboard-stat-change positive">vs manual reporting</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Report Accuracy</span>
+                    </div>
+                    <div class="dashboard-stat-value">99.8%</div>
+                    <div class="dashboard-stat-change positive">+0.5% improvement</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Available Reports</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn-primary">Generate Report</button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-reports-list">
+                        <div class="dashboard-report-item">
+                            <div class="dashboard-report-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <path d="M14 2v6h6"></path>
+                                    <path d="M16 13H8"></path>
+                                    <path d="M16 17H8"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-report-info">
+                                <span class="dashboard-report-name">Monthly Financial Summary</span>
+                                <span class="dashboard-report-detail">Last generated: 2 days ago</span>
+                            </div>
+                            <div class="dashboard-report-actions">
+                                <button class="dashboard-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" x2="12" y1="15" y2="3"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dashboard-report-item">
+                            <div class="dashboard-report-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 3v18h18"></path>
+                                    <path d="m19 9-5 5-4-4-3 3"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-report-info">
+                                <span class="dashboard-report-name">Revenue Analysis Report</span>
+                                <span class="dashboard-report-detail">Last generated: 5 days ago</span>
+                            </div>
+                            <div class="dashboard-report-actions">
+                                <button class="dashboard-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" x2="12" y1="15" y2="3"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dashboard-report-item">
+                            <div class="dashboard-report-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 3v18h18"></path>
+                                    <path d="m7 12 5 5 5-5"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-report-info">
+                                <span class="dashboard-report-name">Expense Breakdown Report</span>
+                                <span class="dashboard-report-detail">Last generated: 1 week ago</span>
+                            </div>
+                            <div class="dashboard-report-actions">
+                                <button class="dashboard-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" x2="12" y1="15" y2="3"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="dashboard-report-item">
+                            <div class="dashboard-report-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m3 16 4 4 4-4"></path>
+                                    <path d="M7 20V4"></path>
+                                    <path d="m21 8-4-4-4 4"></path>
+                                    <path d="M17 4v16"></path>
+                                </svg>
+                            </div>
+                            <div class="dashboard-report-info">
+                                <span class="dashboard-report-name">Cash Flow Statement</span>
+                                <span class="dashboard-report-detail">Last generated: 3 days ago</span>
+                            </div>
+                            <div class="dashboard-report-actions">
+                                <button class="dashboard-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" x2="12" y1="15" y2="3"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

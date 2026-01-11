@@ -1,0 +1,20 @@
+{{/* Value Proposition Header Shortcode - Creates a two-column header with title and description
+  Parameters:
+  - title: Main heading text (required)
+  - description: Description/subtitle text (optional)
+  
+  Usage:
+  value-proposition-header title="See Every Dollar, Understand Every Trend, and Act with Unmatched Speed" description="Our unified dashboard brings all your accounts..."
+*/}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+
+{{- if $title -}}
+<div class="value-proposition-header">
+    <h2 class="value-proposition-title">{{ $title }}</h2>
+    {{- if $description -}}
+    <p class="value-proposition-description">{{ $description }}</p>
+    {{- end -}}
+</div>
+{{- end -}}
+

@@ -1,0 +1,189 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Total Leads</span>
+                    </div>
+                    <div class="dashboard-stat-value">2,847</div>
+                    <div class="dashboard-stat-change positive">+18.5% vs last month</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Qualified Leads</span>
+                    </div>
+                    <div class="dashboard-stat-value">1,248</div>
+                    <div class="dashboard-stat-change positive">43.8% qualification rate</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Conversion Rate</span>
+                    </div>
+                    <div class="dashboard-stat-value">4.2%</div>
+                    <div class="dashboard-stat-change positive">+0.8% improvement</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Cost per Lead</span>
+                    </div>
+                    <div class="dashboard-stat-value">$42</div>
+                    <div class="dashboard-stat-change positive">-15.2% reduction</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Lead Sources</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-lead-sources">
+                            <div class="dashboard-lead-source-item">
+                                <span class="dashboard-lead-source-label">Website Forms</span>
+                                <span class="dashboard-lead-source-value">1,124</span>
+                                <div class="dashboard-lead-source-bar">
+                                    <div class="dashboard-lead-source-bar-fill" style="width: 39%"></div>
+                                </div>
+                                <span class="dashboard-lead-source-percentage">39%</span>
+                            </div>
+                            <div class="dashboard-lead-source-item">
+                                <span class="dashboard-lead-source-label">Email Campaigns</span>
+                                <span class="dashboard-lead-source-value">847</span>
+                                <div class="dashboard-lead-source-bar">
+                                    <div class="dashboard-lead-source-bar-fill" style="width: 30%"></div>
+                                </div>
+                                <span class="dashboard-lead-source-percentage">30%</span>
+                            </div>
+                            <div class="dashboard-lead-source-item">
+                                <span class="dashboard-lead-source-label">Social Media</span>
+                                <span class="dashboard-lead-source-value">542</span>
+                                <div class="dashboard-lead-source-bar">
+                                    <div class="dashboard-lead-source-bar-fill" style="width: 19%"></div>
+                                </div>
+                                <span class="dashboard-lead-source-percentage">19%</span>
+                            </div>
+                            <div class="dashboard-lead-source-item">
+                                <span class="dashboard-lead-source-label">Referrals</span>
+                                <span class="dashboard-lead-source-value">234</span>
+                                <div class="dashboard-lead-source-bar">
+                                    <div class="dashboard-lead-source-bar-fill" style="width: 8%"></div>
+                                </div>
+                                <span class="dashboard-lead-source-percentage">8%</span>
+                            </div>
+                            <div class="dashboard-lead-source-item">
+                                <span class="dashboard-lead-source-label">Other</span>
+                                <span class="dashboard-lead-source-value">100</span>
+                                <div class="dashboard-lead-source-bar">
+                                    <div class="dashboard-lead-source-bar-fill" style="width: 4%"></div>
+                                </div>
+                                <span class="dashboard-lead-source-percentage">4%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Lead Quality Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">45%</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 97%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Actual</span>
+                                <span class="dashboard-scorecard-value">43.8%</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value negative">-1.2%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Recent Leads</h3>
+                    <div class="dashboard-card-actions">
+                        <a href="#" class="dashboard-link">View all</a>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Lead Name</th>
+                                    <th>Source</th>
+                                    <th>Status</th>
+                                    <th>Score</th>
+                                    <th class="text-right">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Smith</td>
+                                    <td>Website Form</td>
+                                    <td><span class="dashboard-status-badge success">Qualified</span></td>
+                                    <td class="positive">85</td>
+                                    <td class="text-right">2 hours ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Johnson</td>
+                                    <td>Email Campaign</td>
+                                    <td><span class="dashboard-status-badge success">Qualified</span></td>
+                                    <td class="positive">92</td>
+                                    <td class="text-right">5 hours ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Mike Davis</td>
+                                    <td>Social Media</td>
+                                    <td><span class="dashboard-status-badge">New</span></td>
+                                    <td>65</td>
+                                    <td class="text-right">1 day ago</td>
+                                </tr>
+                                <tr>
+                                    <td>Emily Wilson</td>
+                                    <td>Referral</td>
+                                    <td><span class="dashboard-status-badge success">Qualified</span></td>
+                                    <td class="positive">88</td>
+                                    <td class="text-right">1 day ago</td>
+                                </tr>
+                                <tr>
+                                    <td>David Brown</td>
+                                    <td>Website Form</td>
+                                    <td><span class="dashboard-status-badge">New</span></td>
+                                    <td>58</td>
+                                    <td class="text-right">2 days ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

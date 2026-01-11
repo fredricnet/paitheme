@@ -1,0 +1,30 @@
+{{- /*
+  Tab Shortcode
+  Individual tab within a tabs container
+  
+  @param {string} title The tab title
+  @param {string} active Whether this tab is active by default (true/false)
+  @param {string} icon Optional icon name
+  
+  @example {{< tab title="Tab 1" active="true" >}}Content{{< /tab >}}
+*/ -}}
+{{- $title := .Get "title" | default "Tab" -}}
+{{- $active := .Get "active" | default "false" -}}
+{{- $icon := .Get "icon" -}}
+{{- $content := .Inner -}}
+{{- $tabId := printf "tab-%s-%d" (md5 $title) now.Unix -}}
+
+<div class="pai-tab{{ if eq $active "true" }} is-active{{ end }}" data-tab-id="{{ $tabId }}">
+    <button class="pai-tab-button" data-tab-target="{{ $tabId }}" aria-selected="{{ $active }}">
+        {{- if $icon -}}
+        <span class="pai-tab-icon">
+            {{- partial "utils/icon.html" (dict "name" $icon "attributes" "height=18 width=18") -}}
+        </span>
+        {{- end -}}
+        <span class="pai-tab-title">{{ $title }}</span>
+    </button>
+    <div class="pai-tab-content" id="{{ $tabId }}"{{ if eq $active "true" }} style="display: block;"{{ end }}>
+        {{ $content | markdownify }}
+    </div>
+</div>
+

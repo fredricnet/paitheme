@@ -1,0 +1,106 @@
+{{/* FAQ Section Shortcode - Reusable FAQ section with 50/50 layout
+  Parameters:
+  - title: Section title (optional, default: "Frequently Asked Questions")
+  - description: Section description (optional)
+  - tag-text: Text for the tag badge (optional, e.g., "real results")
+  - tag-icon: Icon type for tag badge (optional, default: "star")
+  - tag-icon-count: Number of icons in tag badge (optional, default: 5)
+  - tag-icon-color: Color of tag icons (optional, default: "#3b82f6")
+  - published: Whether to render this section (optional, default: "true")
+  - limit: Maximum number of FAQs to show (optional, default: all)
+  - category: Filter by category (optional, default: all categories)
+*/}}
+{{- $published := .Get "published" | default "true" -}}
+{{- if ne $published "false" -}}
+{{- $title := .Get "title" | default "Frequently Asked Questions" -}}
+{{- $description := .Get "description" -}}
+{{- $tagText := .Get "tag-text" -}}
+{{- $tagIcon := .Get "tag-icon" | default "star" -}}
+{{- $tagIconCount := .Get "tag-icon-count" | default 5 -}}
+{{- $tagIconColor := .Get "tag-icon-color" | default "#3b82f6" -}}
+{{- $limit := .Get "limit" | default 0 -}}
+{{- $categoryFilter := .Get "category" -}}
+
+{{- /* Get FAQ section pages */ -}}
+{{- $faqSection := .Site.GetPage "section" "faq" -}}
+{{- $faqs := slice -}}
+{{- if $faqSection -}}
+    {{- if $categoryFilter -}}
+        {{- $faqs = where $faqSection.Pages "Params.category" $categoryFilter -}}
+    {{- else -}}
+        {{- $faqs = $faqSection.Pages -}}
+    {{- end -}}
+    {{- /* Filter by visible status - exclude FAQs where visible is "false" */ -}}
+    {{- $visibleFaqs := slice -}}
+    {{- range $faqs -}}
+        {{- $visible := .Params.visible | default "true" -}}
+        {{- if ne $visible "false" -}}
+            {{- $visibleFaqs = $visibleFaqs | append . -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $faqs = $visibleFaqs -}}
+    {{- /* Sort by index if available */ -}}
+    {{- $faqs = sort $faqs "Params.index" "asc" -}}
+    {{- /* Apply limit if specified */ -}}
+    {{- if and $limit (gt $limit 0) -}}
+        {{- $faqs = first $limit $faqs -}}
+    {{- end -}}
+{{- end -}}
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <div class="faq-section-wrapper">
+            <!-- Left Column: Title and Description -->
+            <div class="faq-section-header">
+                {{- if $tagText -}}
+                {{- $firstChar := substr $tagText 0 1 | upper -}}
+                {{- $rest := substr $tagText 1 -}}
+                {{- $capitalizedText := printf "%s%s" $firstChar $rest -}}
+                <div class="testimonials-stars-wrapper" style="margin-bottom: 1.5rem;">
+                    <div class="border-animation">
+                        <div class="border-animation-inner testimonials-stars">
+                            {{- range seq $tagIconCount -}}
+                            {{- if eq $tagIcon "star" -}}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="{{ $tagIconColor }}" stroke="{{ $tagIconColor }}" stroke-width="2">
+                                <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                            </svg>
+                            {{- end -}}
+                            {{- end -}}
+                            <span class="testimonials-label">{{ $capitalizedText }}</span>
+                        </div>
+                    </div>
+                </div>
+                {{- end -}}
+                <h2 class="section-title">{{ $title }}</h2>
+                {{- if $description -}}
+                <p class="section-subtitle">{{ $description }}</p>
+                {{- end -}}
+            </div>
+            
+            <!-- Right Column: FAQ List -->
+            <div class="faq-section-list">
+                {{- if $faqs -}}
+                <div class="faq-list">
+                    {{- range $faqs -}}
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            {{ .Title }}
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                {{ .Content }}
+                            </div>
+                        </div>
+                    </div>
+                    {{- end -}}
+                </div>
+                {{- else -}}
+                <p class="faq-empty">No FAQs found.</p>
+                {{- end -}}
+            </div>
+        </div>
+    </div>
+</section>
+{{- end -}}
+

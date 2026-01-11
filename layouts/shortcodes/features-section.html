@@ -1,0 +1,39 @@
+{{/* Features Section Shortcode
+Parameters:
+- title: Section title (optional)
+- subtitle: Section subtitle (optional)
+- tag-text: Text for the tag badge (optional)
+- tag-icon: Icon type for tag badge (optional, default: "star")
+- tag-icon-count: Number of icons in tag badge (optional, default: 5)
+- tag-icon-color: Color of tag icons (optional, default: "#3b82f6")
+- published: Whether to render this section (optional, default: "true")
+*/}}
+{{- $published := .Get "published" | default "true" -}}
+{{- if ne $published "false" -}}
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+
+<section class="features-section">
+    <div class="container">
+        <div class="features-header">
+            {{- partial "tag-badge.html" (dict "text" (.Get "tag-text") "icon" (.Get "tag-icon") "count" (.Get
+            "tag-icon-count") "color" (.Get "tag-icon-color")) -}}
+            {{- if $title -}}
+            <h2 class="section-title">{{ $title }}</h2>
+            {{- end -}}
+            {{- if $subtitle -}}
+            <p class="section-subtitle">{{ $subtitle }}</p>
+            {{- end -}}
+        </div>
+
+        {{/* Initial container for tabs - JS will reorganize this */}}
+        <div class="features-tabs-initial">
+            {{ .Inner }}
+        </div>
+
+        {{/* Desktop Layout Containers */}}
+        <div class="features-tabs"></div>
+        <div class="features-content"></div>
+    </div>
+</section>
+{{- end -}}

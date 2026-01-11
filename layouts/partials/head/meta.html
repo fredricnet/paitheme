@@ -1,0 +1,84 @@
+{{- /*
+    Shared Meta Tags Partial
+    
+    Used across all baseof.html templates for consistent meta tags.
+    
+    Parameters:
+    - . : The page context
+    - .Params.default_description : Optional fallback description (default: site description)
+*/ -}}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{- /* Theme initialization script - always use dark mode */ -}}
+<script>
+    (function() {
+        document.documentElement.removeAttribute('data-theme');
+    })();
+</script>
+
+{{- /* Title */ -}}
+<title>{{- if .IsHome -}}{{ site.Title }}{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}</title>
+
+{{- /* Description */ -}}
+{{- $description := .Description -}}
+{{- if not $description -}}
+    {{- $description = site.Params.description -}}
+{{- end -}}
+<meta name="description" content="{{ $description | default site.Params.description | default site.Title }}">
+
+{{- /* Canonical URL */ -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Robots meta tag */ -}}
+{{- $noindex := .Params.noindex | default false -}}
+{{- if and (hugo.IsProduction) (not $noindex) -}}
+<meta name="robots" content="index, follow">
+{{- else -}}
+<meta name="robots" content="noindex, nofollow">
+{{- end -}}
+
+{{- /* Open Graph / Facebook */ -}}
+<meta property="og:type" content="{{- if .IsPage -}}article{{- else -}}website{{- end -}}">
+<meta property="og:title" content="{{- if .IsHome -}}{{ site.Title }}{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}">
+{{- $ogDescription := .Description | default site.Params.description | default site.Title -}}
+<meta property="og:description" content="{{ $ogDescription }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{- if .Params.image -}}
+<meta property="og:image" content="{{ .Params.image | absURL }}">
+{{- end -}}
+
+{{- /* Twitter Card */ -}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{- if .IsHome -}}{{ site.Title }}{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}">
+{{- $twitterDescription := .Description | default site.Params.description | default site.Title -}}
+<meta name="twitter:description" content="{{ $twitterDescription }}">
+{{- if .Params.image -}}
+<meta name="twitter:image" content="{{ .Params.image | absURL }}">
+{{- end -}}
+
+{{- /* Favicon - configurable via data/site.yaml */ -}}
+{{- $siteConfig := site.Data.site -}}
+{{- $faviconPath := "brand/favicon.svg" -}}
+{{- if and $siteConfig $siteConfig.brand $siteConfig.brand.favicon -}}
+    {{- $faviconPath = $siteConfig.brand.favicon -}}
+{{- end -}}
+<link rel="icon" type="image/svg+xml" href="{{ $faviconPath | relURL }}">
+<link rel="alternate icon" href="{{ $faviconPath | relURL }}">
+
+{{- /* Font preconnect for performance */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{{- /* Google Fonts - Inter for modern look */ -}}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{{- /* Google Fonts - Caveat for handwritten logo */ -}}
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{{- /* Core Stylesheets */ -}}
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/docs.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+

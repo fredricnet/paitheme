@@ -1,0 +1,139 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{- partial "dashboard/sidebar.html" . -}}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+
+        <main class="dashboard-content">
+            {{ .Content }}
+
+            <div class="dashboard-time-filter">
+                <button class="dashboard-time-btn active" data-period="day">Day</button>
+                <button class="dashboard-time-btn" data-period="week">Week</button>
+                <button class="dashboard-time-btn" data-period="month">Month</button>
+                <button class="dashboard-time-btn" data-period="year">Year</button>
+            </div>
+
+            <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Forecasted Revenue</span>
+                    </div>
+                    <div class="dashboard-stat-value">$2.68M</div>
+                    <div class="dashboard-stat-change positive">+12.3% vs target</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Forecast Accuracy</span>
+                    </div>
+                    <div class="dashboard-stat-value">92%</div>
+                    <div class="dashboard-stat-change positive">+24% improvement</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Commit</span>
+                    </div>
+                    <div class="dashboard-stat-value">$2.4M</div>
+                    <div class="dashboard-stat-change positive">96% of target</div>
+                </div>
+                <div class="dashboard-stat-card">
+                    <div class="dashboard-stat-header">
+                        <span class="dashboard-stat-label">Best Case</span>
+                    </div>
+                    <div class="dashboard-stat-value">$2.9M</div>
+                    <div class="dashboard-stat-change positive">+16% upside</div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Forecast by Month</h3>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-forecast-months">
+                        <div class="dashboard-forecast-month-item">
+                            <span class="dashboard-forecast-month-label">This Month</span>
+                            <span class="dashboard-forecast-month-value">$2.4M</span>
+                            <div class="dashboard-forecast-month-bar">
+                                <div class="dashboard-forecast-month-bar-fill" style="width: 96%"></div>
+                            </div>
+                            <span class="dashboard-forecast-month-percentage">96% of target</span>
+                        </div>
+                        <div class="dashboard-forecast-month-item">
+                            <span class="dashboard-forecast-month-label">Next Month</span>
+                            <span class="dashboard-forecast-month-value">$2.6M</span>
+                            <div class="dashboard-forecast-month-bar">
+                                <div class="dashboard-forecast-month-bar-fill" style="width: 104%"></div>
+                            </div>
+                            <span class="dashboard-forecast-month-percentage">104% of target</span>
+                        </div>
+                        <div class="dashboard-forecast-month-item">
+                            <span class="dashboard-forecast-month-label">+2 Months</span>
+                            <span class="dashboard-forecast-month-value">$2.7M</span>
+                            <div class="dashboard-forecast-month-bar">
+                                <div class="dashboard-forecast-month-bar-fill" style="width: 108%"></div>
+                            </div>
+                            <span class="dashboard-forecast-month-percentage">108% of target</span>
+                        </div>
+                        <div class="dashboard-forecast-month-item">
+                            <span class="dashboard-forecast-month-label">+3 Months</span>
+                            <span class="dashboard-forecast-month-value">$2.8M</span>
+                            <div class="dashboard-forecast-month-bar">
+                                <div class="dashboard-forecast-month-bar-fill" style="width: 112%"></div>
+                            </div>
+                            <span class="dashboard-forecast-month-percentage">112% of target</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-2col">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Forecast Accuracy Trend</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-chart-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 600 200" fill="none">
+                                <line x1="0" y1="150" x2="600" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                                <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                                <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                                <polyline points="30,120 90,115 150,110 210,105 270,100 330,95 390,90 450,85 510,80 570,75" 
+                                    stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polygon points="30,120 90,115 150,110 210,105 270,100 330,95 390,90 450,85 510,80 570,75 570,150 30,150" 
+                                    fill="rgba(16,185,129,0.15)"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="dashboard-card-header">
+                        <h3 class="dashboard-card-title">Forecast Scorecard</h3>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-scorecard">
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Target</span>
+                                <span class="dashboard-scorecard-value">$2.5M</span>
+                                <div class="dashboard-scorecard-progress">
+                                    <div class="dashboard-scorecard-progress-fill" style="width: 107%"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Forecast</span>
+                                <span class="dashboard-scorecard-value">$2.68M</span>
+                            </div>
+                            <div class="dashboard-scorecard-item">
+                                <span class="dashboard-scorecard-label">Variance</span>
+                                <span class="dashboard-scorecard-value positive">+$180K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

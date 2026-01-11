@@ -1,0 +1,54 @@
+{{ define "main" }}
+<div class="dashboard-layout">
+    {{ partial "dashboard/sidebar.html" . }}
+    <div class="dashboard-main">
+        {{ partial "dashboard/header.html" . }}
+        <main class="dashboard-content">
+            {{ .Content }}
+            <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                    <h3 class="dashboard-card-title">Error Details</h3>
+                    <div class="dashboard-card-actions">
+                        <button class="dashboard-btn dashboard-btn-secondary">Resolve All</button>
+                    </div>
+                </div>
+                <div class="dashboard-card-content">
+                    <div class="dashboard-error-list">
+                        <div class="dashboard-error-item">
+                            <div class="dashboard-error-icon error">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                            </div>
+                            <div class="dashboard-error-info">
+                                <span class="dashboard-error-title">Email Parser Agent</span>
+                                <span class="dashboard-error-detail">Connection timeout after 30s - Unable to establish connection to email server</span>
+                                <span class="dashboard-error-time">2 minutes ago</span>
+                            </div>
+                            <a href="#" class="dashboard-error-link">Inspect →</a>
+                        </div>
+                        <div class="dashboard-error-item">
+                            <div class="dashboard-error-icon error">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                            </div>
+                            <div class="dashboard-error-info">
+                                <span class="dashboard-error-title">Data Sync Workflow</span>
+                                <span class="dashboard-error-detail">Failed to authenticate with external API - Invalid API key or expired token</span>
+                                <span class="dashboard-error-time">15 minutes ago</span>
+                            </div>
+                            <a href="#" class="dashboard-error-link">Inspect →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+{{ end }}
+

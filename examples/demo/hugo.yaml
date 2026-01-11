@@ -1,0 +1,30 @@
+baseURL: 'http://localhost:1313/'
+languageCode: 'en-us'
+title: 'PAI Theme Demo'
+theme: 'pai-theme'
+description: 'Demo site showcasing PAI Theme features and capabilities'
+
+module:
+  imports:
+    - path: github.com/fredricnet/pai-theme
+      # For local development, use: hugo mod replace github.com/fredricnet/pai-theme => ../..
+  replacements:
+    - github.com/fredricnet/pai-theme => ../..
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Documentation"
+      url: "/docs/"
+      weight: 2
+    - name: "Dictionary"
+      url: "/dictionary/"
+      weight: 3
+    - name: "Blog"
+      url: "/blog/"
+      weight: 4
+    - name: "Styleguide"
+      url: "/dev/styleguide/"
+      weight: 5

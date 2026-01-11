@@ -1,0 +1,92 @@
+{{- /*
+    Organization Schema (JSON-LD)
+    
+    Outputs Organization structured data for search engines and AI.
+    Configuration via data/site.yaml under schema.organization
+    
+    Reference: https://schema.org/Organization
+*/ -}}
+
+{{- $siteConfig := site.Data.site -}}
+{{- $schema := $siteConfig.schema -}}
+{{- $org := $schema.organization -}}
+
+{{- if $org -}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ $org.name | default site.Title | jsonify }},
+    {{- if $org.legal_name }}
+    "legalName": {{ $org.legal_name | jsonify }},
+    {{- end }}
+    {{- if $org.description }}
+    "description": {{ $org.description | jsonify }},
+    {{- end }}
+    "url": {{ $org.url | default site.BaseURL | jsonify }},
+    {{- if $org.logo }}
+    "logo": {
+        "@type": "ImageObject",
+        "url": {{ $org.logo | jsonify }}
+    },
+    {{- end }}
+    {{- if $org.founding_date }}
+    "foundingDate": {{ $org.founding_date | jsonify }},
+    {{- end }}
+    {{- if $org.founders }}
+    "founder": [
+        {{- range $i, $founder := $org.founders }}
+        {{- if $i }},{{ end }}
+        {
+            "@type": "Person",
+            "name": {{ $founder.name | jsonify }}
+        }
+        {{- end }}
+    ],
+    {{- end }}
+    {{- if $org.contact }}
+    "contactPoint": {
+        "@type": "ContactPoint",
+        {{- if $org.contact.email }}
+        "email": {{ $org.contact.email | jsonify }},
+        {{- end }}
+        {{- if $org.contact.phone }}
+        "telephone": {{ $org.contact.phone | jsonify }},
+        {{- end }}
+        "contactType": {{ $org.contact.type | default "customer service" | jsonify }}
+    },
+    {{- end }}
+    {{- if $org.address }}
+    "address": {
+        "@type": "PostalAddress",
+        {{- if $org.address.street }}
+        "streetAddress": {{ $org.address.street | jsonify }},
+        {{- end }}
+        {{- if $org.address.city }}
+        "addressLocality": {{ $org.address.city | jsonify }},
+        {{- end }}
+        {{- if $org.address.state }}
+        "addressRegion": {{ $org.address.state | jsonify }},
+        {{- end }}
+        {{- if $org.address.postal_code }}
+        "postalCode": {{ $org.address.postal_code | jsonify }},
+        {{- end }}
+        {{- if $org.address.country }}
+        "addressCountry": {{ $org.address.country | jsonify }}
+        {{- end }}
+    },
+    {{- end }}
+    {{- if $org.social_profiles }}
+    "sameAs": [
+        {{- range $i, $url := $org.social_profiles }}
+        {{- if $i }},{{ end }}
+        {{ $url | jsonify }}
+        {{- end }}
+    ]
+    {{- else }}
+    "sameAs": []
+    {{- end }}
+}
+</script>
+{{- end -}}
+
