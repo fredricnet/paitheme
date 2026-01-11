@@ -34,7 +34,7 @@ View the self-documenting styleguide showcasing typography, colors, components, 
 
 ## Getting Started
 
-To use PAI Theme in your own Hugo site, see the [README](https://github.com/fredricnet/pai-theme) for installation and configuration instructions.
+To use PAI Theme in your own Hugo site, see the [README](https://github.com/fredricnet/paitheme) for installation and configuration instructions.
 
 ---
 

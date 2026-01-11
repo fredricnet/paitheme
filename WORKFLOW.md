@@ -15,7 +15,7 @@ The theme includes a demo site at `examples/demo/` for testing changes:
 
 2. Use Hugo module replace to point to local theme directory:
    ```bash
-   hugo mod replace github.com/fredricnet/pai-theme => ../..
+   hugo mod replace github.com/fredricnet/paitheme => ../..
    ```
 
 3. Start the development server:
@@ -126,7 +126,7 @@ To update a website to the latest theme version:
 cd /path/to/website
 
 # Update to latest version
-hugo mod get -u github.com/fredricnet/pai-theme
+hugo mod get -u github.com/fredricnet/paitheme
 hugo mod tidy
 
 # Test the build
@@ -136,7 +136,7 @@ hugo server
 To update to a specific version:
 
 ```bash
-hugo mod get -u github.com/fredricnet/pai-theme@v1.1.0
+hugo mod get -u github.com/fredricnet/paitheme@v1.1.0
 hugo mod tidy
 ```
 
@@ -156,7 +156,7 @@ hugo mod tidy
 If Hugo can't find the module:
 
 1. Ensure the repository exists on GitHub
-2. Check the module path is correct: `github.com/fredricnet/pai-theme`
+2. Check the module path is correct: `github.com/fredricnet/paitheme`
 3. Verify the version tag exists (e.g., `v1.0.0`)
 4. Run `hugo mod clean` to clear cache, then `hugo mod get -u`
 
@@ -176,7 +176,7 @@ If demo site isn't using local changes:
 1. Ensure module replace is set:
    ```bash
    cd examples/demo
-   hugo mod replace github.com/fredricnet/pai-theme => ../..
+   hugo mod replace github.com/fredricnet/paitheme => ../..
    ```
 2. Verify in `hugo.yaml` that replacement is configured
 3. Restart Hugo server
@@ -195,4 +195,4 @@ If demo site isn't using local changes:
 
 - [Hugo Modules Documentation](https://gohugo.io/hugo-modules/)
 - [Semantic Versioning](https://semver.org/)
-- [Theme Repository](https://github.com/fredricnet/pai-theme)
+- [Theme Repository](https://github.com/fredricnet/paitheme)

@@ -35,3 +35,6 @@ _vendor/
 # Demo site build output
 examples/demo/public/
 examples/demo/resources/_gen/
+
+# Local development TODO (not for GitHub)
+TODO_LOCAL.md

@@ -32,7 +32,7 @@ This demo site serves multiple purposes:
 
 3. For local development, use module replace to point to parent theme:
    ```bash
-   hugo mod replace github.com/fredricnet/pai-theme => ../..
+   hugo mod replace github.com/fredricnet/paitheme => ../..
    ```
 
 4. Start the development server:

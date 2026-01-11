@@ -32,14 +32,14 @@ hugo mod init github.com/your-org/your-site
 ```yaml
 module:
   imports:
-    - path: github.com/fredricnet/pai-theme
+    - path: github.com/fredricnet/paitheme
       version: v1.0.0  # Optional: specify version or use latest
 ```
 
 3. Install the module:
 
 ```bash
-hugo mod get -u github.com/fredricnet/pai-theme
+hugo mod get -u github.com/fredricnet/paitheme
 hugo mod tidy
 ```
 
@@ -56,14 +56,14 @@ hugo server
 To update to the latest version:
 
 ```bash
-hugo mod get -u github.com/fredricnet/pai-theme
+hugo mod get -u github.com/fredricnet/paitheme
 hugo mod tidy
 ```
 
 To update to a specific version:
 
 ```bash
-hugo mod get -u github.com/fredricnet/pai-theme@v1.1.0
+hugo mod get -u github.com/fredricnet/paitheme@v1.1.0
 hugo mod tidy
 ```
 
@@ -450,7 +450,7 @@ Crawl-delay: 1
 
 ## Versioning
 
-PAI Theme uses semantic versioning (v1.0.0, v1.1.0, v2.0.0). See version tags on [GitHub](https://github.com/fredricnet/pai-theme/tags).
+PAI Theme uses semantic versioning (v1.0.0, v1.1.0, v2.0.0). See version tags on [GitHub](https://github.com/fredricnet/paitheme/tags).
 
 ### Current Version
 

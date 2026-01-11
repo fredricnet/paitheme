@@ -19,7 +19,7 @@ A **Hugo module** is a reusable package of Hugo components (themes, layouts, con
 ```yaml
 module:
   imports:
-    - path: github.com/fredricnet/pai-theme
+    - path: github.com/fredricnet/paitheme
 ```
 
 This dictionary entry demonstrates how terms are displayed in the dictionary section of PAI Theme.

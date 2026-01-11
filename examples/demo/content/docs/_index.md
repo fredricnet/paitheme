@@ -31,7 +31,7 @@ Here's an example of code highlighting:
 # hugo.yaml
 module:
   imports:
-    - path: github.com/fredricnet/pai-theme
+    - path: github.com/fredricnet/paitheme
 ```
 
 The theme automatically highlights code in various languages!

@@ -3,10 +3,10 @@
 
 name = "PAI Theme"
 license = "MIT"
-licenselink = "https://github.com/fredricnet/pai-theme/blob/main/LICENSE"
+licenselink = "https://github.com/fredricnet/paitheme/blob/main/LICENSE"
 description = "A modern, dark-mode Hugo theme with a clean, professional design. Built for documentation sites, blogs, and marketing pages."
-homepage = "https://github.com/fredricnet/pai-theme/"
-demosite = "https://github.com/fredricnet/pai-theme/tree/main/examples/demo"
+homepage = "https://github.com/fredricnet/paitheme/"
+demosite = "https://github.com/fredricnet/paitheme/tree/main/examples/demo"
 tags = ["Modern", "Dark Mode", "Documentation", "Blog", "Responsive", "Clean", "Minimal", "SEO", "AI Ready"]
 features = ["Responsive", "Dark Mode", "Documentation", "Blog", "Dictionary", "SEO", "JSON-LD", "LLMs.txt", "Customization"]
 min_version = "0.100.0"

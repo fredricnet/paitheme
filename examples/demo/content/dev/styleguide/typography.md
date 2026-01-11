@@ -61,7 +61,7 @@ The theme includes syntax highlighting for code blocks:
 # Example YAML configuration
 module:
   imports:
-    - path: github.com/fredricnet/pai-theme
+    - path: github.com/fredricnet/paitheme
 ```
 
 ```javascript

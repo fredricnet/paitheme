@@ -14,7 +14,7 @@ Install PAI Theme as a Hugo module:
 
 ```bash
 hugo mod init github.com/your-org/your-site
-hugo mod get github.com/fredricnet/pai-theme
+hugo mod get github.com/fredricnet/paitheme
 ```
 
 ## Configuration
@@ -24,7 +24,7 @@ Add the theme to your `hugo.yaml`:
 ```yaml
 module:
   imports:
-    - path: github.com/fredricnet/pai-theme
+    - path: github.com/fredricnet/paitheme
 ```
 
 ## Content Structure
