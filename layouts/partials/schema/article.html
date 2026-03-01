@@ -25,10 +25,11 @@
     "description": {{ .Description | jsonify }},
     {{- end }}
     "url": {{ .Permalink | jsonify }},
-    {{- if .Params.image }}
+    {{- $imgSrc := partial "func/resolve-image.html" . -}}
+    {{- if $imgSrc }}
     "image": {
         "@type": "ImageObject",
-        "url": {{ .Params.image | absURL | jsonify }}
+        "url": {{ $imgSrc | absURL | jsonify }}
     },
     {{- end }}
     {{- if not .PublishDate.IsZero }}

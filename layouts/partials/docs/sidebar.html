@@ -20,12 +20,10 @@
         {{- $currentPage := . -}}
         {{- $section := .Section -}}
         
-        {{- /* Determine which section to use based on current page path */ -}}
-        {{- $targetSection := false -}}
+        {{- /* Determine which section to use - automatically resolves to the top-level section */ -}}
+        {{- $targetSection := .FirstSection -}}
         {{- if hasPrefix $currentPage.RelPermalink "/dev/styleguide" -}}
             {{- $targetSection = site.GetPage "section" "dev/styleguide" -}}
-        {{- else -}}
-            {{- $targetSection = site.GetPage "section" "docs" -}}
         {{- end -}}
         
         {{- if $targetSection -}}

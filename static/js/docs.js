@@ -1,7 +1,50 @@
 // Documentation JavaScript
+// Includes sessionStorage sidebar state persistence to prevent flash on navigation
 
 (function() {
     'use strict';
+
+    // --- Sidebar State Persistence ---
+    // Save expanded group IDs to sessionStorage
+    function saveExpandedState(container) {
+        if (!container) return;
+        var expanded = [];
+        container.querySelectorAll('.docs-nav-group.is-expanded > .docs-nav-group-content').forEach(function(el) {
+            if (el.id) expanded.push(el.id);
+        });
+        try { sessionStorage.setItem('docs-sidebar-expanded', JSON.stringify(expanded)); } catch(e) {}
+    }
+
+    // Check if sessionStorage has saved state
+    function hasSavedState() {
+        try {
+            var s = sessionStorage.getItem('docs-sidebar-expanded');
+            return s && JSON.parse(s).length > 0;
+        } catch(e) { return false; }
+    }
+
+    // Restore expanded state from sessionStorage
+    function restoreExpandedState(container) {
+        if (!container) return false;
+        try {
+            var s = sessionStorage.getItem('docs-sidebar-expanded');
+            if (!s) return false;
+            var ids = JSON.parse(s);
+            if (ids.length === 0) return false;
+            ids.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) {
+                    var group = el.closest('.docs-nav-group');
+                    if (group) {
+                        group.classList.add('is-expanded');
+                        var toggle = group.querySelector(':scope > .docs-nav-group-toggle');
+                        if (toggle) toggle.setAttribute('aria-expanded', 'true');
+                    }
+                }
+            });
+            return true;
+        } catch(e) { return false; }
+    }
 
     // Sidebar Toggle
     const sidebarToggle = document.getElementById('docs-sidebar-toggle');
@@ -90,6 +133,9 @@
             group.classList.add('is-expanded');
             toggle.setAttribute('aria-expanded', 'true');
         }
+        // Save state after every toggle
+        const sidebar = document.getElementById('docs-sidebar');
+        saveExpandedState(sidebar);
     }
     
     function initNavGroupToggles() {
@@ -100,14 +146,21 @@
             return;
         }
         
-        // Collapse all groups first
+        // Try to restore from sessionStorage first
+        // If we have saved state, use it instead of the default collapse/expand logic
         collapseAllGroups(sidebar);
+        const restored = restoreExpandedState(sidebar);
         
-        // Expand the top-level folder by default
-        expandTopLevelGroup(sidebar);
+        if (!restored) {
+            // No saved state - use default behavior
+            expandTopLevelGroup(sidebar);
+        }
         
-        // Then expand groups containing the active page
+        // Always expand groups containing the active page
         expandActiveGroups(sidebar);
+        
+        // Save the resulting state
+        saveExpandedState(sidebar);
         
         // Remove existing listener if any
         if (navGroupClickHandler) {
@@ -119,6 +172,8 @@
             // Don't interfere with clicks on navigation items (actual links)
             const navItem = e.target.closest('a.docs-nav-item');
             if (navItem) {
+                // Save state before navigation so the next page can restore it
+                saveExpandedState(sidebar);
                 return;
             }
             
@@ -135,7 +190,8 @@
                         toggleGroup(group, toggle);
                         return;
                     }
-                    // If group is collapsed, allow navigation to proceed (don't prevent default)
+                    // If group is collapsed, save state before navigation
+                    saveExpandedState(sidebar);
                 }
                 return;
             }
@@ -186,45 +242,19 @@
     window.addEventListener('load', () => {
         const sidebar = document.getElementById('docs-sidebar');
         if (sidebar) {
-            collapseAllGroups(sidebar);
-            expandTopLevelGroup(sidebar);
-            expandActiveGroups(sidebar);
+            // Don't collapse/re-expand if already initialized - just ensure active is visible
             if (!isInitialized) {
+                collapseAllGroups(sidebar);
+                const restored = restoreExpandedState(sidebar);
+                if (!restored) {
+                    expandTopLevelGroup(sidebar);
+                }
+                expandActiveGroups(sidebar);
+                saveExpandedState(sidebar);
                 initNavGroupToggles();
             }
         }
     });
-    
-    // Use MutationObserver to catch any dynamically added groups
-    if (typeof MutationObserver !== 'undefined') {
-        const observer = new MutationObserver(() => {
-            const sidebar = document.getElementById('docs-sidebar');
-            if (sidebar) {
-                collapseAllGroups(sidebar);
-                expandTopLevelGroup(sidebar);
-                expandActiveGroups(sidebar);
-            }
-        });
-        
-        // Start observing when sidebar is available
-        function startObserving() {
-            const sidebar = document.getElementById('docs-sidebar');
-            if (sidebar) {
-                observer.observe(sidebar, {
-                    childList: true,
-                    subtree: true
-                });
-            } else {
-                setTimeout(startObserving, 100);
-            }
-        }
-        
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', startObserving);
-        } else {
-            startObserving();
-        }
-    }
 
     // Tabs Functionality
     const tabsContainers = document.querySelectorAll('.pai-tabs');
@@ -512,5 +542,3 @@
     }
 
 })();
-
-

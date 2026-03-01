@@ -15,6 +15,47 @@
         .docs-nav-group.is-expanded > .docs-nav-group-content { display: block !important; }
     </style>
     
+    {{- /* Restore sidebar expanded state from sessionStorage before paint.
+         Injects a style tag targeting saved nav-group IDs with display:block,
+         so they render expanded immediately without waiting for JS. */ -}}
+    <script>
+    (function(){
+      try {
+        var s = sessionStorage.getItem('docs-sidebar-expanded');
+        if (s) {
+          var ids = JSON.parse(s);
+          if (ids.length > 0) {
+            // Build CSS rules that force saved groups to show before DOM paints
+            var rules = ids.map(function(id) {
+              return '#' + id + ' { display: block !important; }';
+            });
+            var style = document.createElement('style');
+            style.setAttribute('data-sidebar-restore', '');
+            style.textContent = rules.join('\n');
+            document.head.appendChild(style);
+            // Once DOM is ready, add is-expanded class and clean up temp style
+            document.addEventListener('DOMContentLoaded', function() {
+              ids.forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) {
+                  var group = el.closest('.docs-nav-group');
+                  if (group) {
+                    group.classList.add('is-expanded');
+                    var toggle = group.querySelector(':scope > .docs-nav-group-toggle');
+                    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+                  }
+                }
+              });
+              // Remove temporary style once classes are applied
+              var tmp = document.querySelector('style[data-sidebar-restore]');
+              if (tmp) tmp.remove();
+            });
+          }
+        }
+      } catch(e) {}
+    })();
+    </script>
+    
     {{- block "head" . }}{{ end -}}
 </head>
 <body class="docs-layout">

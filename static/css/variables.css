@@ -71,8 +71,19 @@
 /* -----------------------------------------------------------------------------
    Typography
    ----------------------------------------------------------------------------- */
+/* Airoman heading font */
+@font-face {
+    font-family: 'Airoman';
+    src: url('/fonts/Airoman.woff2') format('woff2'),
+         url('/fonts/Airoman.otf') format('opentype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family-heading: 'Airoman', system-ui, -apple-system, sans-serif;
     --font-family-mono: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     --font-family-handwriting: 'Caveat', cursive;
 }

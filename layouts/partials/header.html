@@ -5,6 +5,7 @@
     - header.cta.text: Button text
     - header.cta.url: Button URL
     - header.cta.style: Button style class (btn-primary, btn-secondary, btn-ghost)
+    - header.cta.hidden: If true, the CTA button is not shown (e.g. when Research is in nav only)
     
     Navigation items from hugo.yaml menus.main
 */ -}}
@@ -15,15 +16,16 @@
 <header class="site-header">
     <div class="container">
         {{- partial "brand/logo.html" (dict "context" .) -}}
+        <span class="header-divider" aria-hidden="true"></span>
         <nav class="nav-menu" id="nav-menu">
             {{- range site.Menus.main -}}
             <a href="{{ .URL }}" class="nav-link{{- if $.IsMenuCurrent "main" . }} active{{- end -}}">{{ .Name }}</a>
             {{- end -}}
         </nav>
         <div class="header-actions">
-            {{- if and $header $header.cta -}}
+            {{- if and $header $header.cta (not $header.cta.hidden) -}}
             <a href="{{ $header.cta.url | default "/contact" }}" class="btn {{ $header.cta.style | default "btn-secondary" }}">{{ $header.cta.text | default "Login" }}</a>
-            {{- else -}}
+            {{- else if not (and $header $header.cta) -}}
             <a href="/contact" class="btn btn-secondary">Login</a>
             {{- end -}}
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">

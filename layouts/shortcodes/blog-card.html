@@ -47,7 +47,7 @@
 
 {{- $image := .Get "image" -}}
 {{- if and $post (not $image) -}}
-  {{- $image = $post.Params.image -}}
+  {{- $image = partial "func/resolve-image.html" $post -}}
 {{- end -}}
 
 {{- $category := .Get "category" -}}

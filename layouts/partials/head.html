@@ -1,0 +1,9 @@
+{{- /* This file wraps head/meta.html for compatibility with baseof.html templates that call partial "head.html" */ -}}
+<head>
+    {{- partial "head/meta.html" . -}}
+
+    {{- /* Global JSON-LD Schemas */ -}}
+    {{- partial "head/schema-global.html" . -}}
+
+    {{- block "head" . }}{{ end -}}
+</head>

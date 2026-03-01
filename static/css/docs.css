@@ -327,6 +327,7 @@ body:has(.docs-toc[style*="display: none"]) .docs-main {
 .docs-article-content h2,
 .docs-content-wrapper h2,
 .dictionary-content-wrapper h2 {
+    font-family: var(--font-family-heading);
     font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-color);
@@ -348,6 +349,7 @@ body:has(.docs-toc[style*="display: none"]) .docs-main {
 .docs-article-content h3,
 .docs-content-wrapper h3,
 .dictionary-content-wrapper h3 {
+    font-family: var(--font-family-heading);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-color);
@@ -370,6 +372,7 @@ body:has(.docs-toc[style*="display: none"]) .docs-main {
 .docs-article-content h4,
 .docs-content-wrapper h4,
 .dictionary-content-wrapper h4 {
+    font-family: var(--font-family-heading);
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-color);
@@ -561,6 +564,8 @@ body:has(.docs-toc[style*="display: none"]) .docs-main {
 }
 
 .docs-article-content table,
+.docs-content-wrapper table,
+.blog-article-content table,
 .dictionary-content-wrapper table {
     width: 100%;
     border-collapse: collapse;
@@ -569,6 +574,10 @@ body:has(.docs-toc[style*="display: none"]) .docs-main {
 
 .docs-article-content th,
 .docs-article-content td,
+.docs-content-wrapper th,
+.docs-content-wrapper td,
+.blog-article-content th,
+.blog-article-content td,
 .dictionary-content-wrapper th,
 .dictionary-content-wrapper td {
     padding: 0.75rem;
@@ -577,6 +586,8 @@ body:has(.docs-toc[style*="display: none"]) .docs-main {
 }
 
 .docs-article-content th,
+.docs-content-wrapper th,
+.blog-article-content th,
 .dictionary-content-wrapper th {
     font-weight: 600;
     background: var(--accent-bg-light) !important;

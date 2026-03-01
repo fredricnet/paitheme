@@ -48,6 +48,18 @@
    - Added changelog section
    - Added link to WORKFLOW.md
 
+9. ✅ **Added custom Airoman heading font**
+   - Added Airoman.otf font file to `static/fonts/`
+   - Created @font-face declarations in variables.css and style.css
+   - Defined --font-family-heading CSS variable with Airoman
+   - Applied to all h1-h6 elements globally
+   - Added explicit font-family to docs.css heading rules (h2, h3, h4)
+   - Added font preload in head/meta.html for performance
+   - Body text continues using Inter from Google Fonts
+   - Font format: OpenType/CFF with proper fallbacks (system-ui, -apple-system, sans-serif)
+   - Updated README.md with typography documentation section
+   - Updated v1.1.0 changelog with font implementation
+
 ## Remaining Tasks ⚠️
 
 ### 1. Push to GitHub

@@ -166,8 +166,53 @@ If changes don't appear after updating:
 
 1. Clear Hugo cache: `hugo mod clean`
 2. Clear vendor directory: Remove `_vendor/` if present
-3. Re-download module: `hugo mod get -u`
-4. Rebuild: `hugo server` or `hugo --cleanDestinationDir`
+3. Clear public directory: `rm -rf public`
+4. Re-download module: `hugo mod get -u`
+5. Rebuild: `hugo server --noHTTPCache --disableFastRender` or `hugo --cleanDestinationDir`
+
+### Local Replace Not Working (hugo.yaml version pin)
+
+**Important**: If `hugo.yaml` has a `version:` field on the module import, Hugo may ignore
+the `replace` directive in `go.mod` and download from GitHub instead.
+
+**Problem** — Hugo uses the cached GitHub version instead of local `../paitheme`:
+```yaml
+# hugo.yaml — THIS CAUSES THE REPLACE TO BE IGNORED:
+module:
+  imports:
+    - path: github.com/fredricnet/paitheme
+      version: v1.0.0   # <-- Remove this line for local development
+```
+
+**Fix** — Remove the `version:` field so Hugo respects `go.mod replace`:
+```yaml
+# hugo.yaml — CORRECT for local development:
+module:
+  imports:
+    - path: github.com/fredricnet/paitheme
+  # Version is managed in go.mod (not pinned here, so replace directive works)
+```
+
+Then verify Hugo watches the local theme:
+```bash
+hugo server
+# Should show: Watching for changes in .../{your-site,paitheme}
+# NOT: Watching for changes in .../go-mod/github.com/fredricnet/paitheme@v1.0.0/
+```
+
+### Cursor IDE Sandbox Note
+
+When running Hugo from Cursor's built-in terminal, the IDE sandbox may override
+`GOMODCACHE` and cache a stale copy of the theme from GitHub. If local theme changes
+are not appearing:
+
+1. Remove `version:` from `hugo.yaml` module import (see above)
+2. Run `rm -rf _vendor public` and `hugo mod clean`
+3. Restart Hugo: `hugo server --noHTTPCache --disableFastRender`
+4. Verify Hugo watches `{your-site,paitheme}` (not a `/go-mod/` cache path)
+
+If the sandbox still serves stale files, run Hugo from an external terminal (Terminal.app)
+outside of Cursor.
 
 ### Demo Site Not Using Local Theme
 
@@ -178,7 +223,7 @@ If demo site isn't using local changes:
    cd examples/demo
    hugo mod replace github.com/fredricnet/paitheme => ../..
    ```
-2. Verify in `hugo.yaml` that replacement is configured
+2. Verify in `hugo.yaml` that no `version:` is pinned on the import
 3. Restart Hugo server
 
 ## Best Practices

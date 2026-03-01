@@ -27,8 +27,9 @@
                 {{- range $featured -}}
                 <article class="blog-card blog-card-featured">
                     <div class="blog-card-image">
-                        {{- if .Params.image -}}
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        {{- $imgSrc := partial "func/resolve-image.html" . -}}
+                        {{- if $imgSrc -}}
+                        <img src="{{ $imgSrc }}" alt="{{ .Title }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                         <div class="blog-card-image-placeholder" style="display: none;">
                             <p>{{ .Title }}</p>
                         </div>
@@ -51,8 +52,9 @@
             {{- range $regular -}}
             <article class="blog-card">
                 <div class="blog-card-image">
-                    {{- if .Params.image -}}
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    {{- $imgSrc := partial "func/resolve-image.html" . -}}
+                    {{- if $imgSrc -}}
+                    <img src="{{ $imgSrc }}" alt="{{ .Title }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                     <div class="blog-card-image-placeholder" style="display: none;">
                         <p>{{ .Title }}</p>
                     </div>

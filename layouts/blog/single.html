@@ -28,9 +28,10 @@
         </div>
     </header>
     
-    {{- if .Params.image -}}
+    {{- $imgSrc := partial "func/resolve-image.html" . -}}
+    {{- if $imgSrc -}}
     <div class="blog-article-image">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+        <img src="{{ $imgSrc }}" alt="{{ .Title }}" />
     </div>
     {{- end -}}
     

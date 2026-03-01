@@ -46,8 +46,9 @@
 <meta property="og:description" content="{{ $ogDescription }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ site.Title }}">
-{{- if .Params.image -}}
-<meta property="og:image" content="{{ .Params.image | absURL }}">
+{{- $imgSrc := partial "func/resolve-image.html" . -}}
+{{- if $imgSrc -}}
+<meta property="og:image" content="{{ $imgSrc | absURL }}">
 {{- end -}}
 
 {{- /* Twitter Card */ -}}
@@ -55,8 +56,8 @@
 <meta name="twitter:title" content="{{- if .IsHome -}}{{ site.Title }}{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}">
 {{- $twitterDescription := .Description | default site.Params.description | default site.Title -}}
 <meta name="twitter:description" content="{{ $twitterDescription }}">
-{{- if .Params.image -}}
-<meta name="twitter:image" content="{{ .Params.image | absURL }}">
+{{- if $imgSrc -}}
+<meta name="twitter:image" content="{{ $imgSrc | absURL }}">
 {{- end -}}
 
 {{- /* Favicon - configurable via data/site.yaml */ -}}
@@ -77,7 +78,11 @@
 {{- /* Google Fonts - Caveat for handwritten logo */ -}}
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-{{- /* Core Stylesheets */ -}}
+{{- /* Preload Airoman heading font for fast rendering */ -}}
+<link rel="preload" href="{{ "fonts/Airoman.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+
+{{- /* Core Stylesheets - variables.css loaded first for CSS custom properties */ -}}
+<link rel="stylesheet" href="{{ "css/variables.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/docs.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">

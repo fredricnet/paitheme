@@ -1,0 +1,23 @@
+{{- /*
+    resolve-image.html
+    Resolves an image from page bundle resources, falling back to the raw frontmatter path.
+    
+    Usage: {{ $imgSrc := partial "func/resolve-image.html" . }}
+    
+    Input: Page context (must have .Params.image and .Resources)
+    Returns: Image URL string (empty string if no image set)
+    
+    Backward-compatible:
+    - If image is a relative filename (e.g. "cover.webp"), resolves from page bundle resources
+    - If image is an absolute path (e.g. "/images/foo.webp"), passes through as-is
+*/ -}}
+{{- $imgSrc := "" -}}
+{{- if .Params.image -}}
+  {{- $res := .Resources.GetMatch .Params.image -}}
+  {{- if $res -}}
+    {{- $imgSrc = $res.RelPermalink -}}
+  {{- else -}}
+    {{- $imgSrc = .Params.image -}}
+  {{- end -}}
+{{- end -}}
+{{- return $imgSrc -}}

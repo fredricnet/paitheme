@@ -1,15 +1,16 @@
 baseURL: 'http://localhost:1313/'
 languageCode: 'en-us'
 title: 'PAI Theme Demo'
-theme: 'pai-theme'
 description: 'Demo site showcasing PAI Theme features and capabilities'
 
 module:
+  proxy: direct
+  private: "*"
   imports:
     - path: github.com/fredricnet/paitheme
-      # For local development, use: hugo mod replace github.com/fredricnet/paitheme => ../..
-  replacements:
-    - github.com/fredricnet/paitheme -> ../..
+      version: v1.0.0
+  # Local development: Using local replace (configured in go.mod)
+  # For faster iteration. To use GitHub version, remove replace from go.mod
 
 menu:
   main:

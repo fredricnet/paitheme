@@ -95,6 +95,7 @@ header:
     text: "Get Started"
     url: "/signup"
     style: "btn-primary"    # btn-primary, btn-secondary, btn-ghost
+    hidden: true             # Optional: hide the CTA button entirely
 
 # Footer
 footer:
@@ -218,6 +219,47 @@ Edit `static/css/variables.css` to customize the color palette:
     --radius: 8px;
 }
 ```
+
+### Typography & Fonts
+
+The theme uses a dual-font system:
+
+- **Headings (h1-h6)**: Custom "Airoman" font (OpenType)
+- **Body text**: "Inter" from Google Fonts
+- **Monospace**: Monaco, Menlo, Ubuntu Mono
+- **Handwriting**: Caveat (for logo/special elements)
+
+#### Custom Heading Font
+
+The theme includes the Airoman font for all headings. This is defined in `static/css/variables.css`:
+
+```css
+--font-family-heading: 'Airoman', system-ui, -apple-system, sans-serif;
+```
+
+To replace with a different heading font:
+
+1. Add your font file to `static/fonts/yourfont.otf` (or .ttf, .woff2)
+2. Update the @font-face declaration in `static/css/variables.css`:
+   ```css
+   @font-face {
+       font-family: 'YourFont';
+       src: url('/fonts/yourfont.otf') format('opentype');
+       font-weight: normal;
+       font-style: normal;
+       font-display: swap;
+   }
+   ```
+3. Update the CSS variable:
+   ```css
+   --font-family-heading: 'YourFont', system-ui, sans-serif;
+   ```
+4. Update the preload in `layouts/partials/head/meta.html`:
+   ```html
+   <link rel="preload" href="{{ "fonts/yourfont.otf" | relURL }}" as="font" type="font/otf" crossorigin>
+   ```
+
+All headings will automatically use the new font via the `var(--font-family-heading)` CSS variable.
 
 ### Light Mode
 
@@ -439,6 +481,74 @@ Crawl-delay: 1
 
 ---
 
+## Header Design
+
+The site header is a centered, compact pill-shaped bar inspired by modern SaaS designs (e.g. Webflow):
+
+- **Centered bar**: Horizontally centered, only as wide as logo + nav links (not full page width)
+- **Logo + divider + nav**: Brand icon and site name on the left, a vertical divider, then navigation links
+- **Dark translucent background**: `rgba(30, 30, 30, 0.95)` with backdrop blur
+- **Pill shape**: `border-radius: 999px` for a fully rounded bar
+- **No CTA button**: Set `header.cta.hidden: true` in `data/site.yaml` to hide the header CTA
+- **Mobile**: Reverts to full-width bar with hamburger menu on screens < 768px
+
+### Header Configuration
+
+```yaml
+# data/site.yaml
+header:
+  cta:
+    text: "Get Started"       # Button label (ignored if hidden)
+    url: "/signup"             # Button link
+    style: "btn-primary"      # btn-primary, btn-secondary, btn-ghost
+    hidden: true               # Set to true to hide the CTA button
+```
+
+### Typography Alignment
+
+Navigation links (header) and footer links use the same font size (`0.875rem` / 14px) with regular weight (`400`) for visual consistency across the site.
+
+---
+
+## Local Development Setup
+
+PAI Theme is designed as a **master theme** used by multiple sites (e.g. fredricnet-website). All theme edits are made in the paitheme directory only — never in the consuming site.
+
+### Directory Structure
+
+```
+002-fredricnet/
+├── paitheme/              # Theme (master — all edits here)
+│   ├── layouts/
+│   ├── static/css/
+│   └── ...
+├── fredricnet-website/    # Site (consumes paitheme locally)
+│   ├── go.mod             # Has: replace github.com/fredricnet/paitheme => ../paitheme
+│   ├── hugo.yaml          # Imports paitheme (no version pin!)
+│   ├── data/site.yaml     # Site-specific config
+│   └── content/
+└── ...
+```
+
+### Key Rules
+
+1. **Never edit theme files inside fredricnet-website** — all changes go in `paitheme/`
+2. **go.mod** in the site must have the `replace` directive pointing to `../paitheme`
+3. **hugo.yaml** must NOT have `version:` on the module import (this causes Hugo to ignore the local replace and download from GitHub)
+4. **Run from site directory**: `cd fredricnet-website && hugo server`
+5. **Verify local loading**: Hugo should show `Watching for changes in .../{fredricnet-website,paitheme}`
+
+### Quick Start
+
+```bash
+cd fredricnet-website
+rm -rf _vendor public
+hugo mod clean
+hugo server --noHTTPCache --disableFastRender
+```
+
+---
+
 ## Browser Support
 
 - Chrome / Edge (latest)
@@ -454,9 +564,21 @@ PAI Theme uses semantic versioning (v1.0.0, v1.1.0, v2.0.0). See version tags on
 
 ### Current Version
 
-**v1.0.0** - Initial release
+**v1.1.0** - Header redesign & improvements
 
 ### Changelog
+
+#### v1.1.0 (2026-02-16)
+- **Custom heading font**: Added Airoman OpenType font for all headings (h1-h6)
+- **Typography system**: Dual-font setup with Airoman for headings, Inter for body text
+- **Font preloading**: Optimized Airoman loading with rel="preload" for better performance
+- **Header redesign**: Centered compact pill-shaped bar (Webflow-style) that only spans the width of logo + nav links
+- **Header divider**: Vertical separator between logo/brand and navigation links
+- **CTA hidden option**: `header.cta.hidden: true` in `data/site.yaml` hides the header CTA button
+- **Unified link sizing**: Nav bar links and footer links use the same font size (0.875rem / 14px, regular weight 400)
+- **Improved nav link colors**: Brighter nav links (white at 85% opacity) with full white on hover/active
+- **Mobile responsive**: Header reverts to full-width bar on small screens (< 768px), divider hidden
+- **Light mode support**: Header, divider, and nav links adapt to light theme
 
 #### v1.0.0 (2024-01-11)
 - Initial release

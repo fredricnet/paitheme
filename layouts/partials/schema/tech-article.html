@@ -24,8 +24,9 @@
     "description": {{ .Description | jsonify }},
     {{- end }}
     "url": {{ .Permalink | jsonify }},
-    {{- if .Params.image }}
-    "image": {{ .Params.image | absURL | jsonify }},
+    {{- $imgSrc := partial "func/resolve-image.html" . -}}
+    {{- if $imgSrc }}
+    "image": {{ $imgSrc | absURL | jsonify }},
     {{- end }}
     {{- if not .PublishDate.IsZero }}
     "datePublished": {{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
