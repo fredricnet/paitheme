@@ -35,7 +35,7 @@
                 {{- partial "utils/icon.html" (dict "name" $targetSection.Params.icon "attributes" "height=16 width=16") -}}
             </span>
             {{- end -}}
-            <span class="docs-nav-text">{{ $targetSection.Title }}</span>
+            <span class="docs-nav-text">{{ $targetSection.LinkTitle }}</span>
         </a>
         {{- /* Then show child pages directly (not wrapped in a group) */ -}}
         {{- range $targetSection.Pages.ByWeight -}}
@@ -51,7 +51,7 @@
                 {{- partial "utils/icon.html" (dict "name" .Params.icon "attributes" "height=16 width=16") -}}
             </span>
             {{- end -}}
-            <span class="docs-nav-text">{{ .Title }}</span>
+            <span class="docs-nav-text">{{ .LinkTitle }}</span>
         </a>
         {{- end -}}
         {{- end -}}
@@ -81,7 +81,7 @@
                 {{- partial "utils/icon.html" (dict "name" $page.Params.icon "attributes" "height=18 width=18") -}}
             </span>
             {{- end -}}
-            <span class="docs-nav-text">{{ $page.Title }}</span>
+            <span class="docs-nav-text">{{ $page.LinkTitle }}</span>
         </a>
     </button>
     <div class="docs-nav-group-content" id="nav-group-{{ $groupId }}">
@@ -99,7 +99,7 @@
                 {{- partial "utils/icon.html" (dict "name" .Params.icon "attributes" "height=16 width=16") -}}
             </span>
             {{- end -}}
-            <span class="docs-nav-text">{{ .Title }}</span>
+            <span class="docs-nav-text">{{ .LinkTitle }}</span>
         </a>
         {{- end -}}
         {{- end -}}
@@ -112,7 +112,7 @@
         {{- partial "utils/icon.html" (dict "name" $page.Params.icon "attributes" "height=16 width=16") -}}
     </span>
     {{- end -}}
-    <span class="docs-nav-text">{{ $page.Title }}</span>
+    <span class="docs-nav-text">{{ $page.LinkTitle }}</span>
 </a>
 {{- end -}}
 {{- end -}}
