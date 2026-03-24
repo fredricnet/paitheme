@@ -3,6 +3,10 @@ languageCode: 'en-us'
 title: 'PAI Theme Demo'
 description: 'Demo site showcasing PAI Theme features and capabilities'
 
+# Uncomment to test the Unterminal variant:
+# params:
+#   variant: unterminal
+
 module:
   proxy: direct
   private: "*"
