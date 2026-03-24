@@ -73,17 +73,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-{{- /* Google Fonts - Inter for modern look */ -}}
+{{- /* Fonts — variant-dependent */ -}}
+{{- $variant := site.Params.variant | default "" -}}
+{{- if eq $variant "unterminal" -}}
+{{- /* JetBrains Mono for Unterminal variant */ -}}
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{{- else -}}
+{{- /* Default: Inter + Caveat + Airoman */ -}}
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-{{- /* Google Fonts - Caveat for handwritten logo */ -}}
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-{{- /* Preload Airoman heading font for fast rendering */ -}}
 <link rel="preload" href="{{ "fonts/Airoman.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- end -}}
 
 {{- /* Core Stylesheets - variables.css loaded first for CSS custom properties */ -}}
 <link rel="stylesheet" href="{{ "css/variables.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/docs.css" | relURL }}">
+{{- /* Variant CSS — overrides variables + component styles */ -}}
+{{- with $variant -}}
+<link rel="stylesheet" href="{{ printf "css/variants/%s.css" . | relURL }}">
+{{- end -}}
 <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 

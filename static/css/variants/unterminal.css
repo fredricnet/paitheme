@@ -1,0 +1,336 @@
+/* =============================================================================
+   Unterminal Variant — Catppuccin Mocha
+   =============================================================================
+   Activated via: params.variant: unterminal in hugo.yaml
+   Overrides all paitheme CSS variables to match the Unterminal platform design.
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Color Palette — Catppuccin Mocha (Dark Mode)
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] {
+    /* Base Colors */
+    --bg-color: #1e1e2e;           /* Mocha base */
+    --bg-secondary: #181825;        /* Mocha mantle */
+    --bg-card: #313244;             /* Mocha surface0 */
+    --bg-accent: rgba(180, 190, 254, 0.05);  /* lavender tint */
+    --bg-accent-hover: rgba(180, 190, 254, 0.08);
+
+    /* Text Colors */
+    --text-color: #cdd6f4;          /* Mocha text */
+    --text-muted: #a6adc8;          /* Mocha subtext1 */
+    --text-light: #6c7086;          /* Mocha overlay0 */
+
+    /* Primary / Brand Colors — Lavender */
+    --primary-color: #b4befe;       /* Mocha lavender */
+    --primary-hover: #c8d3fe;       /* Lighter lavender */
+
+    /* Secondary Colors */
+    --secondary-color: #313244;     /* Mocha surface0 */
+    --secondary-hover: #45475a;     /* Mocha surface1 */
+
+    /* Accent — Mocha Blue (RGB for rgba usage) */
+    --accent-blue: 137, 180, 250;
+    --accent-bg-card: rgba(137, 180, 250, 0.08);
+    --accent-bg-secondary: rgba(137, 180, 250, 0.12);
+    --accent-bg-light: rgba(137, 180, 250, 0.025);
+    --accent-bg-code: rgba(137, 180, 250, 0.06);
+    --accent-bg-inline-code: rgba(137, 180, 250, 0.1);
+
+    /* Border Colors */
+    --border-color: rgba(69, 71, 90, 0.5);   /* Mocha surface1 */
+    --border-hover: rgba(69, 71, 90, 0.8);
+    --charcoal: rgba(69, 71, 90, 0.5);
+    --ebony: #313244;
+
+    /* Typography — JetBrains Mono everywhere */
+    --font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+    --font-family-heading: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+    --font-family-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+    --font-family-handwriting: 'JetBrains Mono', monospace;
+
+    /* Shadows — softer for Mocha palette */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+/* -----------------------------------------------------------------------------
+   Gradients — Lavender/Mauve tones (replacing violet/purple)
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] {
+    /* Hero & Accent */
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(180, 190, 254, 0.06), transparent);
+    --gradient-card: radial-gradient(ellipse 80% 50% at 50% 120%, rgba(180, 190, 254, 0.06), transparent);
+    --gradient-footer: radial-gradient(ellipse 100% 60% at 50% 100%, rgba(180, 190, 254, 0.04), transparent);
+
+    --gradient-accent-1: radial-gradient(ellipse 100% 100% at 20% 30%, rgba(180, 190, 254, 0.01), transparent);
+    --gradient-accent-2: radial-gradient(ellipse 120% 100% at 80% 70%, rgba(203, 166, 247, 0.008), transparent);
+    --gradient-accent-3: radial-gradient(ellipse 100% 120% at 10% 80%, rgba(137, 180, 250, 0.008), transparent);
+    --gradient-accent-4: radial-gradient(ellipse 120% 100% at 90% 20%, rgba(245, 194, 231, 0.006), transparent);
+
+    /* Dashboard */
+    --gradient-dashboard-1: radial-gradient(ellipse 150% 100% at 15% 25%, rgba(180, 190, 254, 0.02), transparent 60%);
+    --gradient-dashboard-2: radial-gradient(ellipse 120% 150% at 85% 75%, rgba(137, 180, 250, 0.015), transparent 65%);
+    --gradient-dashboard-3: radial-gradient(ellipse 100% 120% at 50% 50%, rgba(180, 190, 254, 0.01), transparent 70%);
+    --gradient-dashboard-4: linear-gradient(135deg, rgba(180, 190, 254, 0.008) 0%, transparent 40%, rgba(137, 180, 250, 0.006) 100%);
+    --gradient-dashboard-5: radial-gradient(ellipse 140% 100% at 70% 20%, rgba(203, 166, 247, 0.012), transparent 60%);
+    --gradient-dashboard-6: radial-gradient(ellipse 100% 140% at 30% 80%, rgba(137, 180, 250, 0.01), transparent 65%);
+
+    /* Background CSS gradients */
+    --bg-css-1: radial-gradient(ellipse 180% 120% at 10% 15%, rgba(180, 190, 254, 0.002), transparent 70%);
+    --bg-css-2: radial-gradient(ellipse 140% 180% at 90% 85%, rgba(137, 180, 250, 0.0015), transparent 75%);
+    --bg-css-3: radial-gradient(ellipse 120% 100% at 50% 50%, rgba(180, 190, 254, 0.001), transparent 80%);
+    --bg-css-4: radial-gradient(ellipse 160% 100% at 25% 40%, rgba(203, 166, 247, 0.0015), transparent 72%);
+    --bg-css-5: radial-gradient(ellipse 100% 160% at 75% 60%, rgba(137, 180, 250, 0.001), transparent 78%);
+    --bg-css-6: linear-gradient(180deg, rgba(180, 190, 254, 0.003) 0%, transparent 25%, transparent 75%, rgba(137, 180, 250, 0.0025) 100%);
+    --bg-css-7: radial-gradient(ellipse 200% 80% at 50% 5%, rgba(180, 190, 254, 0.004), transparent 60%);
+    --bg-css-8: radial-gradient(ellipse 200% 80% at 50% 95%, rgba(137, 180, 250, 0.0035), transparent 60%);
+    --bg-css-9: radial-gradient(ellipse 150% 100% at 60% 30%, rgba(203, 166, 247, 0.001), transparent 75%);
+    --bg-css-10: radial-gradient(ellipse 100% 150% at 40% 70%, rgba(245, 194, 231, 0.0012), transparent 73%);
+    --bg-css-11: linear-gradient(45deg, rgba(180, 190, 254, 0.0008) 0%, transparent 50%, rgba(137, 180, 250, 0.0006) 100%);
+    --bg-css-12: linear-gradient(225deg, rgba(203, 166, 247, 0.0008) 0%, transparent 50%, rgba(137, 180, 250, 0.001) 100%);
+
+    --bg-css-header: radial-gradient(ellipse 300% 80% at 50% 0%, rgba(180, 190, 254, 0.06), transparent 50%);
+    --bg-css-footer: radial-gradient(ellipse 300% 80% at 50% 100%, rgba(137, 180, 250, 0.05), transparent 50%);
+
+    /* Image background gradients */
+    --image-bg-css-1: radial-gradient(ellipse 120% 120% at 0% 0%, rgba(180, 190, 254, 0.012), transparent 60%);
+    --image-bg-css-2: radial-gradient(ellipse 100% 100% at 10% 10%, rgba(137, 180, 250, 0.008), transparent 65%);
+    --image-bg-css-3: linear-gradient(to bottom, rgba(180, 190, 254, 0.025) 0%, transparent 20%, transparent 60%, rgba(203, 166, 247, 0.030) 100%);
+    --image-bg-css-4: radial-gradient(ellipse 150% 80% at 100% 100%, rgba(180, 190, 254, 0.035), transparent 50%);
+    --image-bg-css-5: radial-gradient(ellipse 140% 70% at 95% 95%, rgba(137, 180, 250, 0.028), transparent 55%);
+    --image-bg-css-6: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.20) 60%, transparent 100%);
+    --image-bg-css-7: radial-gradient(ellipse 200% 200% at 50% 50%, rgba(0, 0, 0, 0.12), transparent 70%);
+    --image-bg-css-8: linear-gradient(135deg, rgba(180, 190, 254, 0.006) 0%, transparent 25%, transparent 100%);
+    --image-bg-css-9: radial-gradient(ellipse 80% 80% at 5% 5%, rgba(203, 166, 247, 0.010), transparent 70%);
+    --image-bg-css-10: linear-gradient(to bottom right, transparent 0%, transparent 70%, rgba(180, 190, 254, 0.020) 90%, rgba(203, 166, 247, 0.025) 100%);
+    --image-bg-css-11: radial-gradient(ellipse 180% 60% at 100% 100%, rgba(137, 180, 250, 0.022), transparent 60%);
+    --image-bg-css-12: radial-gradient(ellipse 250% 250% at 50% 50%, rgba(0, 0, 0, 0.10), transparent 75%);
+}
+
+/* -----------------------------------------------------------------------------
+   Header — Mocha surface colors, yellow active state
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] .site-header .container {
+    background: rgba(49, 50, 68, 0.92);  /* surface0 */
+    border-color: rgba(69, 71, 90, 0.4); /* surface1 */
+}
+
+[data-variant="unterminal"] .nav-link {
+    color: #a6adc8; /* subtext1 */
+}
+
+[data-variant="unterminal"] .nav-link:hover {
+    color: #cdd6f4; /* text */
+}
+
+[data-variant="unterminal"] .nav-link.active {
+    color: #f9e2af; /* Mocha yellow — matches platform active state */
+}
+
+/* -----------------------------------------------------------------------------
+   Buttons — Lavender primary, matching platform unt-btn-primary-solid
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] .btn-primary,
+[data-variant="unterminal"] .btn-secondary {
+    font-family: var(--font-family);
+}
+
+[data-variant="unterminal"] .btn-primary {
+    background-color: #b4befe;  /* lavender */
+    color: #11111b;             /* crust */
+    border-color: transparent;
+}
+
+[data-variant="unterminal"] .btn-primary:hover {
+    background-color: #c8d3fe;
+    color: #11111b;
+}
+
+[data-variant="unterminal"] .btn-secondary {
+    background-color: #313244;  /* surface0 */
+    color: #cdd6f4;             /* text */
+    border-color: rgba(69, 71, 90, 0.5);
+}
+
+[data-variant="unterminal"] .btn-secondary:hover {
+    background-color: #45475a;  /* surface1 */
+    color: #cdd6f4;
+}
+
+/* -----------------------------------------------------------------------------
+   Cards — Surface0 background, surface1 border
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] .card,
+[data-variant="unterminal"] .feature-card,
+[data-variant="unterminal"] .blog-card {
+    background-color: #313244;
+    border-color: rgba(69, 71, 90, 0.4);
+}
+
+[data-variant="unterminal"] .card:hover,
+[data-variant="unterminal"] .feature-card:hover,
+[data-variant="unterminal"] .blog-card:hover {
+    border-color: rgba(69, 71, 90, 0.7);
+}
+
+/* -----------------------------------------------------------------------------
+   Code Blocks — Catppuccin Mocha syntax colors
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] pre,
+[data-variant="unterminal"] code {
+    font-family: var(--font-family-mono);
+}
+
+[data-variant="unterminal"] pre {
+    background-color: #11111b !important;  /* Mocha crust */
+    border-color: rgba(69, 71, 90, 0.3);
+}
+
+[data-variant="unterminal"] :not(pre) > code {
+    background-color: rgba(137, 180, 250, 0.1);  /* blue tint */
+    color: #89b4fa;  /* Mocha blue */
+}
+
+/* Hugo Chroma syntax highlighting — Catppuccin Mocha tokens */
+[data-variant="unterminal"] .highlight pre {
+    background-color: #11111b !important;
+}
+
+[data-variant="unterminal"] .highlight .k,   /* Keyword */
+[data-variant="unterminal"] .highlight .kd,  /* Keyword.Declaration */
+[data-variant="unterminal"] .highlight .kn,  /* Keyword.Namespace */
+[data-variant="unterminal"] .highlight .kr { /* Keyword.Reserved */
+    color: #cba6f7;  /* mauve */
+}
+
+[data-variant="unterminal"] .highlight .s,   /* String */
+[data-variant="unterminal"] .highlight .s1,  /* String.Single */
+[data-variant="unterminal"] .highlight .s2,  /* String.Double */
+[data-variant="unterminal"] .highlight .se { /* String.Escape */
+    color: #a6e3a1;  /* green */
+}
+
+[data-variant="unterminal"] .highlight .mi,  /* Number */
+[data-variant="unterminal"] .highlight .mf,  /* Number.Float */
+[data-variant="unterminal"] .highlight .mh { /* Number.Hex */
+    color: #fab387;  /* peach */
+}
+
+[data-variant="unterminal"] .highlight .c,   /* Comment */
+[data-variant="unterminal"] .highlight .c1,  /* Comment.Single */
+[data-variant="unterminal"] .highlight .cm,  /* Comment.Multiline */
+[data-variant="unterminal"] .highlight .cp { /* Comment.Preproc */
+    color: #6c7086;  /* overlay0 */
+    font-style: italic;
+}
+
+[data-variant="unterminal"] .highlight .nf,  /* Name.Function */
+[data-variant="unterminal"] .highlight .nb { /* Name.Builtin */
+    color: #89b4fa;  /* blue */
+}
+
+[data-variant="unterminal"] .highlight .nc,  /* Name.Class */
+[data-variant="unterminal"] .highlight .nn { /* Name.Namespace */
+    color: #f9e2af;  /* yellow */
+}
+
+[data-variant="unterminal"] .highlight .o,   /* Operator */
+[data-variant="unterminal"] .highlight .ow { /* Operator.Word */
+    color: #89dceb;  /* sky */
+}
+
+[data-variant="unterminal"] .highlight .na { /* Name.Attribute */
+    color: #89b4fa;  /* blue */
+}
+
+[data-variant="unterminal"] .highlight .nt { /* Name.Tag (HTML) */
+    color: #cba6f7;  /* mauve */
+}
+
+[data-variant="unterminal"] .highlight .nx { /* Name.Other */
+    color: #cdd6f4;  /* text */
+}
+
+/* -----------------------------------------------------------------------------
+   Docs Sidebar — Yellow active, muted inactive, transparent bg
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] .docs-nav-link.active {
+    color: #f9e2af;  /* yellow */
+    background: transparent;
+}
+
+[data-variant="unterminal"] .docs-nav-link {
+    color: #a6adc8;  /* subtext1 */
+}
+
+[data-variant="unterminal"] .docs-nav-link:hover {
+    color: #cdd6f4;  /* text */
+}
+
+/* Group headers — overline style */
+[data-variant="unterminal"] .docs-nav-group-toggle {
+    color: #6c7086;  /* overlay0 */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* TOC active heading */
+[data-variant="unterminal"] .toc-link.active {
+    color: #f9e2af;  /* yellow */
+}
+
+/* -----------------------------------------------------------------------------
+   Footer — Mocha surface colors
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] .site-footer {
+    border-top-color: rgba(69, 71, 90, 0.3);
+}
+
+[data-variant="unterminal"] .footer-link {
+    color: #a6adc8;
+}
+
+[data-variant="unterminal"] .footer-link:hover {
+    color: #cdd6f4;
+}
+
+/* -----------------------------------------------------------------------------
+   Scrollbar — Mocha themed
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] ::-webkit-scrollbar-track {
+    background: #1e1e2e;
+}
+
+[data-variant="unterminal"] ::-webkit-scrollbar-thumb {
+    background: #45475a;
+    border-radius: 4px;
+}
+
+[data-variant="unterminal"] ::-webkit-scrollbar-thumb:hover {
+    background: #585b70;
+}
+
+/* -----------------------------------------------------------------------------
+   Selection — Lavender highlight
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] ::selection {
+    background: rgba(180, 190, 254, 0.25);
+    color: #cdd6f4;
+}
+
+/* -----------------------------------------------------------------------------
+   Heading weight adjustment — JetBrains Mono is heavier than Airoman
+   ----------------------------------------------------------------------------- */
+[data-variant="unterminal"] h1,
+[data-variant="unterminal"] h2,
+[data-variant="unterminal"] h3 {
+    font-weight: 600;
+}
+
+[data-variant="unterminal"] h1 {
+    font-size: 2rem;
+}
